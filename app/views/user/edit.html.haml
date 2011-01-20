@@ -1,0 +1,18 @@
+#edit
+  %h1 Tus Ajustes
+  - form_for @user, :html => { :multipart => true } do |f|
+    =f.text_field :display_name
+    %br
+    
+    -if @user.avatar.exists?
+      = image_tag @user.avatar.url(:thumb)
+    %br
+    =f.file_field :avatar
+    %br
+
+    -if @user.background.exists?
+      = image_tag @user.background.url(:thumb)
+    %br
+    =f.file_field :background
+    
+    =submit_tag "Enviar"

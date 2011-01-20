@@ -1,0 +1,6 @@
+bei http://www.cincopreguntas.local:3000/user/1 keine angabe möglich wenn current_user der gleiche ist
+
+bei space in textfeld skip zum nächsten 
+
+paperclip & settings menu-point
+

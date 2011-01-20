@@ -1,0 +1,24 @@
+-if @user.background.exists?
+  :css
+    body {
+      background-image: url(#{@user.background.url(:small)});
+      background-position: center top;
+    }
+
+= form_for @user do |words_form|
+  = words_form.fields_for :words do |words_fields|
+
+    =words_fields.text_field :word_1, :class => "word_field"
+    =words_fields.text_field :word_2, :class => "word_field"
+    =words_fields.text_field :word_3, :class => "word_field"
+    =words_fields.text_field :word_4, :class => "word_field"
+    =words_fields.text_field :word_5, :class => "word_field"
+  
+  =submit_tag "Enviar"
+    
+
+
+#words_said
+  -@user.sets.each do |set_id|
+    !="#{set_sender_name(set_id)} dijo que eres #{set_words(set_id)}"
+    %br

@@ -1,0 +1,216 @@
+/* line 1, ../../../app/stylesheets/own/generic.sass */
+h1.grey_gradient_title {
+  color: white;
+  overflow: hidden;
+  font-size: 26px;
+  background-color: transparent;
+  border-bottom: none;
+  font-weight: normal;
+  padding: 6px 10px;
+  background: url("/images/gradients/header_grey_45.jpg") 0 0 repeat-x;
+  line-height: 47px;
+  font-size: 26px;
+  display: inline;
+  margin-bottom: 10px;
+  text-transform: none;
+}
+
+/* line 17, ../../../app/stylesheets/own/generic.sass */
+ul.disc li {
+  list-style: disc outside none;
+}
+
+/* line 21, ../../../app/stylesheets/own/generic.sass */
+ol.decimal li, ul.decimal li {
+  list-style: decimal outside none;
+}
+
+/* line 24, ../../../app/stylesheets/own/generic.sass */
+#moz_banner {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+/* line 29, ../../../app/stylesheets/own/generic.sass */
+.grey_background {
+  background-color: #aaaaaa;
+}
+
+/* line 32, ../../../app/stylesheets/own/generic.sass */
+.green_background {
+  background-color: green;
+}
+
+/* line 35, ../../../app/stylesheets/own/generic.sass */
+.blue_background {
+  background-color: blue;
+}
+
+/* line 39, ../../../app/stylesheets/own/generic.sass */
+.more_link {
+  color: #6a9000;
+  border-bottom: dotted 1px #6a9000;
+}
+
+/* line 43, ../../../app/stylesheets/own/generic.sass */
+.margin_fix {
+  overflow: hidden;
+  display: inline;
+}
+
+/* line 47, ../../../app/stylesheets/own/generic.sass */
+.top_margin_5 {
+  margin-top: 5px;
+}
+
+/* line 50, ../../../app/stylesheets/own/generic.sass */
+.top_margin_10 {
+  margin-top: 10px;
+}
+
+/* line 53, ../../../app/stylesheets/own/generic.sass */
+.top_margin_20 {
+  margin-top: 20px;
+}
+
+/* line 56, ../../../app/stylesheets/own/generic.sass */
+.top_margin_30 {
+  margin-top: 30px;
+}
+
+/* line 59, ../../../app/stylesheets/own/generic.sass */
+.top_padding_20 {
+  padding-top: 20px;
+}
+
+/* line 62, ../../../app/stylesheets/own/generic.sass */
+.padding_5 {
+  padding: 5px;
+}
+
+/* line 65, ../../../app/stylesheets/own/generic.sass */
+.top_padding_10 {
+  padding-top: 10px;
+}
+
+/* line 69, ../../../app/stylesheets/own/generic.sass */
+.bottom_margin_10 {
+  margin-bottom: 10px;
+}
+
+/* line 73, ../../../app/stylesheets/own/generic.sass */
+a.underline {
+  text-decoration: underline;
+}
+
+/* line 77, ../../../app/stylesheets/own/generic.sass */
+ul.with_disk li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* line 81, ../../../app/stylesheets/own/generic.sass */
+.text_center {
+  text-align: center;
+}
+
+/* line 84, ../../../app/stylesheets/own/generic.sass */
+.top_padding_12 {
+  padding-top: 12px;
+}
+
+/* line 87, ../../../app/stylesheets/own/generic.sass */
+.italic {
+  font-style: italic;
+}
+
+/* line 90, ../../../app/stylesheets/own/generic.sass */
+.no_margin {
+  margin: 0;
+}
+
+/* line 93, ../../../app/stylesheets/own/generic.sass */
+.font_16 {
+  font-size: 16px;
+}
+
+/* line 96, ../../../app/stylesheets/own/generic.sass */
+.font_12 {
+  font-size: 12px;
+}
+
+/* line 100, ../../../app/stylesheets/own/generic.sass */
+.hidden_content {
+  display: none;
+}
+
+/* line 103, ../../../app/stylesheets/own/generic.sass */
+.hidden, a.hidden {
+  display: none;
+}
+
+/* line 106, ../../../app/stylesheets/own/generic.sass */
+.shown {
+  display: block;
+}
+
+/* line 109, ../../../app/stylesheets/own/generic.sass */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 112, ../../../app/stylesheets/own/generic.sass */
+.visible {
+  visibility: visible;
+}
+
+/* line 115, ../../../app/stylesheets/own/generic.sass */
+.justify {
+  text-align: justify;
+}
+
+/* line 118, ../../../app/stylesheets/own/generic.sass */
+.left_padding {
+  padding-left: 5px;
+}
+
+/* line 121, ../../../app/stylesheets/own/generic.sass */
+.clear {
+  clear: both;
+}
+
+/* line 123, ../../../app/stylesheets/own/generic.sass */
+.cl {
+  clear: left;
+}
+
+/* line 125, ../../../app/stylesheets/own/generic.sass */
+.cr {
+  clear: right;
+}
+
+/* line 129, ../../../app/stylesheets/own/generic.sass */
+.grey_line {
+  margin: 30px 0px 10px 0px;
+}
+
+/* line 132, ../../../app/stylesheets/own/generic.sass */
+.fr {
+  float: right;
+}
+
+/* line 135, ../../../app/stylesheets/own/generic.sass */
+.fl {
+  float: left;
+}
+
+/* line 138, ../../../app/stylesheets/own/generic.sass */
+.bold {
+  font-weight: bold;
+}
+
+/* line 143, ../../../app/stylesheets/own/generic.sass */
+#pages .spread_the_word h2 {
+  margin: 0;
+}

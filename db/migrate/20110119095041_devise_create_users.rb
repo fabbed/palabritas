@@ -5,7 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.recoverable
       t.rememberable
       t.trackable
-      t.string :permalink
+      t.string :display_name
       t.string :username
 
       # t.confirmable

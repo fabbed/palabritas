@@ -1,7 +1,33 @@
 CincopalabritasCom::Application.routes.draw do
+  get "home/index"
+
   devise_for :users
 
-  root :to => {:controller=>"devise/sessions", :action=>"create"}
+  #custom route names
+  devise_for :users do
+    get "/entrar" => "devise/sessions#new"
+  end
+  devise_scope :user do
+    get "/cerrar_session" => "devise/sessions#destroy"
+  end
+  devise_scope :user do
+    get "/registrate" => "devise/registrations#new"
+  end
+
+  root :to => "home#index"
+
+  resources :user do
+    member do
+      get :dashboard
+      get :find_friends
+      get :settings
+    end
+    
+  end
+
+  match 'dashboard' => 'user#dashboard', :as => 'user_root'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  set_id: 1
+  sender_id: 1
+  receiver_id: 1
+  word_id: 1
+  position: 1
+  note: MyString
+
+two:
+  set_id: 1
+  sender_id: 1
+  receiver_id: 1
+  word_id: 1
+  position: 1
+  note: MyString

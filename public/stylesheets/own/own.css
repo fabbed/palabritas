@@ -1,0 +1,20 @@
+/* line 3, ../../../app/stylesheets/own/own.sass */
+#user #dashboard input#username {
+  width: 800px;
+  border: 1px solid #bbbbbb;
+  font-size: 20pt;
+  padding: 8px;
+}
+
+/* line 9, ../../../app/stylesheets/own/own.sass */
+h1.green {
+  margin-bottom: 0.2em;
+  font-size: 40px;
+  color: #5d9e1b;
+}
+
+/* line 13, ../../../app/stylesheets/own/own.sass */
+h2 {
+  font-size: 22px;
+  margin-bottom: 0.2em;
+}

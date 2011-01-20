@@ -1,0 +1,107 @@
+#dashboard
+  %h1.green Comparte este enlace con tus amigos para que te respondan
+
+  =text_field_tag "username", HOST + current_user.username, :readonly => true
+
+%div{:style => "border-bottom:1px solid #CCCCCC;"}
+%div{:style => "padding:20px;padding-top:10px;padding-bottom:10px;"}
+  %script{:src => "/fancybox/jquery.fancybox-1.3.4.pack.js", :type => "text/javascript"}
+  %link{:href => "/fancybox/jquery.fancybox-1.3.4.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %div
+    Tu página es <b>pública</b>
+    %button#toggle_public{:onclick => "toggle_public()"} Hazla privada
+    (Tus respuestas puede verlas todo el mundo )
+  %div{:style => "height:5px;"}
+  %table.padfix{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+    %tr
+      %td.padfix{:width => "25%"}
+        %span{:style => "vertical-align:middle;"} Mostrar respuestas en:
+        %img{:src => "/images/tumblr.png", :style => "margin-left:10px;vertical-align:middle;"}
+          %span{:style => "vertical-align:middle;margin-right:10px;"}
+            Tumblr
+            %a#tumblr_link{:href => "#tumblr"} turn on!
+          %img{:src => "/images/facebook.png", :style => "margin-left:10px;vertical-align:middle;"}
+            %span{:style => "vertical-align:middle;margin-right:10px;"}
+              Facebook
+              %fb:login-button{:perms => "email, publish_stream, offline_access", :size => "small"}
+%div{:style => "padding:20px;"}
+  %a#youranswers.selected_tab{:href => "#", :onclick => "select_answers()"} Tus respuestas
+  %a#following.unselected_tab{:href => "#", :onclick => "select_following()"} Gente que sigues
+  %a#facebook.unselected_tab{:href => "#", :onclick => "select_facebook()"} Amigos en Facebook
+%div{:style => "display:none"}
+  #tumblr
+    %h3
+      %strong Setup Tumblr
+    %form{"accept-charset" => "UTF-8", :action => "/save_tumblr", :method => "post"}
+      %div{:style => "margin:0;padding:0;display:inline"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        %input{:name => "authenticity_token", :type => "hidden", :value => "MOijczISJZoPHqsyyFwRuU4qhadAAge6S114GS3Ip0I="}/
+      %input{:name => "username", :type => "text", :value => ""}/
+      tumblr
+      %strong
+        %u email
+      %br/
+      %input{:name => "password", :type => "password", :value => ""}/
+      password
+      %br/
+      %img{:src => "/images/lock.png", :style => "vertical-align:middle;"}/
+      %span{:style => "vertical-align:middle;"} your password will be encrypted.
+      %br/
+      %input{:type => "submit", :value => "Save!"}
+:javascript
+  $(document).ready(function() {
+  	$("a#tumblr_link").fancybox({});
+  });
+#my_answers
+  %table.padfix{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+    %tr
+      %td.padfix{:style => "vertical-align:top;", :width => "75%"}
+        .answer_row
+          %div
+            Anonymous said you are
+            = succeed "," do
+              %strong feo
+            = succeed "," do
+              %strong bonito
+            and
+            %strong horrible
+          #reply-1456728{:style => "display:none;padding-left:15px;"}
+            %div
+              %textarea#replybox-1456728.reply_box
+            %div
+              %button#post_button-1456728{:onclick => "post_reply(1456728)"} Post Reply
+          .answer_actions
+            %a{:href => "#", :onclick => "reply_box(1456728)"} reply
+            \· posted about 23 hours ago ·
+            %a{:href => "#", :onclick => "delete_entry(1456728);return false;"} delete
+          / <div class="respond_link"><a href="#">respond</a></div>
+        .answer_row
+          %div
+            Anonymous said you are
+            = succeed "," do
+              %strong s
+            = succeed "," do
+              %strong f
+            and
+            %strong k
+          #reply-1456685{:style => "display:none;padding-left:15px;"}
+            %div
+              %textarea#replybox-1456685.reply_box
+            %div
+              %button#post_button-1456685{:onclick => "post_reply(1456685)"} Post Reply
+          .answer_actions
+            %a{:href => "#", :onclick => "reply_box(1456685)"} reply
+            \· posted about 23 hours ago ·
+            %a{:href => "#", :onclick => "delete_entry(1456685);return false;"} delete
+          / <div class="respond_link"><a href="#">respond</a></div>
+      %td.padfix{:style => "vertical-align:top;", :width => "25%"}
+        %div{:style => "padding-left:10px;"}
+          %h3{:style => "margin-bottom:4px;"} Top words
+          %div{:style => "font-size:14px;color:rgb(156,156,156);"} feo
+          %div{:style => "font-size:14px;color:rgb(156,156,156);"} horrible
+          %div{:style => "font-size:14px;color:rgb(156,156,156);"} k
+          %div{:style => "font-size:14px;color:rgb(156,156,156);"} s
+          %div{:style => "font-size:14px;color:rgb(156,156,156);"} bonito
+          %div{:style => "font-size:14px;color:rgb(156,156,156);"} f
+#following_answers
+#facebook_answers
