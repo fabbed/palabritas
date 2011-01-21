@@ -1,0 +1,8 @@
+!="#{set_sender_name(set)} dijo que eres #{set_words(set)}"
+%br
+=#link_to "responder", ""
+
+= button_to "borrar", user_word_set_path(@user, set), :confirm => "¿Estas seguro?", :method => :delete
+
+%br
+%br

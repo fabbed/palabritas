@@ -1,6 +1,23 @@
 bei http://www.cincopreguntas.local:3000/user/1 keine angabe möglich wenn current_user der gleiche ist
 
-bei space in textfeld skip zum nächsten 
+protect user  (authentication)
 
-paperclip & settings menu-point
+facebook login
 
+todo: counter for words
+
+
+
+delete word_set
+
+
+
+time ago in words:
+http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words
+
+
+
+
+
+Später:
+reply to word set (http://ruby-toolbox.com/categories/rails_comments.html)

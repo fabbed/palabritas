@@ -1,7 +1,7 @@
 #loginout
   -if user_signed_in?
     ¡hola
-    =link_to(current_user.username, user_path(current_user))
+    =link_to(current_user.username, show_user_path(current_user.username))
     !&nbsp;&nbsp;&nbsp;
 
     =link_to "início", user_root_path

@@ -4,7 +4,11 @@
     %title 5palabritas.com - TODO
     = stylesheet_link_tag "screen"
     = stylesheet_link_tag "own/threewords"    
-    = javascript_include_tag :defaults
+    = javascript_include_tag "jquery.js"
+    = javascript_include_tag "rails.js"
+    = javascript_include_tag "jquery.validate.min.js"
+    
+    
     = csrf_meta_tag
   %body{ :id => @body_id || controller.controller_name }
     .container_24
@@ -18,5 +22,6 @@
             = render :partial => 'shared/footer'
     
         =# render "/tracking/google_analytics_tracking_code.html.erb"
-        =# yield :javascript
+    
+    = yield :javascript
     
