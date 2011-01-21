@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110120165155) do
+ActiveRecord::Schema.define(:version => 20110121124300) do
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                  :default => "",   :null => false
-    t.string   "encrypted_password",      :limit => 128, :default => "",   :null => false
-    t.string   "password_salt",                          :default => "",   :null => false
+    t.string   "email",                                  :default => "",        :null => false
+    t.string   "encrypted_password",      :limit => 128, :default => "",        :null => false
+    t.string   "password_salt",                          :default => "",        :null => false
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(:version => 20110120165155) do
     t.string   "background_content_type"
     t.integer  "background_file_size"
     t.boolean  "profile_public",                         :default => true
+    t.string   "auth_type",                              :default => "sign_up"
+    t.integer  "fb_uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

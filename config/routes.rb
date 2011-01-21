@@ -1,4 +1,5 @@
 CincopalabritasCom::Application.routes.draw do
+
   get "word_set/destroy"
 
   get "home/index"
@@ -18,6 +19,10 @@ CincopalabritasCom::Application.routes.draw do
 
   root :to => "home#index"
 
+  resources :authentications
+  match '/auth/:provider/callback' => 'authentications#create'
+  
+    
   resources :user do
     resources :word_sets
     member do

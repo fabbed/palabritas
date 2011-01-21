@@ -1,5 +1,7 @@
 #dashboard
   %h1.green Comparte este enlace con tus amigos para que te respondan
+  
+  =link_to "Compartir en facebook", "http://www.facebook.com/sharer.php?u=" + HOST + current_user.username + "&t=Describe #{current_user.username}", :class => "fb_share_link", :onlick => "return fbs_click()", :rel => "nofollow"
 
   =text_field_tag "username", HOST + current_user.username, :readonly => true
 

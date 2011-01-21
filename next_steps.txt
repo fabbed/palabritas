@@ -1,3 +1,16 @@
+wenn über facebook dann auth_type facebook setzten
+email von facebook übernehmen, username auch, permalink auch
+brauch kein passwort beim erzeugen
+beim nächsten mal bestehenden usert finden und einloggen
+
+
+
+
+
+
+
+
+
 bei http://www.cincopreguntas.local:3000/user/1 keine angabe möglich wenn current_user der gleiche ist
 
 protect user  (authentication)

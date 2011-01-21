@@ -5,11 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :display_name, :words_attributes, :avatar, :background, :delete_photo_avatar, :delete_photo_background, :profile_public
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :display_name, :words_attributes, :avatar, :background, :delete_photo_avatar, :delete_photo_background, :profile_public, :fb_uid, :auth_type
   
   has_many :word_sets, :foreign_key => :receiver_id
   has_many :words, :through => :word_sets
-
 
   has_many :received_word_sets, :class_name => :word_sets, :foreign_key => :receiver_id
   has_many :sent_word_sets, :class_name => :word_sets, :foreign_key => :sender_id

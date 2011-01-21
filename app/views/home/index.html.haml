@@ -9,6 +9,8 @@
   %h3{:style => "text-align:center;width:400px;margin:auto;margin-bottom:20px;line-height:22px;"}
     3palabritas es una página para que tus amigos te describan en 3 palabras. Inténtalo. ¡Es muy fácil! 
 
+  =link_to "login with facebook", "/auth/facebook"
+
   = form_for(@user, :url => registration_path(@user)) do |f|
     %p
       = f.label :display_name, "Escribe tu nombre"

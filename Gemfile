@@ -7,11 +7,8 @@ gem 'haml'
 gem 'compass-colors'
 gem "omniauth"
 
-
 gem 'compass-960-plugin'
 gem 'compass'
-
-
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
