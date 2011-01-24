@@ -43,16 +43,11 @@ input {
   border: solid 1px red;
 }
 
-/* line 29, ../../../app/stylesheets/own/home.sass */
-#background {
-  background: url("/images/home_background.jpg") 0 0 repeat-y;
-}
-
-/* line 33, ../../../app/stylesheets/own/home.sass */
+/* line 30, ../../../app/stylesheets/own/home.sass */
 #sign_up #logo, #login #logo {
   padding-top: 30px;
 }
-/* line 35, ../../../app/stylesheets/own/home.sass */
+/* line 32, ../../../app/stylesheets/own/home.sass */
 #sign_up h1, #login h1 {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -61,24 +56,24 @@ input {
   line-height: 45px;
   font-weight: bold;
 }
-/* line 42, ../../../app/stylesheets/own/home.sass */
+/* line 39, ../../../app/stylesheets/own/home.sass */
 #sign_up h2, #login h2 {
   color: white;
   line-height: 25px;
   margin-bottom: 15px;
 }
-/* line 46, ../../../app/stylesheets/own/home.sass */
+/* line 43, ../../../app/stylesheets/own/home.sass */
 #sign_up #es_gratis_label, #login #es_gratis_label {
   margin: 130px 0px 0px 122px;
 }
-/* line 48, ../../../app/stylesheets/own/home.sass */
+/* line 45, ../../../app/stylesheets/own/home.sass */
 #sign_up #slogan_below_form, #login #slogan_below_form {
   color: white;
   margin: 35px 0px 0px 25px;
   font-weight: normal;
   font-size: 16px;
 }
-/* line 54, ../../../app/stylesheets/own/home.sass */
+/* line 51, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields, #login #register_fields {
   z-index: 1;
   float: left;
@@ -87,29 +82,29 @@ input {
   height: 533px;
   margin-top: -55px;
 }
-/* line 61, ../../../app/stylesheets/own/home.sass */
+/* line 58, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form, #login #register_fields form {
   padding: 85px 0px 0px 135px;
   font-weight: bold;
   width: 240px;
 }
-/* line 65, ../../../app/stylesheets/own/home.sass */
+/* line 62, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form span, #login #register_fields form span {
   display: block;
   margin-bottom: 0px;
   height: 80px;
 }
-/* line 69, ../../../app/stylesheets/own/home.sass */
+/* line 66, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form #btn_registrate, #login #register_fields form #btn_registrate {
   margin-left: -5px;
 }
-/* line 72, ../../../app/stylesheets/own/home.sass */
+/* line 69, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form #user_username, #login #register_fields form #user_username {
   padding-left: 107px;
   width: 143px;
   background: url("/images/username_prevalue.png") 0 8px no-repeat;
 }
-/* line 76, ../../../app/stylesheets/own/home.sass */
+/* line 73, ../../../app/stylesheets/own/home.sass */
 #sign_up #introduction, #login #introduction {
   float: left;
   width: 405px;

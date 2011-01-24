@@ -1,46 +1,46 @@
 /* line 1, ../../../app/stylesheets/own/own.sass */
 body {
-  background-color: #ff3300;
+  background: #ff3300 url("/images/body_background.jpg") top center no-repeat;
 }
 
-/* line 4, ../../../app/stylesheets/own/own.sass */
+/* line 5, ../../../app/stylesheets/own/own.sass */
 #loginout {
   float: right;
 }
 
-/* line 9, ../../../app/stylesheets/own/own.sass */
+/* line 10, ../../../app/stylesheets/own/own.sass */
 #user #dashboard input#username {
   width: 800px;
   border: 1px solid #bbbbbb;
   font-size: 20pt;
   padding: 8px;
 }
-/* line 15, ../../../app/stylesheets/own/own.sass */
+/* line 16, ../../../app/stylesheets/own/own.sass */
 #user #avatar img {
   background-color: white;
   padding: 3px;
 }
 
-/* line 19, ../../../app/stylesheets/own/own.sass */
+/* line 20, ../../../app/stylesheets/own/own.sass */
 h1.green {
   margin-bottom: 0.2em;
   font-size: 40px;
   color: #5d9e1b;
 }
 
-/* line 23, ../../../app/stylesheets/own/own.sass */
+/* line 24, ../../../app/stylesheets/own/own.sass */
 h2 {
   font-size: 22px;
   margin-bottom: 0.2em;
 }
 
-/* line 30, ../../../app/stylesheets/own/own.sass */
+/* line 31, ../../../app/stylesheets/own/own.sass */
 #user #show .word_field {
   width: 150px;
   height: 20px;
   font-size: 15px;
 }
-/* line 34, ../../../app/stylesheets/own/own.sass */
+/* line 35, ../../../app/stylesheets/own/own.sass */
 #user #show #user_note {
   width: 350px;
   height: 80px;
