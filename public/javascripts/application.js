@@ -34,32 +34,32 @@ $(document).ready(function() {
     rules: {
       "user[display_name]": {required: true, maxlength: 30,  minlength: 4},
       "user[email]": {required: true, email: true},
-      "user[username]": {required: true, maxlength: 20,  minlength: 4, remote:"user/validate_form_data"},
+      "user[username]": {required: true, maxlength: 20,  minlength: 4, remote:"/user/validate_form_data"},
       "user[password]": {required: true, maxlength: 15,  minlength: 4}
     },
-		messages: {
-			"user[display_name]": {
-				required: I18n.t("activerecord.errors.models.user.attributes.display_name.blank"),
-				minlength: I18n.t("activerecord.errors.models.user.attributes.display_name.too_short"),
-				maxlength: I18n.t("activerecord.errors.models.user.attributes.display_name.too_long"),
-			},
-			"user[email]": {
-				required: I18n.t("activerecord.errors.models.user.attributes.email.blank"),
-			},
-			"user[username]": {
-				required: I18n.t("activerecord.errors.models.user.attributes.username.blank"),
-				minlength: I18n.t("activerecord.errors.models.user.attributes.username.too_short"),
-				maxlength: I18n.t("activerecord.errors.models.user.attributes.username.too_long"),
-				remote: I18n.t("activerecord.errors.models.user.attributes.username.taken"),
-			},
-			"user[password]": {
-				required: I18n.t("activerecord.errors.models.user.attributes.password.blank"),
-				minlength: I18n.t("activerecord.errors.models.user.attributes.password.too_short"),
-				maxlength: I18n.t("activerecord.errors.models.user.attributes.password.too_long"),
-			},
-			email: "Por favor pon un email valido"
-		},
-		
+    messages: {
+      "user[display_name]": {
+        required: I18n.t("activerecord.errors.models.user.attributes.display_name.blank"),
+        minlength: I18n.t("activerecord.errors.models.user.attributes.display_name.too_short"),
+        maxlength: I18n.t("activerecord.errors.models.user.attributes.display_name.too_long"),
+      },
+      "user[email]": {
+        required: I18n.t("activerecord.errors.models.user.attributes.email.blank"),
+      },
+      "user[username]": {
+        required: I18n.t("activerecord.errors.models.user.attributes.username.blank"),
+        minlength: I18n.t("activerecord.errors.models.user.attributes.username.too_short"),
+        maxlength: I18n.t("activerecord.errors.models.user.attributes.username.too_long"),
+        remote: I18n.t("activerecord.errors.models.user.attributes.username.taken"),
+      },
+      "user[password]": {
+        required: I18n.t("activerecord.errors.models.user.attributes.password.blank"),
+        minlength: I18n.t("activerecord.errors.models.user.attributes.password.too_short"),
+        maxlength: I18n.t("activerecord.errors.models.user.attributes.password.too_long"),
+      },
+      email: "Por favor pon un email valido"
+    },
+    
     errorElement: "div",
     errorClass: "formError"
     
