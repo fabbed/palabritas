@@ -1,22 +1,23 @@
 #loginout
-  -if user_signed_in?
-    ¡hola
-    =link_to(current_user.username, show_user_path(current_user.username))
-    !&nbsp;&nbsp;&nbsp;
+  #text_links
+    -if user_signed_in?
+      ¡hola
+      =link_to(current_user.username, show_user_path(current_user.username))
+      !&nbsp;&nbsp;&nbsp;
 
-    =link_to "início", user_root_path
-    \/
+      =link_to "início", user_root_path
+      \/
 
-  -if user_signed_in?
-    = link_to("respuestas", user_root_path)
-    \/
-    = link_to("ajustes", edit_user_path(@user))
-    \/    
-    = link_to("cerrar sessión", destroy_user_session_path)
+    -if user_signed_in?
+      = link_to("respuestas", user_root_path)
+      \/
+      = link_to("ajustes", edit_user_path(@user))
+      \/    
+      = link_to("cerrar sessión", destroy_user_session_path)
 
-  -else
-    =link_to "entrar", new_user_session_path
-    \/
-    =link_to "regístrate", new_user_registration_path
+    -else
+      =link_to "entrar", new_user_session_path
 
-%a#header_real{:href => "/"}
+
+  -if !user_signed_in?
+    =link_to image_tag("btn_registrate.png"), new_user_registration_path, :style => "float: left;"

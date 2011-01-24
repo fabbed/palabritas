@@ -1,0 +1,7 @@
+/* line 1, ../../../app/stylesheets/own/footer.sass */
+#footer {
+  margin-top: 150px;
+  margin-bottom: 100px;
+  color: white;
+  float: right;
+}

@@ -1,7 +1,6 @@
 class UserController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:show, :update]
-  
+  before_filter :authenticate_user!, :except => [:show, :update, :validate_form_data]
 
   def show
     @user = User.find_by_username(params[:username])
@@ -21,6 +20,26 @@ class UserController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+  end
+
+
+  def validate_form_data
+    case params[:user].keys[0]
+      when "username"
+        if User.find_by_username(params[:user][:username])
+          return_value = false
+        else
+          return_value = true
+        end
+      when "email"
+        if User.find_by_email(params[:user][:email])
+          return_value = false
+        else
+          return_value = true
+        end
+    end
+      
+    render :text => return_value
   end
 
 end

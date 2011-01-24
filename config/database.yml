@@ -13,7 +13,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: cincopalabritas.com
+  database: cincopalabritas
   username: root
   password: red098
   host: localhost
@@ -22,7 +22,7 @@ development:
 production:
   adapter: mysql2
   encoding: utf8
-  database: cincopalabritas.com
+  database: cincopalabritas
   username: root
   password: 
   host: localhost

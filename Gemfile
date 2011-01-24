@@ -6,6 +6,9 @@ gem 'mysql2', '0.2.6'
 gem 'haml'
 gem 'compass-colors'
 gem "omniauth"
+gem "dynamic_form"
+gem "i18n-js"
+
 
 gem 'compass-960-plugin'
 gem 'compass'

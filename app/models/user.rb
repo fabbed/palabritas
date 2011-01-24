@@ -14,6 +14,16 @@ class User < ActiveRecord::Base
   has_many :sent_word_sets, :class_name => :word_sets, :foreign_key => :sender_id
 
 
+  validates_presence_of :display_name
+  validates_presence_of :email
+  validates_presence_of :username
+  validates_uniqueness_of :username
+  validates_length_of :display_name, :within => 4..30
+  validates_length_of :username, :within => 4..20
+  validates_length_of :password, :within => 4..15
+  
+  #TODO: Other validations
+
   before_validation :clear_photo
 
   has_attached_file :avatar,

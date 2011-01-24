@@ -30,6 +30,10 @@ CincopalabritasCom::Application.routes.draw do
       get :find_friends
       get :settings
     end
+
+    collection do
+      get :validate_form_data
+    end
     
   end
 

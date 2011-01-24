@@ -1,0 +1,23 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            display_name:
+              blank: "Por favor pon un nombre"
+              too_short: "El nombre debe tener 4 letras minimo"
+              too_long: "El nombre no debe tener mas que 30 letras"
+            email:
+              invalid: "Este email no es valido"
+              blank: "Por favor pon tu email"
+            password:
+              blank: "Por favor elige una contraseña"
+              too_short: "La contraseña debe tener 4 letras minimo"
+              too_long: "La contraseña no debe tener mas que 15 letras"
+            username:
+              too_short: "Tu nombre de usuario debe tener 4 letras minimo"
+              too_long: "Tu nombre de usuario no debe tener mas que 20 letras"
+              taken: "Este nombre de usuario ya esta tomado, elige otro"
+              blank: "Tienes que especificar un nombre de usuario"
+  

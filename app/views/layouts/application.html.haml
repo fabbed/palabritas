@@ -3,23 +3,31 @@
   %head
     %title 5palabritas.com - TODO
     = stylesheet_link_tag "screen"
-    = stylesheet_link_tag "own/threewords"    
+    =# stylesheet_link_tag "own/threewords"    
     = javascript_include_tag "jquery.js"
     = javascript_include_tag "rails.js"
     = javascript_include_tag "jquery.validate.min.js"
-    
+    = javascript_include_tag "application.js"    
+    = javascript_include_tag "i18n.js"
+    = javascript_include_tag "translations.js"    
     
     = csrf_meta_tag
   %body{ :id => @body_id || controller.controller_name }
+    :javascript
+      I18n.defaultLocale = "#{I18n.default_locale}";
+      I18n.locale = "#{I18n.locale}";
+
     .container_24
-      .grid_24
+      .grid_24#background
         .constraint
           #header
             = render :partial => 'shared/header'
           =yield
+        .clear
         #footer
           .constraint
             = render :partial => 'shared/footer'
+        
     
         =# render "/tracking/google_analytics_tracking_code.html.erb"
     

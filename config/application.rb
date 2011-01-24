@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
+I18n.default_locale = "es"
+I18n.locale = "es"
+
+
 module CincopalabritasCom
   class Application < Rails::Application
     # Added by the Rails 3 jQuery Template
