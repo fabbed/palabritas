@@ -1,5 +1,14 @@
 module ApplicationHelper
 
+
+  def get_user_avatar_or_facebook_profile_picture
+    
+    
+    
+    
+    
+  end
+
   def set_sender_name(set)
     return "Anonimo" unless set.sender_id
     return link_to set.sender.display_name, user_path(set.sender)

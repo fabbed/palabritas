@@ -1,67 +1,68 @@
-#show
-  %h1 Describeme en 5 palabras!
-  -if @user.background.exists?
-    :css
-      body {
-        background-image: url(#{@user.background.url(:small)});
-        background-position: center top;
-      }
+.grid_24
+  #show
+    %h1 Describeme en 5 palabras!
+    -if @user.background.exists?
+      :css
+        body {
+          background-image: url(#{@user.background.url(:small)});
+          background-position: center top;
+        }
 
 
-  #avatar
-    -if @user.avatar.exists?
-      = image_tag @user.avatar.url(:thumb)
-    =@user.display_name
+    #avatar
+      -if @user.avatar.exists?
+        = image_tag @user.avatar.url(:thumb)
+      =@user.display_name
 
 
-  =form_for [@user, @word_set], :html => {:id => "word_set_form"}, :method => :post do |words_form|
-    = words_form.fields_for :words do |words_fields|
-      =words_fields.text_field :word_1, :class => "word_field"
-      =words_fields.text_field :word_2, :class => "word_field"
-      =words_fields.text_field :word_3, :class => "word_field"
-      =words_fields.text_field :word_4, :class => "word_field"
-      =words_fields.text_field :word_5, :class => "word_field"
+    =form_for [@user, @word_set], :html => {:id => "word_set_form"}, :method => :post do |words_form|
+      = words_form.fields_for :words do |words_fields|
+        =words_fields.text_field :word_1, :class => "word_field"
+        =words_fields.text_field :word_2, :class => "word_field"
+        =words_fields.text_field :word_3, :class => "word_field"
+        =words_fields.text_field :word_4, :class => "word_field"
+        =words_fields.text_field :word_5, :class => "word_field"
+
+      %br
+      %span#add_note_to_words ¿Añadir una nota con tus palabritas?
+      .hidden_content#note
+        = text_area_tag "user[note]"
+
+      =submit_tag "Enviar"
 
     %br
-    %span#add_note_to_words ¿Añadir una nota con tus palabritas?
-    .hidden_content#note
-      = text_area_tag "user[note]"
-
-    =submit_tag "Enviar"
-
-  %br
-  #words_said
-    -@user.word_sets.reverse.each do |set|
-      =render :partial => "words/word_set_for_show", :locals => {:set => set}
+    #words_said
+      -@user.word_sets.reverse.each do |set|
+        =render :partial => "words/word_set_for_show", :locals => {:set => set}
 
 
--content_for :javascript do
-  :javascript
-    $(".word_field")[0].focus();
-    $(".word_field").keypress(function(event) {
-      if (event.which == '32') {
-         event.preventDefault();
-         $(this).next(".word_field").focus();
-       }
-    });
+  -content_for :javascript do
+    :javascript
+      $(".word_field")[0].focus();
+      $(".word_field").keypress(function(event) {
+        if (event.which == '32') {
+           event.preventDefault();
+           $(this).next(".word_field").focus();
+         }
+      });
 
-    $("#add_note_to_words").click(function(event) {
+      $("#add_note_to_words").click(function(event) {
 
-      if ($("#note").css("display") == "block"){
-        $("#user_note").val("");
-      }
+        if ($("#note").css("display") == "block"){
+          $("#user_note").val("");
+        }
 
-      $("#note").slideToggle();
-    });
+        $("#note").slideToggle();
+      });
 
 
-    $("#word_set_form").validate({
-      rules: {
-        "word_set[words][word_1]": {required: true, maxlength: 20,  minlength: 3},
-        "word_set[words][word_2]": {required: true, maxlength: 20,  minlength: 3},
-        "word_set[words][word_3]": {required: true, maxlength: 20,  minlength: 3},
-        "word_set[words][word_4]": {required: false, maxlength: 20,  minlength: 3},
-        "word_set[words][word_5]": {required: false, maxlength: 20,  minlength: 3},
-        "word_set[note]": {required: false, maxlength: 200,  minlength: 5}
-      }
-    });
+      $("#word_set_form").validate({
+        rules: {
+          "word_set[words][word_1]": {required: true, maxlength: 20,  minlength: 3},
+          "word_set[words][word_2]": {required: true, maxlength: 20,  minlength: 3},
+          "word_set[words][word_3]": {required: true, maxlength: 20,  minlength: 3},
+          "word_set[words][word_4]": {required: false, maxlength: 20,  minlength: 3},
+          "word_set[words][word_5]": {required: false, maxlength: 20,  minlength: 3},
+          "word_set[note]": {required: false, maxlength: 200,  minlength: 5}
+        }
+      });

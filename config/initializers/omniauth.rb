@@ -1,7 +1,8 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   # provider :facebook, '122533867816948', '9c64f15c3a2837e17e993208466b8188' #this is for live
   
-  provider :facebook, '187624934590653', '24a3d96f7b207f7aebbbde8bf6d08a04' #this is for http://www.cincopreguntas.local:3000/
+  provider :facebook, '187624934590653', '24a3d96f7b207f7aebbbde8bf6d08a04', {:scope => 'publish_stream'} #this is for http://www.cincopreguntas.local:3000/
+  
   
   
   

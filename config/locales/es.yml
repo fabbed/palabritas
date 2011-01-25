@@ -20,13 +20,9 @@ es:
               too_long: "Tu nombre de usuario no debe tener mas que 20 letras"
               taken: "Este nombre de usuario ya esta tomado, elige otro"
               blank: "Tienes que especificar un nombre de usuario"
-  
-  errors:
-    messages:
-      not_found: "not found"
-      already_confirmed: "was already confirmed"
-      not_locked: "was not locked"
-
+      login:
+        password:
+          blank: "Por favor, pon tu contraseña"
   devise:
     failure:
       unauthenticated: 'You need to sign in or sign up before continuing.'
@@ -36,3 +32,29 @@ es:
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'Your account was not activated yet.'
+
+  devise:
+    registrations:
+        new:
+          nombre: "Escribe tu nombre"
+          email: "Email"
+          username: "Nombre de usuario"
+          password: "Contraseña"
+          slogan_below_form: "Obtén tu propio 5palabritas.com totalmente gratis! "
+          title: "Sólo 5 palabras acerca de ti."
+          subtitle: "5palabritas.com te regala una página <br/> donde tus amigos pueden describirte en <br/> tan sólo 5 palabras."
+  shared:
+    header:
+      hola_username: "¡hola %{link}"
+      home: "início"
+      answers: "respuestas"
+      settings: "ajustes"
+      close_session: "cerrar sessión"
+      login: "entrar"
+  
+  
+  user:
+    dashboard:
+      share_link_call_to_action: "Comparte este enlace con tus amigos para que te respondan"
+      your_answers: "Tus respuestas"
+      share_in_facebook: "Compartir en facebook"

@@ -1,27 +1,42 @@
-#dashboard
-  %h1.green Comparte este enlace con tus amigos para que te respondan
+.grid_24.alpha.omega{:style => "width: 960px"}
+  #top_section
+    #content
+      %p#share_link Comparte este link con tus amigos para tener respuestas:
+      =image_tag "arrow_left.gif", :id => "arrow_left"
+      =text_field_tag "username", HOST + current_user.username, :readonly => true
+      
+      =button_to "share on facebook", share_on_wall_user_index_path
+      
+      #avatar=image_tag @user.avatar.url(:thumb)
+  #main_section
+    %br
+    %br
+    
+    
+    
+    %h1.green=t(".share_link_call_to_action")
   
-  =link_to "Compartir en facebook", "http://www.facebook.com/sharer.php?u=" + HOST + current_user.username + "&t=Describe #{current_user.username}", :class => "fb_share_link", :onlick => "return fbs_click()", :rel => "nofollow"
+    -text = "Describe " + current_user.username.gsub(/\'/,"")
+    =link_to t(".share_in_facebook"), "#", :name => "fb_share", :onclick => "fbshare('#{HOST+current_user.username}', '#{text}'); return false;"
 
-  =text_field_tag "username", HOST + current_user.username, :readonly => true
+    
+
+    %br
+    %div{:style => "border-bottom:1px solid #CCCCCC;"}
+    %a#youranswers.selected_tab{:href => "#", :onclick => "select_answers()"}=t(".your_answers")
+
+
 
   %br
-  %div{:style => "border-bottom:1px solid #CCCCCC;"}
-  %a#youranswers.selected_tab{:href => "#", :onclick => "select_answers()"} Tus respuestas
+  #words_said
+    -current_user.word_sets.reverse.each do |set|
+      =render :partial => "words/word_set_for_dashboard", :locals => {:set => set}
 
 
-%br
-#words_said
-  -current_user.word_sets.reverse.each do |set|
-    =render :partial => "words/word_set_for_dashboard", :locals => {:set => set}
-
-
-
-
--content_for :javascript do
-  :javascript
-    $("#username").click(function(event) {
-      $(this).select();
-    });
+  -content_for :javascript do
+    :javascript
+      $("#username, #arrow_left").click(function(event) {
+        $(this).select();
+      });
 
 

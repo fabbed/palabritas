@@ -1,35 +1,18 @@
-wenn über facebook dann auth_type facebook setzten
-email von facebook übernehmen, username auch, permalink auch
-brauch kein passwort beim erzeugen
-beim nächsten mal bestehenden usert finden und einloggen
-
-
-
-
-
-
-
-
-
-bei http://www.cincopreguntas.local:3000/user/1 keine angabe möglich wenn current_user der gleiche ist
-
 protect user  (authentication)
 
-facebook login
-
 todo: counter for words
-
-
-
-delete word_set
-
-
 
 time ago in words:
 http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words
 
 
+texte aus den controllern in i18n
+freiwilliges sharen auf Facebook
 
+
+
+images to .gitignore
+styling dashboard
 
 
 Später:

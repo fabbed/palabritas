@@ -8,7 +8,8 @@ gem 'compass-colors'
 gem "omniauth"
 gem "dynamic_form"
 gem "i18n-js"
-
+gem "fb_graph"
+gem "mechanize"
 
 gem 'compass-960-plugin'
 gem 'compass'

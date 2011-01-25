@@ -8,6 +8,8 @@ class UserController < ApplicationController
   end
   
   def dashboard
+    @fb_user = FbGraph::User.me(current_user.last_access_token).fetch
+    
     @user = current_user
   end
   
@@ -21,6 +23,20 @@ class UserController < ApplicationController
   def edit
     @user = User.find(params[:id])
   end
+
+
+  def share_on_wall
+    fb_user = FbGraph::User.me(current_user.last_access_token).fetch
+    
+    fb_user.feed!(
+      :message => 'Como me describerias en 5 palabras?',
+      :picture => HOST+current_user.avatar.url(:thumb, ),
+      :link => HOST + current_user.username,
+      :name => 'FbGraph',
+      :description => 'Describe me en 5palabritas.com'
+    )
+  end
+
 
 
   def validate_form_data

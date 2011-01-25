@@ -1,0 +1,56 @@
+/* line 3, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section {
+  margin-top: 100px;
+  background: #ff3300 url("/images/dashboard_content_section_top.png") top center no-repeat;
+  height: 210px;
+}
+/* line 7, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #avatar {
+  float: right;
+  margin-top: -25px;
+  margin-right: 10px;
+}
+/* line 11, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #content {
+  padding: 20px;
+}
+/* line 12, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #content p#share_link {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+/* line 17, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard input#username {
+  width: 700px;
+  border: 1px solid #bbbbbb;
+  font-size: 20pt;
+  padding: 8px;
+}
+/* line 23, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #avatar img {
+  background-color: white;
+  padding: 3px;
+}
+/* line 28, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section {
+  background: #ff3300 url("/images/dashboard_content_section_main.png") top center repeat-y;
+}
+/* line 31, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #header {
+  position: absolute;
+  top: 0px;
+  margin-left: 545px;
+  color: white;
+}
+/* line 36, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #header a {
+  color: #ff6600;
+}
+/* line 39, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #header_background {
+  background-color: black;
+  opacity: 0.58;
+  height: 40px;
+  z-index: 1;
+}

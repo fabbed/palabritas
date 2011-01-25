@@ -1,23 +1,24 @@
-#edit
-  %h1 Tus Ajustes
-  - form_for @user, :html => { :multipart => true } do |f|
-    =f.text_field :display_name
-    %br
-    =f.check_box :profile_public
-    Perfil es visible para todo el mundo
-    %br
-    -if @user.avatar.exists?
-      = image_tag @user.avatar.url(:thumb)
-    %br
-    =f.file_field :avatar
-    Borrar tu foto
-    = f.check_box(:delete_photo_avatar)
-    %br
+.grid_24
+  #edit
+    %h1 Tus Ajustes
+    - form_for @user, :html => { :multipart => true } do |f|
+      =f.text_field :display_name
+      %br
+      =f.check_box :profile_public
+      Perfil es visible para todo el mundo
+      %br
+      -if @user.avatar.exists?
+        = image_tag @user.avatar.url(:thumb)
+      %br
+      =f.file_field :avatar
+      Borrar tu foto
+      = f.check_box(:delete_photo_avatar)
+      %br
 
-    -if @user.background.exists?
-      = image_tag @user.background.url(:thumb)
-    %br
-    =f.file_field :background
-    Borrar foto de trasfondo
-    =f.check_box(:delete_photo_background)    
-    =submit_tag "Enviar"
+      -if @user.background.exists?
+        = image_tag @user.background.url(:thumb)
+      %br
+      =f.file_field :background
+      Borrar foto de trasfondo
+      =f.check_box(:delete_photo_background)    
+      =submit_tag "Enviar"

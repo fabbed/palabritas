@@ -14,40 +14,45 @@
   font-size: 14px;
 }
 
-/* line 11, ../../../app/stylesheets/own/home.sass */
+/* line 12, ../../../app/stylesheets/own/home.sass */
+input.formError {
+  color: black;
+}
+
+/* line 15, ../../../app/stylesheets/own/home.sass */
 input.text_field {
   padding: 7px;
   font-size: 14px;
   width: 240px;
 }
 
-/* line 15, ../../../app/stylesheets/own/home.sass */
+/* line 19, ../../../app/stylesheets/own/home.sass */
 label.error, .formError {
   color: red;
   line-height: 13px;
   margin-top: 3px;
 }
 
-/* line 19, ../../../app/stylesheets/own/home.sass */
+/* line 23, ../../../app/stylesheets/own/home.sass */
 input {
   color: black;
 }
 
-/* line 22, ../../../app/stylesheets/own/home.sass */
+/* line 26, ../../../app/stylesheets/own/home.sass */
 .blur {
   color: #888888;
 }
 
-/* line 26, ../../../app/stylesheets/own/home.sass */
+/* line 30, ../../../app/stylesheets/own/home.sass */
 .field_with_errors input {
   border: solid 1px red;
 }
 
-/* line 30, ../../../app/stylesheets/own/home.sass */
+/* line 34, ../../../app/stylesheets/own/home.sass */
 #sign_up #logo, #login #logo {
   padding-top: 30px;
 }
-/* line 32, ../../../app/stylesheets/own/home.sass */
+/* line 36, ../../../app/stylesheets/own/home.sass */
 #sign_up h1, #login h1 {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -56,24 +61,24 @@ input {
   line-height: 45px;
   font-weight: bold;
 }
-/* line 39, ../../../app/stylesheets/own/home.sass */
+/* line 43, ../../../app/stylesheets/own/home.sass */
 #sign_up h2, #login h2 {
   color: white;
   line-height: 25px;
   margin-bottom: 15px;
 }
-/* line 43, ../../../app/stylesheets/own/home.sass */
+/* line 47, ../../../app/stylesheets/own/home.sass */
 #sign_up #es_gratis_label, #login #es_gratis_label {
   margin: 130px 0px 0px 122px;
 }
-/* line 45, ../../../app/stylesheets/own/home.sass */
+/* line 49, ../../../app/stylesheets/own/home.sass */
 #sign_up #slogan_below_form, #login #slogan_below_form {
   color: white;
   margin: 35px 0px 0px 25px;
   font-weight: normal;
   font-size: 16px;
 }
-/* line 51, ../../../app/stylesheets/own/home.sass */
+/* line 55, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields, #login #register_fields {
   z-index: 1;
   float: left;
@@ -82,29 +87,29 @@ input {
   height: 533px;
   margin-top: -55px;
 }
-/* line 58, ../../../app/stylesheets/own/home.sass */
+/* line 62, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form, #login #register_fields form {
   padding: 85px 0px 0px 135px;
   font-weight: bold;
   width: 240px;
 }
-/* line 62, ../../../app/stylesheets/own/home.sass */
+/* line 66, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form span, #login #register_fields form span {
   display: block;
   margin-bottom: 0px;
   height: 80px;
 }
-/* line 66, ../../../app/stylesheets/own/home.sass */
+/* line 70, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form #btn_registrate, #login #register_fields form #btn_registrate {
   margin-left: -5px;
 }
-/* line 69, ../../../app/stylesheets/own/home.sass */
+/* line 73, ../../../app/stylesheets/own/home.sass */
 #sign_up #register_fields form #user_username, #login #register_fields form #user_username {
   padding-left: 107px;
   width: 143px;
   background: url("/images/username_prevalue.png") 0 8px no-repeat;
 }
-/* line 73, ../../../app/stylesheets/own/home.sass */
+/* line 77, ../../../app/stylesheets/own/home.sass */
 #sign_up #introduction, #login #introduction {
   float: left;
   width: 405px;

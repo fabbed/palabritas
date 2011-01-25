@@ -33,6 +33,7 @@ CincopalabritasCom::Application.routes.draw do
 
     collection do
       get :validate_form_data
+      post :share_on_wall
     end
     
   end

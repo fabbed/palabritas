@@ -3,8 +3,9 @@
     =image_tag "logo.png"
 
   #introduction
-    %h1 Sólo 5 palabras acerca de ti.
-    %h2 5palabritas.com te regala una página <br/> donde tus amigos pueden describirte en <br/> tan sólo 5 palabras.
+    %h1=t(".title")
+    %h2!=t(".subtitle")
+    
     =link_to(image_tag("facebook_login.png"), "/auth/facebook")
     
     =image_tag "es_gratis.png", :id => "es_gratis_label"
@@ -12,19 +13,19 @@
   #register_fields
     = form_for(@user, :url => registration_path(@user)) do |f|
       %span
-        = f.label :display_name, "Escribe tu nombre"
+        = f.label :display_name, t(".nombre")
         = f.text_field :display_name, :class => "text_field delete_when_focus"
         = f.error_message_on :display_name        
       %span
-        = f.label :email, "Email"
+        = f.label :email, t(".email")
         = f.text_field :email, :class => "text_field delete_when_focus"
         = f.error_message_on :email
       %span
-        = f.label :username, "Nombre de usuario"
+        = f.label :username, t(".username")
         = f.text_field :username, :class => "text_field"
         = f.error_message_on :username
       %span
-        = f.label :password, "Contraseña"
+        = f.label :password, t(".password")
         = f.password_field :password, :class => "text_field"
         = f.error_message_on :password
       / TODO: password_confirmation
@@ -32,4 +33,4 @@
       %span= image_submit_tag "btn_registrate_big.png", :id => "btn_registrate"
 
     .clear  
-    %p.bold#slogan_below_form Obtén tu propio 5palabritas.com totalmente gratis! 
+    %p.bold#slogan_below_form=t(".slogan_below_form")

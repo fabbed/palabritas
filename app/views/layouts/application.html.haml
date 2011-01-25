@@ -13,24 +13,19 @@
     
     = csrf_meta_tag
   %body{ :id => @body_id || controller.controller_name }
-    :javascript
-      I18n.defaultLocale = "#{I18n.default_locale}";
-      I18n.locale = "#{I18n.locale}";
-
-    .container_24
-      .grid_24
-        
-        .constraint
+    %div{ :id => @body_id || controller.action_name }
+      #header_background &nbsp;
+      .container_24
+        .grid_24.alpha.omega
           #header
             = render :partial => 'shared/header'
-          =yield
-        .clear
+
+        =yield
+
+      .grid_24.alpha
         #footer
           .constraint
             = render :partial => 'shared/footer'
-        
-    
-        =# render "/tracking/google_analytics_tracking_code.html.erb"
-    
-    = yield :javascript
-    
+
+      = yield :javascript
+  
