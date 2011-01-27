@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
   has_attached_file :background,
       :styles => {
       :thumb=> "100x100#",
-      :small  => "400x400>" }
+      :medium  => "400x400>" }
 
 
   def received_words_as_array

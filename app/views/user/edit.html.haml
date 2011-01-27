@@ -4,13 +4,13 @@
   #section_middle
     #content
       !=render_flash_in_section_head
-      %h1 Tus Ajustes
+      %h1 Configuración
       
       = render "shared/error_messages", :target => @user
       
       - form_for @user, :html => { :multipart => true } do |f|
         %p
-          = f.label :display_name, t("devise.registrations.new.nombre")
+          = f.label :display_name, "Tu nombre"
           %br
           = f.text_field :display_name, :class => "text_field delete_when_focus"
           = f.error_message_on :display_name
@@ -36,7 +36,7 @@
           %br
           -if @user.avatar.exists?
             = image_tag @user.avatar.url(:medium)
-            Borrar tu foto
+            Quitar tu foto
             = f.check_box(:delete_photo_avatar)
         %p
           = f.label :background, t(".choose_a_background")
@@ -44,16 +44,16 @@
           =f.file_field :background
           %br
           -if @user.background.exists?
-            = image_tag @user.background.url(:medium)
-            Borrar tu foto de trasfondo
+            = image_tag @user.background.url(:thumb)
+            Quitar esta foto como fondo de pantalla
             = f.check_box(:delete_photo_background)
 
         =f.check_box :profile_public
-        Respuestas visible para todo el mundo
+        Todo el mundo puede ver mis palabritas
         %br
         %br
         %br
 
-        =submit_tag "Enviar"
+        =submit_tag "Guardar"
   #section_bottom &nbsp;
   

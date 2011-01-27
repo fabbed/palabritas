@@ -5,6 +5,12 @@
       -if user_signed_in?
         !=t(".hola_username", :link => link_to(current_user.get_username, show_user_path(current_user.get_username)))+"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;"
 
+        !=link_to(t(".your_public_page"), show_user_path(current_user.get_username))
+        &nbsp;
+        \|
+        &nbsp;
+
+
       -if user_signed_in?
         = link_to(t(".answers"), user_root_path)
         &nbsp;

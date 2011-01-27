@@ -1,6 +1,6 @@
 es:
-  title_user_show: "Página publica de %{username} en 5palabritas.com"
-  user_show_meta: "Obten tu propio 5palabritas.com completamente GRATIS"
+  title_user_show: "Página pública de %{username} en 5palabritas.com"
+  user_show_meta: "Consigue tu propio 5palabritas.com completamente GRATIS"
   title_user_dashboard: "¡Comparte tu enlace con todo el mundo para recibir palabras!"
 
   standard_title: "5palabritas.com te regala una página donde tus amigos pueden describirte en tan sólo 5 palabras."
@@ -19,16 +19,16 @@ es:
               too_long: "El nombre no debe tener mas que 30 letras"
             email:
               invalid: "Este email no es valido"
-              blank: "Por favor pon tu email"
-              taken: "Este email ya esta tomada"
+              blank: "Por favor, escribe tu email"
+              taken: "Este email ya esta tomado"
             password:
-              blank: "Por favor elige una contraseña"
+              blank: "Por favor, elige una contraseña"
               too_short: "La contraseña debe tener 4 letras minimo"
               too_long: "La contraseña no debe tener mas que 15 letras"
             username:
               too_short: "Tu nombre de usuario debe tener 4 letras minimo"
               too_long: "Tu nombre de usuario no debe tener mas que 20 letras"
-              taken: "Este nombre de usuario ya esta tomado, elige otro"
+              taken: "Este usuario ya existe, elige otro"
               blank: "Tienes que especificar un nombre de usuario"
       login:
         password:
@@ -50,27 +50,28 @@ es:
           email: "Email"
           username: "Nombre de usuario"
           password: "Contraseña"
-          slogan_below_form: "Obtén tu propio 5palabritas.com totalmente gratis! "
-          title: "Sólo 5 palabras acerca de ti."
-          subtitle: "5palabritas.com te regala una página <br/> donde tus amigos pueden describirte en <br/> tan sólo 5 palabras."
+          slogan_below_form: "Consigue tu propio 5palabritas.com totalmente GRATIS! "
+          title: "¿Quieres saber cómo te describen tus amigos?"
+          subtitle: "Gracias a 5palabritas.com tus amigos pueden describirte tal como te ven en 5 palabras."
   shared:
     header:
+      your_public_page: "tu página pública"
       hola_username: "Hola, %{link}"
       home: "início"
-      answers: "tus respuestas"
-      settings: "ajustes"
-      close_session: "cerrar sessión"
+      answers: "tus palabritas"
+      settings: "configuración"
+      close_session: "cerrar sesión"
       login: "entrar"
   
   
   user:
     dashboard:
       share_link_call_to_action: "Comparte este enlace con tus amigos para que te respondan"
-      your_answers: "Tus respuestas"
+      your_answers: "Tus palabritas"
       share_in_facebook: "Compartir enlace en facebook"
     edit:
-      choose_an_avatar: "Elige un foto para ti"
-      choose_a_background: "Elige un foto para el trasfondo de tu página publica"
+      choose_an_avatar: "Elige una foto para ti"
+      choose_a_background: "Elige una foto para el fondo de pantalla de tu página pública"
   please_choose_a_username: "Por favor, elige un nombre de usuario..."
 
 

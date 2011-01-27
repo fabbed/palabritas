@@ -5,7 +5,7 @@
   #top_section.fixpng
     .content
       #share_link_field
-        %p#share_link Comparte este link con tus amigos para tener respuestas:
+        %p#share_link Comparte esta enlace con tus amigos y sabrás que opinan de ti:
         =image_tag "arrow_left.gif", :id => "arrow_left"
         =text_field_tag "username", HOST + current_user.username, :readonly => true
         =link_to t(".share_in_facebook"), "#", :name => "fb_share", :onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;", :id => "btn_share_on_facebook"
@@ -22,8 +22,17 @@
             -current_user.word_sets.reverse.each do |set|
               =render :partial => "words/word_set_for_dashboard", :locals => {:set => set}
         -else
-          %span.no_words No tienes palabritas, comparte tu enlace en facebook o en tu estado de messanger para obtener palabras
-          =link_to t(".share_in_facebook"), "#", :name => "fb_share", :onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;", :id => "btn_share_on_facebook"
+          %span.no_words No hay palabritas aún para ti, comparte tu enlace
+          %span.no_words y averiguarás lo que tus amigos piensan realmente de ti.
+          %br
+          %br          
+          %span.comparte Puedes compartir tu enlace
+          %ul
+            %li{:onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;"} en facebook
+            %li en messenger
+            %li o por email
+          
+            
           
       #sidebar
         =image_tag "tus_palabritas_top.gif"

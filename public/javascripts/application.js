@@ -6,7 +6,7 @@ function fbshare(url,title){
 }
 
 $(document).ready(function() {
-  $("#new_user #user_display_name").val("Tu nombre o lo que quieras")
+  $("#new_user #user_display_name").val("Tu nombre o apodo")
   $("#new_user #user_email").val("No te spamearemos")
   
   $('.text_field').addClass("blur");

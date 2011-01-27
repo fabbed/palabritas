@@ -31,7 +31,7 @@
   #section_top &nbsp;
   #section_middle
     #content
-      %h1="A #{@user.username} lo han descrito asi:"
+      %h1="Así describen a #{@user.username}:"
       #word_sets
         -if @user.word_sets.exists?
           -@user.word_sets.reverse.each do |set|
@@ -108,6 +108,5 @@
 -if @user.background.exists?
   :css
     body {
-      background-image: url(#{@user.background.url(:small)});
-      background-position: center top;
+      background: url(#{@user.background.url(:medium)});
     }
