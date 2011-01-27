@@ -5,6 +5,15 @@ class ApplicationController < ActionController::Base
   before_filter :redirect_to_user_settings_if_username_is_already_taken_or_empty_when_signing_up_over_facebook
 
 
+
+  def after_sign_in_path_for(resource_or_scope)
+    if resource_or_scope.is_a?(User)
+      user_root_path(resource_or_scope)
+    else
+      super
+    end
+  end
+
   private
     def export_i18n_messages
       SimplesIdeias::I18n.export! if Rails.env.development?

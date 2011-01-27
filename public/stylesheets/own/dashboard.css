@@ -22,11 +22,11 @@
 }
 /* line 18, ../../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #bottom_section {
-  background: #ff3300 url("/images/dashboard_content_section_bottom.png") top center no-repeat;
+  background: url("/images/dashboard_content_section_bottom.png") top center no-repeat;
 }
 /* line 20, ../../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #top_section {
-  background: #ff3300 url("/images/dashboard_content_section_top.png") top center no-repeat;
+  background: url("/images/dashboard_content_section_top.png") top center no-repeat;
   height: 160px;
 }
 /* line 23, ../../../app/stylesheets/own/dashboard.sass */

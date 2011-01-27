@@ -8,7 +8,7 @@
         %p#share_link Comparte esta enlace con tus amigos y sabrás que opinan de ti:
         =image_tag "arrow_left.gif", :id => "arrow_left"
         =text_field_tag "username", HOST + current_user.username, :readonly => true
-        =link_to t(".share_in_facebook"), "#", :name => "fb_share", :onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;", :id => "btn_share_on_facebook"
+        =link_to t(".share_in_facebook"), "#", :name => "fb_share", :onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;", :id => "btn_share_on_facebook", :class => "sth_with_facebook"
 
       #avatar=link_to render_avatar(current_user), edit_user_path(current_user)
       .clear
@@ -28,11 +28,9 @@
           %br          
           %span.comparte Puedes compartir tu enlace
           %ul
-            %li{:onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;"} en facebook
+            %li.sth_with_facebook{:onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;"} en facebook
             %li en messenger
             %li o por email
-          
-            
           
       #sidebar
         =image_tag "tus_palabritas_top.gif"

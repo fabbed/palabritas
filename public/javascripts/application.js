@@ -6,6 +6,8 @@ function fbshare(url,title){
 }
 
 $(document).ready(function() {
+  $('.sth_with_facebook').fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400);
+  
   $("#new_user #user_display_name").val("Tu nombre o apodo")
   $("#new_user #user_email").val("No te spamearemos")
   

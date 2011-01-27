@@ -36,7 +36,7 @@ class UserController < ApplicationController
     fb_user = FbGraph::User.me(current_user.last_access_token).fetch
     
     fb_user.feed!(
-      :message => 'Como me describerias en 5 palabras?',
+      :message => '¿Qué piensas de mi? Dímelo en 5 palabritas!',
       :picture => HOST+current_user.avatar.url(:medium),
       :link => HOST + current_user.username,
       :name => '5palabritas.com - Quieres saber que la gente piensa realmente de ti?',
