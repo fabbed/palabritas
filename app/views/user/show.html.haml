@@ -1,8 +1,12 @@
+- content_for(:title, t("title_user_show", :username => @user.username) )
+- content_for(:description, t("user_show_meta") )
+
+
 #space_to_header &nbsp;
 #show
   #introduction
     =image_tag "show_call_to_action.png", :class => "fixpng", :id => "show_call_to_action"
-    =image_tag "register_bubble.png", :class => "fixpng", :id => "register_bubble"
+    =link_to image_tag("register_bubble.png", :class => "fixpng", :id => "register_bubble"), "/"
 
     #avatar{:style => "margin-top: 297px"}
       %h1=@user.username

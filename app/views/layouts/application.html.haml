@@ -1,7 +1,9 @@
 !!!
 %html
   %head
-    %title 5palabritas.com - TODO
+    %title= yield_for(:title, t("standard_title"))
+    %meta{:name => 'description', :content => yield_for(:description, t("standard_title"))}/
+
     = stylesheet_link_tag "screen"
     =# stylesheet_link_tag "own/threewords"    
     = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"
