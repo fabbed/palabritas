@@ -1,0 +1,107 @@
+es:
+  activerecord:
+    errors:
+      words:
+        blank: "Por favor pon por lo menos 3 palabras"
+        too_short: "Una palabra debe tener por lo menos 3 letras"
+        too_long: "Una palabra debe tener mas que 25 letras"
+      models:
+        user:
+          attributes:
+            display_name:
+              blank: "Por favor pon un nombre"
+              too_short: "El nombre debe tener 4 letras minimo"
+              too_long: "El nombre no debe tener mas que 30 letras"
+            email:
+              invalid: "Este email no es valido"
+              blank: "Por favor pon tu email"
+              taken: "Este email ya esta tomada"
+            password:
+              blank: "Por favor elige una contraseña"
+              too_short: "La contraseña debe tener 4 letras minimo"
+              too_long: "La contraseña no debe tener mas que 15 letras"
+            username:
+              too_short: "Tu nombre de usuario debe tener 4 letras minimo"
+              too_long: "Tu nombre de usuario no debe tener mas que 20 letras"
+              taken: "Este nombre de usuario ya esta tomado, elige otro"
+              blank: "Tienes que especificar un nombre de usuario"
+      login:
+        password:
+          blank: "Por favor, pon tu contraseña"
+  devise:
+    failure:
+      unauthenticated: 'Tienes que entrar antes que accesear tus respuestas.'
+      unconfirmed: 'You have to confirm your account before continuing.'
+      locked: 'Your account is locked.'
+      invalid: 'Este email con esa contraseña no es valido'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Your session expired, please sign in again to continue.'
+      inactive: 'Your account was not activated yet.'
+
+  devise:
+    registrations:
+        new:
+          nombre: "Escribe tu nombre"
+          email: "Email"
+          username: "Nombre de usuario"
+          password: "Contraseña"
+          slogan_below_form: "Obtén tu propio 5palabritas.com totalmente gratis! "
+          title: "Sólo 5 palabras acerca de ti."
+          subtitle: "5palabritas.com te regala una página <br/> donde tus amigos pueden describirte en <br/> tan sólo 5 palabras."
+  shared:
+    header:
+      hola_username: "Hola, %{link}"
+      home: "início"
+      answers: "tus respuestas"
+      settings: "ajustes"
+      close_session: "cerrar sessión"
+      login: "entrar"
+  
+  
+  user:
+    dashboard:
+      share_link_call_to_action: "Comparte este enlace con tus amigos para que te respondan"
+      your_answers: "Tus respuestas"
+      share_in_facebook: "Compartir enlace en facebook"
+    edit:
+      choose_an_avatar: "Elige un foto para ti"
+      choose_a_background: "Elige un foto para el trasfondo de tu página publica"
+  please_choose_a_username: "Por favor, elige un nombre de usuario..."
+
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "medio minuto"
+      less_than_x_seconds:
+        one: "menos de 1 segundo"
+        other: "menos de %{count} segundos"
+      x_seconds:
+        one: "1 segundo"
+        other: "%{count} segundos"
+      less_than_x_minutes:
+        one: "menos de 1 minuto"
+        other: "menos de %{count} minutos"
+      x_minutes:
+        one: "1 minuto"
+        other: "%{count} minutos"
+      about_x_hours:
+        one: "cerca de 1 hora"
+        other: "cerca de %{count} horas"
+      x_days:
+        one: "1 día"
+        other: "%{count} días"
+      about_x_months:
+        one: "cerca de 1 mes"
+        other: "cerca de %{count} meses"
+      x_months:
+        one: "1 mes"
+        other: "%{count} meses"
+      about_x_years:
+        other: "cerca de %{count} años"
+        one: "cerca de 1 año"
+      over_x_years:
+        one: "más de 1 año"
+        other: "más de %{count} años"
+      almost_x_years:
+        one: "casi 1 año"
+        other: "casi %{count} años"

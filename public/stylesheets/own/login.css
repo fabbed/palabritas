@@ -1,0 +1,13 @@
+/* line 1, ../../../app/stylesheets/own/login.sass */
+#flash_alert_in_form {
+  color: red;
+}
+
+/* line 5, ../../../app/stylesheets/own/login.sass */
+#login h2 {
+  font-size: 28px;
+}
+/* line 7, ../../../app/stylesheets/own/login.sass */
+#login #introduction {
+  width: 300px;
+}

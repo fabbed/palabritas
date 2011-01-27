@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  word_set_id: 1
+  word_id: 1
+  position: 1
+
+two:
+  word_set_id: 1
+  word_id: 1
+  position: 1

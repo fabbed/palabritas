@@ -1,0 +1,36 @@
+#sign_up
+  #logo.fix_png
+    =link_to image_tag("logo.png", :class => "fixpng"), root_path
+
+  #introduction
+    %h1=t(".title")
+    %h2!=t(".subtitle")
+    
+    =link_to(image_tag("facebook_login.png"), "/auth/facebook")
+    
+    =image_tag "es_gratis.png", :id => "es_gratis_label", :class => "fixpng"
+
+  #register_fields
+    = form_for(@user, :url => registration_path(@user)) do |f|
+      %span
+        = f.label :display_name, t(".nombre")
+        = f.text_field :display_name, :class => "text_field delete_when_focus"
+        = f.error_message_on :display_name        
+      %span
+        = f.label :email, t(".email")
+        = f.text_field :email, :class => "text_field delete_when_focus"
+        = f.error_message_on :email
+      %span
+        = f.label :username, t(".username")
+        = f.text_field :username, :class => "text_field"
+        = f.error_message_on :username
+      %span
+        = f.label :password, t(".password")
+        = f.password_field :password, :class => "text_field"
+        = f.error_message_on :password
+      / TODO: password_confirmation
+      .clear
+      %span= image_submit_tag "btn_registrate_big.png", :id => "btn_registrate"
+
+    .clear  
+    %p.bold#slogan_below_form=t(".slogan_below_form")

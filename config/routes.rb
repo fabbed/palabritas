@@ -1,4 +1,7 @@
 CincopalabritasCom::Application.routes.draw do
+
+  get "word_set/destroy"
+
   get "home/index"
 
   devise_for :users
@@ -16,18 +19,28 @@ CincopalabritasCom::Application.routes.draw do
 
   root :to => "home#index"
 
+  resources :authentications
+  match '/auth/:provider/callback' => 'authentications#create'
+  
+    
   resources :user do
+    resources :word_sets
     member do
       get :dashboard
       get :find_friends
       get :settings
+    end
+
+    collection do
+      get :validate_form_data
+      post :share_on_wall
     end
     
   end
 
   match 'dashboard' => 'user#dashboard', :as => 'user_root'
 
-
+  match '/:username' => 'user#show', :as => :show_user
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

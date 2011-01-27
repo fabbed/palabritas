@@ -1,6 +1,33 @@
-bei http://www.cincopreguntas.local:3000/user/1 keine angabe möglich wenn current_user der gleiche ist
+protect user  (authentication)
 
-bei space in textfeld skip zum nächsten 
+todo: counter for words
 
-paperclip & settings menu-point
+time ago in words:
+http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-time_ago_in_words
 
+
+texte aus den controllern in i18n
+freiwilliges sharen auf Facebook
+
+
+
+images to .gitignore
+styling dashboard
+
+
+Später:
+reply to word set (http://ruby-toolbox.com/categories/rails_comments.html)
+
+
+alle strings in i18n - mail paula
+
+
+
+
+#TODO:
+What if already taken? 
+oder es keinen gibt? 
+do: set all_values_valid to false
+method in application_controller: redirect to preferences where username can be changed
+dont let him navigate away until changed
+display message that username is already taken

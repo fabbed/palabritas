@@ -1,22 +1,51 @@
-#loginout
-  -if user_signed_in?
-    ¡hola
-    =link_to(current_user.username, user_path(current_user))
-    !&nbsp;&nbsp;&nbsp;
+#negative_margin_header
+  #small_logo=image_tag "logo_small.png", :class => "fixpng"
+  #loginout
+    #text_links
+      -if user_signed_in?
+        !=t(".hola_username", :link => link_to(current_user.get_username, show_user_path(current_user.get_username)))+"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;"
 
-    =link_to "início", user_root_path
-    \/
+      -if user_signed_in?
+        = link_to(t(".answers"), user_root_path)
+        &nbsp;
+        \|
+        &nbsp;
+        = link_to(t(".settings"), edit_user_path(@user))
 
-  -if user_signed_in?
-    = link_to("respuestas", user_root_path)
-    \/
-    = link_to("ajustes", edit_user_path(@user))
-    \/    
-    = link_to("cerrar sessión", destroy_user_session_path)
+      -else
+        =link_to t(".login"), new_user_session_path
 
-  -else
-    =link_to "entrar", new_user_session_path
-    \/
-    =link_to "regístrate", new_user_registration_path
+    -if user_signed_in?
+      = link_to(image_tag("btn_logout.png"), destroy_user_session_path, :style => "float: left;")
 
-%a#header_real{:href => "/"}
+    -if !user_signed_in?
+      =link_to image_tag("btn_registrate.png"), new_user_registration_path, :style => "float: left;"
+
+
+
+/ .container_24
+/   .grid_24
+/     #small_logo=image_tag "logo_small.png", :class => "fixpng"
+/     #header
+/       #loginout
+/         #text_links
+/           -if user_signed_in?
+/             !=t(".hola_username", :link => link_to(current_user.get_username, show_user_path(current_user.get_username)))+"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;"
+/ 
+/           -if user_signed_in?
+/             = link_to(t(".answers"), user_root_path)
+/             &nbsp;
+/             \|
+/             &nbsp;
+/             = link_to(t(".settings"), edit_user_path(@user))
+/ 
+/           -else
+/             =link_to t(".login"), new_user_session_path
+/ 
+/         -if user_signed_in?
+/           = link_to(image_tag("btn_logout.png"), destroy_user_session_path, :style => "float: left;")
+/     
+/         -if !user_signed_in?
+/           =link_to image_tag("btn_registrate.png"), new_user_registration_path, :style => "float: left;"
+/   
+/     .clear

@@ -1,18 +1,59 @@
+#space_to_header &nbsp;
 #edit
-  %h1 Tus Ajustes
-  - form_for @user, :html => { :multipart => true } do |f|
-    =f.text_field :display_name
-    %br
-    
-    -if @user.avatar.exists?
-      = image_tag @user.avatar.url(:thumb)
-    %br
-    =f.file_field :avatar
-    %br
+  #section_top &nbsp;
+  #section_middle
+    #content
+      !=render_flash_in_section_head
+      %h1 Tus Ajustes
+      
+      = render "shared/error_messages", :target => @user
+      
+      - form_for @user, :html => { :multipart => true } do |f|
+        %p
+          = f.label :display_name, t("devise.registrations.new.nombre")
+          %br
+          = f.text_field :display_name, :class => "text_field delete_when_focus"
+          = f.error_message_on :display_name
+          %br
+        -if !current_user.all_values_valid && current_user.username.blank?
+          %p
+            = f.label :username, t("devise.registrations.new.username")
+            %br
+            = f.text_field :username, :class => "text_field"
+            = f.error_message_on :username
+            %br          
+        -if !current_user.all_values_valid && current_user.email.blank? || current_user.email.match(/elige_un/)
+          %p
+            = f.label :email, t("devise.registrations.new.email")
+            %br
+            = f.text_field :email, :class => "text_field"
+            = f.error_message_on :email
+            %br          
+        %p
+          = f.label :avatar, t(".choose_an_avatar")
+          %br
+          =f.file_field :avatar
+          %br
+          -if @user.avatar.exists?
+            = image_tag @user.avatar.url(:medium)
+            Borrar tu foto
+            = f.check_box(:delete_photo_avatar)
+        %p
+          = f.label :background, t(".choose_a_background")
+          %br
+          =f.file_field :background
+          %br
+          -if @user.background.exists?
+            = image_tag @user.background.url(:medium)
+            Borrar tu foto de trasfondo
+            = f.check_box(:delete_photo_background)
 
-    -if @user.background.exists?
-      = image_tag @user.background.url(:thumb)
-    %br
-    =f.file_field :background
-    
-    =submit_tag "Enviar"
+        =f.check_box :profile_public
+        Respuestas visible para todo el mundo
+        %br
+        %br
+        %br
+
+        =submit_tag "Enviar"
+  #section_bottom &nbsp;
+  

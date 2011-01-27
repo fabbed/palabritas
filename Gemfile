@@ -2,22 +2,23 @@ source 'http://rubygems.org'
 
 group :default do
   gem 'rails', '3.0.3'
-  gem 'devise', '1.1.5'
+  gem 'devise'
   gem 'mysql2', '0.2.6'
   gem 'haml'
-  gem 'compass-colors'
-
-
-
-  gem 'compass-960-plugin'
+  gem "omniauth"
+  gem "dynamic_form"
+  gem "i18n-js"
+  gem "fb_graph"
+  gem "mechanize"
   gem 'compass'
+  gem 'compass-960-plugin'
+  gem 'compass-colors'
 end
 
 group :deployment do
   gem 'capistrano'
   gem 'capistrano-ext'
 end
-
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

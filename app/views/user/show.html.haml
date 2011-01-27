@@ -1,24 +1,109 @@
+#space_to_header &nbsp;
+#show
+  #introduction
+    =image_tag "show_call_to_action.png", :class => "fixpng", :id => "show_call_to_action"
+    =image_tag "register_bubble.png", :class => "fixpng", :id => "register_bubble"
+
+    #avatar{:style => "margin-top: 297px"}
+      %h1=@user.username
+      =render_avatar(@user, "medium")
+
+  #register_fields
+    =form_for [@user, @word_set], :html => {:id => "word_set_form"}, :method => :post do |words_form|
+      = words_form.fields_for :words do |words_fields|
+        =words_fields.text_field :word_1, :class => "word_field text_field"
+        =words_fields.text_field :word_2, :class => "word_field text_field"
+        =words_fields.text_field :word_3, :class => "word_field text_field"
+        =words_fields.text_field :word_4, :class => "word_field text_field"
+        =words_fields.text_field :word_5, :class => "word_field text_field"
+
+      %p.hidden_content#add_note_to_words ¿Añadir una nota con tus palabritas?
+      .hidden_content#note
+        = text_area_tag "user[note]"
+      %p{:style => "margin: 0; padding: 0; margin-top: 17px; overflow: hidden;"} &nbsp;
+      =image_submit_tag "btn_enviar.png" , :id => "submit_word_form"
+  .clear
+
+  #section_top &nbsp;
+  #section_middle
+    #content
+      %h1="A #{@user.username} lo han descrito asi:"
+      #word_sets
+        -if @user.word_sets.exists?
+          -@user.word_sets.reverse.each do |set|
+            =render :partial => "words/word_set_for_dashboard", :locals => {:set => set}
+        -else
+          %h4="#{@user.username} todavia no tiene palabras, ¡se el primero que le da 5 palabritas!:"
+  #section_bottom &nbsp;
+
+-content_for :javascript do
+  :javascript
+    $(".word_field")[0].focus();
+    $(".word_field").keypress(function(event) {
+      if (event.which == '32') {
+         event.preventDefault();
+         $(this).next(".word_field").focus();
+       }
+    });
+
+    $("#add_note_to_words").click(function(event) {
+
+      if ($("#note").css("display") == "block"){
+        $("#user_note").val("");
+      }
+
+      $("#note").slideToggle();
+    });
+
+    count = 0;
+
+    $(".word_field").each(function(){
+      count++;
+      $(this).val("Palabra#" + count)
+    })
+    
+    $("#word_set_form").validate({
+      rules: {
+        "word_set[words][word_1]": {required: true, maxlength: 25,  minlength: 3},
+        "word_set[words][word_2]": {required: true, maxlength: 25,  minlength: 3},
+        "word_set[words][word_3]": {required: true, maxlength: 25,  minlength: 3},
+        "word_set[words][word_4]": {required: false, maxlength: 25,  minlength: 3},
+        "word_set[words][word_5]": {required: false, maxlength: 25,  minlength: 3},
+        "word_set[note]": {required: false, maxlength: 200,  minlength: 5}
+      },
+      
+      messages: {
+        "word_set[words][word_1]": {
+          required: I18n.t("activerecord.errors.words.blank"),
+          minlength: I18n.t("activerecord.errors.words.too_short"),
+          maxlength: I18n.t("activerecord.errors.words.too_long")
+        },
+        "word_set[words][word_2]": {
+          required: I18n.t("activerecord.errors.words.blank"),
+          minlength: I18n.t("activerecord.errors.words.too_short"),
+          maxlength: I18n.t("activerecord.errors.words.too_long")
+        },
+        "word_set[words][word_3]": {
+          required: I18n.t("activerecord.errors.words.blank"),
+          minlength: I18n.t("activerecord.errors.words.too_short"),
+          maxlength: I18n.t("activerecord.errors.words.too_long")
+        },
+        "word_set[words][word_4]": {
+          minlength: I18n.t("activerecord.errors.words.too_short"),
+          maxlength: I18n.t("activerecord.errors.words.too_long")
+        },
+        "word_set[words][word_5]": {
+          minlength: I18n.t("activerecord.errors.words.too_short"),
+          maxlength: I18n.t("activerecord.errors.words.too_long")
+        }      
+
+      }
+    });
+
+
 -if @user.background.exists?
   :css
     body {
       background-image: url(#{@user.background.url(:small)});
       background-position: center top;
     }
-
-= form_for @user do |words_form|
-  = words_form.fields_for :words do |words_fields|
-
-    =words_fields.text_field :word_1, :class => "word_field"
-    =words_fields.text_field :word_2, :class => "word_field"
-    =words_fields.text_field :word_3, :class => "word_field"
-    =words_fields.text_field :word_4, :class => "word_field"
-    =words_fields.text_field :word_5, :class => "word_field"
-  
-  =submit_tag "Enviar"
-    
-
-
-#words_said
-  -@user.sets.each do |set_id|
-    !="#{set_sender_name(set_id)} dijo que eres #{set_words(set_id)}"
-    %br

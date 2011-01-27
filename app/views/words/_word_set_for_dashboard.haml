@@ -1,0 +1,12 @@
+.word_set
+  =render_avatar(set.sender, "thumb")
+  .words
+    %p.who!="<b>#{set_sender_name(set)}</b> dijo que eres:"
+    %p!=set_words(set)
+    %p.time_ago="hace " + time_ago_in_words(set.created_at)
+    
+  .actions
+    = button_to "", user_word_set_path(@user, set), :confirm => "¿Estas seguro?", :method => :delete
+  .clear
+.divider &nbsp;
+

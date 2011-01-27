@@ -1,25 +1,47 @@
 module ApplicationHelper
 
-  def get_set(set_id)
-    DescriptionSet.find_by_set_id(set_id)
+  def fb_text
+    "Describe " + current_user.username.gsub(/\'/,"")
   end
 
-  def set_sender_name(set_id)
-    set = get_set(set_id)
-    return "Anonimo" unless set.sender_id
-    return link_to set.sender.display_name, user_path(set.sender)
+  def render_avatar(user, size = "medium")
+    if user && user.avatar.exists?
+      output=image_tag(user.avatar.url(:medium)) if size == "medium"
+      output=image_tag(user.avatar.url(:thumb)) if size == "thumb"
+    else
+      output=image_tag("missing_100_100.png") if size == "medium"
+      output=image_tag("missing_50_50.png") if size == "thumb"
+    end
+    
+    content_tag(:div, output, :class => "#{size}_avatar")
   end
 
-
-  def set_words(set_id)
-    sets = DescriptionSet.find(:all, :conditions => ['set_id = ?', set_id])
+  def render_flash_in_section_head
     output = ""
-    puts set_id
-    sets.each do |set|
-      output << content_tag(:span, set.word.word+ ", ")
+    output << content_tag(:div, flash[:notice], :class => "flash_in_section_head notice") if flash[:notice]
+    output << content_tag(:div, flash[:error], :class => "flash_in_section_head error") if flash[:error]
+    output
+  end
+  
+  
+  def set_sender_name(set)
+    return "Anonimo" unless set.sender_id
+    return link_to(set.sender.display_name, show_user_path(set.sender.username))
+  end
+
+
+  def set_words(set)
+    output = ""
+    set.words.each_with_index do |word, i|
+      if i < set.words.size-1
+        output << word.word + ", "
+      else
+        output << "<span class='normal'>y</span> " + word.word
+      end
     end
 
     return output
   end
+
 
 end

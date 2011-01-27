@@ -1,0 +1,120 @@
+/* line 1, ../../../app/stylesheets/own/sign_up.sass */
+#loginout {
+  z-index: 10;
+  margin-top: 10px;
+}
+/* line 4, ../../../app/stylesheets/own/sign_up.sass */
+#loginout #text_links {
+  float: left;
+  margin-right: 10px;
+}
+/* line 7, ../../../app/stylesheets/own/sign_up.sass */
+#loginout #text_links a {
+  font-size: 14px;
+}
+
+/* line 11, ../../../app/stylesheets/own/sign_up.sass */
+input.formError {
+  color: black;
+}
+
+/* line 14, ../../../app/stylesheets/own/sign_up.sass */
+input.text_field {
+  padding: 7px;
+  font-size: 14px;
+  width: 230px;
+}
+
+/* line 18, ../../../app/stylesheets/own/sign_up.sass */
+label.error, .formError {
+  color: red;
+  line-height: 13px;
+  margin-top: 3px;
+}
+
+/* line 22, ../../../app/stylesheets/own/sign_up.sass */
+input {
+  color: black;
+}
+
+/* line 25, ../../../app/stylesheets/own/sign_up.sass */
+.blur {
+  color: #888888;
+}
+
+/* line 29, ../../../app/stylesheets/own/sign_up.sass */
+.field_with_errors input {
+  border: solid 1px red;
+}
+
+/* line 33, ../../../app/stylesheets/own/sign_up.sass */
+#sign_up #user_username, #login #user_username, #edit #user_username {
+  padding-left: 107px;
+  width: 143px;
+  background: url("/images/username_prevalue.png") 0 8px no-repeat;
+}
+
+/* line 38, ../../../app/stylesheets/own/sign_up.sass */
+#register_fields {
+  z-index: 1;
+  float: left;
+  background: url("/images/field_bubble.png") 0 0 repeat-y;
+  width: 533px;
+  height: 533px;
+  margin-top: -55px;
+}
+/* line 46, ../../../app/stylesheets/own/sign_up.sass */
+#register_fields form {
+  padding: 85px 0px 0px 135px;
+  font-weight: bold;
+  width: 250px;
+  display: block;
+  overflow: hidden;
+}
+/* line 52, ../../../app/stylesheets/own/sign_up.sass */
+#register_fields form span {
+  display: block;
+  margin-bottom: 0px;
+  height: 80px;
+}
+/* line 56, ../../../app/stylesheets/own/sign_up.sass */
+#register_fields form #btn_registrate {
+  margin-left: -5px;
+}
+
+/* line 58, ../../../app/stylesheets/own/sign_up.sass */
+#introduction {
+  float: left;
+  width: 405px;
+}
+
+/* line 63, ../../../app/stylesheets/own/sign_up.sass */
+#sign_up #logo, #sign_in #logo {
+  padding-top: 30px;
+}
+/* line 65, ../../../app/stylesheets/own/sign_up.sass */
+#sign_up h1, #sign_in h1 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 50px;
+  line-height: 45px;
+  font-weight: bold;
+}
+/* line 72, ../../../app/stylesheets/own/sign_up.sass */
+#sign_up h2, #sign_in h2 {
+  color: white;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+/* line 76, ../../../app/stylesheets/own/sign_up.sass */
+#sign_up #es_gratis_label, #sign_in #es_gratis_label {
+  margin: 130px 0px 0px 122px;
+}
+/* line 78, ../../../app/stylesheets/own/sign_up.sass */
+#sign_up #slogan_below_form, #sign_in #slogan_below_form {
+  color: white;
+  margin: 35px 0px 0px 25px;
+  font-weight: normal;
+  font-size: 16px;
+}
