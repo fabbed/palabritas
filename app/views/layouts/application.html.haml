@@ -37,4 +37,6 @@
             = render :partial => 'shared/footer'
 
       = yield :javascript
+    - unless Rails.env.development? and false
+      = render "/tracking/google_analytics_tracking_code.html.erb"
   
