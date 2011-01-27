@@ -1,16 +1,22 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
-gem 'devise', '1.1.5'
-gem 'mysql2', '0.2.6'
-gem 'haml'
-gem 'compass-colors'
+group :default do
+  gem 'rails', '3.0.3'
+  gem 'devise', '1.1.5'
+  gem 'mysql2', '0.2.6'
+  gem 'haml'
+  gem 'compass-colors'
 
 
 
-gem 'compass-960-plugin'
-gem 'compass'
+  gem 'compass-960-plugin'
+  gem 'compass'
+end
 
+group :deployment do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+end
 
 
 # Bundle edge Rails instead:
