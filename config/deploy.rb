@@ -28,7 +28,7 @@ role :db,  "83.169.47.164", :primary => true # This is where Rails migrations wi
 ssh_options[:forward_agent] = true
 
 
-after "deploy:update_code", "deploy:remove_rvmrc"
+#after "deploy:update_code", "deploy:remove_rvmrc"
 after "deploy:symlink", "deploy:copy_configs_from_shared"
 
 # If you are using Passenger mod_rails uncomment this:
@@ -57,3 +57,16 @@ end
 # have builder check and install gems after each update_code
 require 'bundler/capistrano'
 set :bundle_without, [:development, :test, :metrics, :deployment]
+
+
+$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
+require "rvm/capistrano"
+set :rvm_ruby_string, 'ree@5palabritas'
+set :rvm_type, :user
+
+set :default_environment, {
+  'PATH' => "/home/rails/.rvm/gems/ree-1.8.7-2010.02/bin:/home/rails/.rvm/bin:/home/rails/.rvm/rubies/ree-1.8.7-2010.02/bin:$PATH",
+  'RUBY_VERSION' => 'ree',
+  'GEM_HOME'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02',
+  'GEM_PATH'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02'
+}
