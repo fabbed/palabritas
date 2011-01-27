@@ -18,6 +18,8 @@ role :web, "83.169.47.164"                          # Your HTTP server, Apache/e
 role :app, "83.169.47.164"                          # This may be the same as your `Web` server
 role :db,  "83.169.47.164", :primary => true # This is where Rails migrations will run
 
+
+
 # =============================================================================
 # SSH OPTIONS
 # =============================================================================
@@ -25,17 +27,32 @@ role :db,  "83.169.47.164", :primary => true # This is where Rails migrations wi
 # ssh_options[:port] = 25
 ssh_options[:forward_agent] = true
 
+
+after "deploy:update_code", "deploy:remove_rvmrc"
+after "deploy:symlink", "deploy:copy_configs_from_shared"
+
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+  
+  task :remove_rvmrc do
+    run "rm -fr #{release_path}/.rvmrc"
+  end
+  
+  task :copy_configs_from_shared do
+    %w(database.yml).each do |file|
+      run "ln -nfs #{shared_path}/config/#{file} #{release_path}/config/#{file}"
+    end
+  end
+  
+end
 
 # have builder check and install gems after each update_code
 require 'bundler/capistrano'
