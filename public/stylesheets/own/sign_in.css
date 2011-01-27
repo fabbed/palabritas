@@ -1,0 +1,13 @@
+/* line 1, ../../../app/stylesheets/own/sign_in.sass */
+#flash_alert_in_form {
+  color: red;
+}
+
+/* line 6, ../../../app/stylesheets/own/sign_in.sass */
+#sign_in #logo {
+  padding-top: 30px;
+}
+/* line 8, ../../../app/stylesheets/own/sign_in.sass */
+#sign_in h1 {
+  font-size: 40px;
+}

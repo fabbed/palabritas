@@ -1,7 +1,7 @@
 class AddAuthTypeToUser < ActiveRecord::Migration
   def self.up
     add_column :users, :auth_type, :string, :default => "sign_up"
-    add_column :users, :fb_uid, :integer
+    add_column :users, :fb_uid, :string
   end
 
   def self.down

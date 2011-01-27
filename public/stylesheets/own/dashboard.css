@@ -1,56 +1,74 @@
 /* line 3, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section {
-  margin-top: 100px;
-  background: #ff3300 url("/images/dashboard_content_section_top.png") top center no-repeat;
-  height: 210px;
+#user #dashboard span.no_words {
+  font-size: 30px;
 }
-/* line 7, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section #avatar {
-  float: right;
-  margin-top: -25px;
-  margin-right: 10px;
-}
-/* line 11, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section #content {
-  padding: 20px;
+/* line 5, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard a#btn_share_on_facebook {
+  padding: 5px 0px 0px 29px;
+  height: 24px;
+  background: url("/images/icon_share_on_facebook.png") left center no-repeat;
+  margin-left: 44px;
+  display: block;
 }
 /* line 12, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section #content p#share_link {
+#user #dashboard #bottom_section {
+  background: #ff3300 url("/images/dashboard_content_section_bottom.png") top center no-repeat;
+}
+/* line 14, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section {
+  background: #ff3300 url("/images/dashboard_content_section_top.png") top center no-repeat;
+  height: 160px;
+}
+/* line 17, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #share_link_field {
+  float: left;
+  width: 800px;
+}
+/* line 20, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #avatar {
+  float: right;
+  margin-right: 10px;
+}
+/* line 23, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard .content {
+  padding: 20px 20px 0px 20px;
+}
+/* line 24, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard .content p#share_link {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-/* line 17, ../../../app/stylesheets/own/dashboard.sass */
+/* line 29, ../../../app/stylesheets/own/dashboard.sass */
 #user #dashboard input#username {
-  width: 700px;
+  width: 720px;
   border: 1px solid #bbbbbb;
   font-size: 20pt;
   padding: 8px;
 }
-/* line 23, ../../../app/stylesheets/own/dashboard.sass */
+/* line 35, ../../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #avatar img {
   background-color: white;
   padding: 3px;
 }
-/* line 28, ../../../app/stylesheets/own/dashboard.sass */
+/* line 38, ../../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #main_section {
   background: #ff3300 url("/images/dashboard_content_section_main.png") top center repeat-y;
 }
-/* line 31, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #header {
-  position: absolute;
-  top: 0px;
-  margin-left: 545px;
-  color: white;
+/* line 40, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section .content {
+  padding-top: 0px;
 }
-/* line 36, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #header a {
-  color: #ff6600;
+/* line 42, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #main_content, #user #dashboard #main_section #sidebar {
+  float: left;
 }
-/* line 39, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #header_background {
-  background-color: black;
-  opacity: 0.58;
-  height: 40px;
-  z-index: 1;
+/* line 44, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #main_content {
+  width: 640px;
+}
+/* line 46, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #sidebar {
+  width: 258px;
+  text-align: center;
 }

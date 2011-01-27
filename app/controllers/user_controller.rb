@@ -8,36 +8,42 @@ class UserController < ApplicationController
   end
   
   def dashboard
-    @fb_user = FbGraph::User.me(current_user.last_access_token).fetch
-    
+    @fb_user = FbGraph::User.me(current_user.last_access_token) if current_user.is_facebook_user?
+    # @fb_user.fetch if @fb_user # TODO
     @user = current_user
   end
   
   def update
     @user = User.find(params[:id])
     @user.update_attributes(params[:user]) if !params[:user][:words]
-    flash[:message] = "TODO"
-    redirect_to edit_user_path(params[:id])
+    if @user.valid? && !@user.all_values_valid
+      @user.update_attribute(:all_values_valid, true)
+      redirect_to user_root_path
+    elsif @user.valid?
+      flash[:notice] = "Has actualizado tus datos."
+      render :action => :edit
+    else
+      flash[:error] = "Corrige los errores"      #todo
+      render :action => :edit
+    end
   end
 
   def edit
     @user = User.find(params[:id])
   end
 
-
   def share_on_wall
     fb_user = FbGraph::User.me(current_user.last_access_token).fetch
     
     fb_user.feed!(
       :message => 'Como me describerias en 5 palabras?',
-      :picture => HOST+current_user.avatar.url(:thumb, ),
+      :picture => HOST+current_user.avatar.url(:medium),
       :link => HOST + current_user.username,
-      :name => 'FbGraph',
+      :name => '5palabritas.com - Quieres saber que la gente piensa realmente de ti?',
       :description => 'Describe me en 5palabritas.com'
     )
+    redirect_to user_root_path
   end
-
-
 
   def validate_form_data
     case params[:user].keys[0]

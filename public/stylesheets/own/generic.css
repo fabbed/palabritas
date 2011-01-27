@@ -1,4 +1,26 @@
 /* line 1, ../../../app/stylesheets/own/generic.sass */
+#errorExplanation {
+  color: red;
+}
+
+/* line 4, ../../../app/stylesheets/own/generic.sass */
+.flash_in_section_head {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+/* line 10, ../../../app/stylesheets/own/generic.sass */
+.flash_in_section_head.notice {
+  border: solid 1px green;
+}
+/* line 12, ../../../app/stylesheets/own/generic.sass */
+.flash_in_section_head.error {
+  border: solid 1px red;
+}
+
+/* line 15, ../../../app/stylesheets/own/generic.sass */
 h1.grey_gradient_title {
   color: white;
   overflow: hidden;
@@ -15,202 +37,202 @@ h1.grey_gradient_title {
   text-transform: none;
 }
 
-/* line 17, ../../../app/stylesheets/own/generic.sass */
+/* line 31, ../../../app/stylesheets/own/generic.sass */
 ul.disc li {
   list-style: disc outside none;
 }
 
-/* line 21, ../../../app/stylesheets/own/generic.sass */
+/* line 35, ../../../app/stylesheets/own/generic.sass */
 ol.decimal li, ul.decimal li {
   list-style: decimal outside none;
 }
 
-/* line 24, ../../../app/stylesheets/own/generic.sass */
+/* line 38, ../../../app/stylesheets/own/generic.sass */
 #moz_banner {
   position: absolute;
   left: 20px;
   top: 20px;
 }
 
-/* line 29, ../../../app/stylesheets/own/generic.sass */
+/* line 43, ../../../app/stylesheets/own/generic.sass */
 .grey_background {
   background-color: #aaaaaa;
 }
 
-/* line 32, ../../../app/stylesheets/own/generic.sass */
+/* line 46, ../../../app/stylesheets/own/generic.sass */
 .green_background {
   background-color: green;
 }
 
-/* line 35, ../../../app/stylesheets/own/generic.sass */
+/* line 49, ../../../app/stylesheets/own/generic.sass */
 .blue_background {
   background-color: blue;
 }
 
-/* line 39, ../../../app/stylesheets/own/generic.sass */
+/* line 53, ../../../app/stylesheets/own/generic.sass */
 .more_link {
   color: #6a9000;
   border-bottom: dotted 1px #6a9000;
 }
 
-/* line 43, ../../../app/stylesheets/own/generic.sass */
+/* line 57, ../../../app/stylesheets/own/generic.sass */
 .margin_fix {
   overflow: hidden;
   display: inline;
 }
 
-/* line 47, ../../../app/stylesheets/own/generic.sass */
+/* line 61, ../../../app/stylesheets/own/generic.sass */
 .top_margin_5 {
   margin-top: 5px;
 }
 
-/* line 50, ../../../app/stylesheets/own/generic.sass */
+/* line 64, ../../../app/stylesheets/own/generic.sass */
 .top_margin_10 {
   margin-top: 10px;
 }
 
-/* line 53, ../../../app/stylesheets/own/generic.sass */
+/* line 67, ../../../app/stylesheets/own/generic.sass */
 .top_margin_20 {
   margin-top: 20px;
 }
 
-/* line 56, ../../../app/stylesheets/own/generic.sass */
+/* line 70, ../../../app/stylesheets/own/generic.sass */
 .top_margin_30 {
   margin-top: 30px;
 }
 
-/* line 59, ../../../app/stylesheets/own/generic.sass */
+/* line 73, ../../../app/stylesheets/own/generic.sass */
 .top_padding_20 {
   padding-top: 20px;
 }
 
-/* line 62, ../../../app/stylesheets/own/generic.sass */
+/* line 76, ../../../app/stylesheets/own/generic.sass */
 .padding_5 {
   padding: 5px;
 }
 
-/* line 65, ../../../app/stylesheets/own/generic.sass */
+/* line 79, ../../../app/stylesheets/own/generic.sass */
 .top_padding_10 {
   padding-top: 10px;
 }
 
-/* line 69, ../../../app/stylesheets/own/generic.sass */
+/* line 83, ../../../app/stylesheets/own/generic.sass */
 .bottom_margin_10 {
   margin-bottom: 10px;
 }
 
-/* line 73, ../../../app/stylesheets/own/generic.sass */
+/* line 87, ../../../app/stylesheets/own/generic.sass */
 a.underline {
   text-decoration: underline;
 }
 
-/* line 77, ../../../app/stylesheets/own/generic.sass */
+/* line 91, ../../../app/stylesheets/own/generic.sass */
 ul.with_disk li {
   list-style-type: disc;
   margin-left: 20px;
 }
 
-/* line 81, ../../../app/stylesheets/own/generic.sass */
+/* line 95, ../../../app/stylesheets/own/generic.sass */
 .text_center {
   text-align: center;
 }
 
-/* line 84, ../../../app/stylesheets/own/generic.sass */
+/* line 98, ../../../app/stylesheets/own/generic.sass */
 .top_padding_12 {
   padding-top: 12px;
 }
 
-/* line 87, ../../../app/stylesheets/own/generic.sass */
+/* line 101, ../../../app/stylesheets/own/generic.sass */
 .italic {
   font-style: italic;
 }
 
-/* line 90, ../../../app/stylesheets/own/generic.sass */
+/* line 104, ../../../app/stylesheets/own/generic.sass */
 .no_margin {
   margin: 0;
 }
 
-/* line 93, ../../../app/stylesheets/own/generic.sass */
+/* line 107, ../../../app/stylesheets/own/generic.sass */
 .font_16 {
   font-size: 16px;
 }
 
-/* line 96, ../../../app/stylesheets/own/generic.sass */
+/* line 110, ../../../app/stylesheets/own/generic.sass */
 .font_12 {
   font-size: 12px;
 }
 
-/* line 100, ../../../app/stylesheets/own/generic.sass */
+/* line 114, ../../../app/stylesheets/own/generic.sass */
 .hidden_content {
   display: none;
 }
 
-/* line 103, ../../../app/stylesheets/own/generic.sass */
+/* line 117, ../../../app/stylesheets/own/generic.sass */
 .hidden, a.hidden {
   display: none;
 }
 
-/* line 106, ../../../app/stylesheets/own/generic.sass */
+/* line 120, ../../../app/stylesheets/own/generic.sass */
 .shown {
   display: block;
 }
 
-/* line 109, ../../../app/stylesheets/own/generic.sass */
+/* line 123, ../../../app/stylesheets/own/generic.sass */
 .invisible {
   visibility: hidden;
 }
 
-/* line 112, ../../../app/stylesheets/own/generic.sass */
+/* line 126, ../../../app/stylesheets/own/generic.sass */
 .visible {
   visibility: visible;
 }
 
-/* line 115, ../../../app/stylesheets/own/generic.sass */
+/* line 129, ../../../app/stylesheets/own/generic.sass */
 .justify {
   text-align: justify;
 }
 
-/* line 118, ../../../app/stylesheets/own/generic.sass */
+/* line 132, ../../../app/stylesheets/own/generic.sass */
 .left_padding {
   padding-left: 5px;
 }
 
-/* line 121, ../../../app/stylesheets/own/generic.sass */
+/* line 135, ../../../app/stylesheets/own/generic.sass */
 .clear {
   clear: both;
 }
 
-/* line 123, ../../../app/stylesheets/own/generic.sass */
+/* line 137, ../../../app/stylesheets/own/generic.sass */
 .cl {
   clear: left;
 }
 
-/* line 125, ../../../app/stylesheets/own/generic.sass */
+/* line 139, ../../../app/stylesheets/own/generic.sass */
 .cr {
   clear: right;
 }
 
-/* line 129, ../../../app/stylesheets/own/generic.sass */
+/* line 143, ../../../app/stylesheets/own/generic.sass */
 .grey_line {
   margin: 30px 0px 10px 0px;
 }
 
-/* line 132, ../../../app/stylesheets/own/generic.sass */
+/* line 146, ../../../app/stylesheets/own/generic.sass */
 .fr {
   float: right;
 }
 
-/* line 135, ../../../app/stylesheets/own/generic.sass */
+/* line 149, ../../../app/stylesheets/own/generic.sass */
 .fl {
   float: left;
 }
 
-/* line 138, ../../../app/stylesheets/own/generic.sass */
+/* line 152, ../../../app/stylesheets/own/generic.sass */
 .bold {
   font-weight: bold;
 }
 
-/* line 143, ../../../app/stylesheets/own/generic.sass */
+/* line 157, ../../../app/stylesheets/own/generic.sass */
 #pages .spread_the_word h2 {
   margin: 0;
 }

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110125105124) do
+ActiveRecord::Schema.define(:version => 20110126100740) do
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                  :default => "",        :null => false
@@ -36,9 +46,9 @@ ActiveRecord::Schema.define(:version => 20110125105124) do
     t.integer  "background_file_size"
     t.boolean  "profile_public",                         :default => true
     t.string   "auth_type",                              :default => "sign_up"
-    t.integer  "fb_uid"
+    t.string   "fb_uid"
     t.string   "last_access_token"
-    t.boolean  "all_values_valid",                       :default => false
+    t.boolean  "all_values_valid",                       :default => true
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

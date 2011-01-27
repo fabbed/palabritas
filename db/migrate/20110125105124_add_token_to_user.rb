@@ -1,7 +1,7 @@
 class AddTokenToUser < ActiveRecord::Migration
   def self.up
     add_column :users, :last_access_token, :string
-    add_column :users, :all_values_valid, :boolean, :default => false
+    add_column :users, :all_values_valid, :boolean, :default => true
   end
 
   def self.down

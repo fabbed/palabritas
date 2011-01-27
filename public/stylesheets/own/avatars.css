@@ -1,0 +1,16 @@
+/* line 1, ../../../app/stylesheets/own/avatars.sass */
+.medium_avatar {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 5, ../../../app/stylesheets/own/avatars.sass */
+.thumb_avatar {
+  height: 50px;
+  width: 50px;
+}
+
+/* line 9, ../../../app/stylesheets/own/avatars.sass */
+.thumb_avatar {
+  border: solid 2px #fff2e5;
+}

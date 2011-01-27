@@ -10,7 +10,7 @@ class WordSetsController < ApplicationController
     @user = User.find(params[:user_id])
     
     if params[:word_set][:words]
-      @user.word_sets.create_set(params[:word_set][:words], params[:user][:note])
+      @user.word_sets.create_set(params[:word_set][:words], params[:user][:note], current_user.id)
       flash[:message] = "TODO"
       redirect_to show_user_path(User.find(params[:user_id]).username)
     end

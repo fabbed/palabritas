@@ -1,0 +1,28 @@
+/* line 1, ../../../app/stylesheets/own/edit.sass */
+#space_to_header {
+  height: 80px;
+}
+
+/* line 3, ../../../app/stylesheets/own/edit.sass */
+#section_top {
+  background: #ff3300 url("/images/section_top.png") top center no-repeat;
+}
+
+/* line 5, ../../../app/stylesheets/own/edit.sass */
+#section_middle {
+  background: #ff3300 url("/images/section_middle.png") top center repeat-y;
+}
+/* line 7, ../../../app/stylesheets/own/edit.sass */
+#section_middle #content {
+  padding: 10px 30px 30px 30px;
+}
+
+/* line 9, ../../../app/stylesheets/own/edit.sass */
+#section_bottom {
+  background: #ff3300 url("/images/section_bottom.png") top center no-repeat;
+}
+
+/* line 14, ../../../app/stylesheets/own/edit.sass */
+#edit form p {
+  margin-bottom: 20px;
+}

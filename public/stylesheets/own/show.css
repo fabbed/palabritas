@@ -1,0 +1,36 @@
+/* line 3, ../../../app/stylesheets/own/show.sass */
+#user #show #show_call_to_action {
+  margin: -24px 0px 0px 366px;
+  position: absolute;
+}
+/* line 6, ../../../app/stylesheets/own/show.sass */
+#user #show #register_bubble {
+  position: absolute;
+  margin: 12px 0px 0px 802px;
+}
+/* line 9, ../../../app/stylesheets/own/show.sass */
+#user #show .word_field {
+  margin-top: 15px;
+  border: solid 1px #999999;
+  width: 230px;
+}
+/* line 13, ../../../app/stylesheets/own/show.sass */
+#user #show #add_note_to_words {
+  margin-top: 15px;
+}
+/* line 15, ../../../app/stylesheets/own/show.sass */
+#user #show #avatar {
+  text-align: right;
+}
+/* line 17, ../../../app/stylesheets/own/show.sass */
+#user #show #avatar h1 {
+  color: white;
+  font-size: 33px;
+  margin-bottom: 0px;
+}
+/* line 21, ../../../app/stylesheets/own/show.sass */
+#user #show #avatar .medium_avatar {
+  border: solid 5px #6b1a00;
+  float: right;
+  height: 100px;
+}

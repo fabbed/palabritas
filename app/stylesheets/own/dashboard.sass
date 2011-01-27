@@ -1,21 +1,33 @@
 #user
   #dashboard
+    span.no_words
+      font-size: 30px
+    a#btn_share_on_facebook
+      padding: 5px 0px 0px 29px
+      height: 24px
+      background: url('/images/icon_share_on_facebook.png')  left center no-repeat    
+      margin-left: 44px
+      display: block
+      
+    #bottom_section
+      background: #FF3300  url('/images/dashboard_content_section_bottom.png') top center no-repeat    
     #top_section
-      margin-top: 100px
       background: #FF3300  url('/images/dashboard_content_section_top.png') top center no-repeat
-      height: 210px
+      height: 160px
+      #share_link_field
+        float: left
+        width: 800px
       #avatar
         float: right
-        margin-top: -25px
         margin-right: 10px
-      #content
-        p#share_link
-          font-size: 16px
-          font-weight: bold
-          margin-bottom: 5px
-        padding: 20px
+    .content
+      p#share_link
+        font-size: 16px
+        font-weight: bold
+        margin-bottom: 5px
+      padding: 20px 20px 0px 20px
     input#username
-      width: 700px
+      width: 720px
       border: 1px solid #BBBBBB
       font-size: 20pt
       padding: 8px
@@ -23,21 +35,16 @@
       img
         background-color: white
         padding: 3px
-
-  
     #main_section
       background: #FF3300  url('/images/dashboard_content_section_main.png') top center repeat-y
-    
-    #header
-      position: absolute
-      top: 0px
-      margin-left: 545px
-      color: white
-      a
-        color: #FF6600
-    
-    #header_background
-      background-color: black
-      opacity: 0.58
-      height: 40px
-      z-index: 1
+      .content
+        padding-top: 0px
+      #main_content, #sidebar
+        float: left
+      #main_content
+        width: 640px
+      #sidebar
+        width: 258px
+        margin-left 15px
+        text-align: center
+        

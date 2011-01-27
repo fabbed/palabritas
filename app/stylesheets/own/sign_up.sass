@@ -3,7 +3,6 @@
   margin-top: 10px
   #text_links
     float: left
-    padding-bottom: 5px
     margin-right: 10px
     a
       font-weight bold
@@ -15,7 +14,7 @@ input.formError
 input.text_field
   padding: 7px
   font-size: 14px
-  width: 240px
+  width: 230px
 label.error, .formError
   color: red
   line-height: 13px
@@ -30,7 +29,37 @@ input
   input
     border: solid 1px red
 
-#sign_up, #login
+#sign_up, #login, #edit
+  #user_username
+    padding-left: 107px
+    width: 143px
+    background: url("/images/username_prevalue.png") 0 8px no-repeat
+
+#register_fields
+  z-index: 1
+  float: left
+  background: url("/images/field_bubble.png") 0 0 repeat-y
+  width: 533px
+  height: 533px
+  margin-top: -55px
+  #form_wrapper
+  form
+    padding: 85px 0px 0px 135px
+    font-weight: bold
+    width: 250px
+    display: block
+    overflow: hidden
+    span
+      display: block
+      margin-bottom: 0px
+      height: 80px
+    #btn_registrate
+      margin-left: -5px
+#introduction
+  float: left
+  width: 405px
+
+#sign_up, #sign_in
   #logo
     padding-top: 30px
   h1
@@ -51,31 +80,3 @@ input
     margin: 35px 0px 0px 25px
     font-weight: normal
     font-size: 16px
-    
-  #register_fields
-    z-index: 1
-    float: left
-    background: url("/images/field_bubble.png") 0 0 repeat-y
-    width: 533px
-    height: 533px
-    margin-top: -55px
-    form
-      padding: 85px 0px 0px 135px
-      font-weight: bold
-      width: 240px
-      span
-        display: block
-        margin-bottom: 0px
-        height: 80px
-      #btn_registrate
-        margin-left: -5px
-
-      #user_username
-        padding-left: 107px
-        width: 143px
-        background: url("/images/username_prevalue.png") 0 8px no-repeat
-  #introduction
-    float: left
-    width: 405px
-    
-  

@@ -6,8 +6,8 @@ function fbshare(url,title){
 }
 
 $(document).ready(function() {
-  $("#user_display_name").val("Tu nombre o lo que quieras")
-  $("#user_email").val("No te spamearemos")
+  $("#new_user #user_display_name").val("Tu nombre o lo que quieras")
+  $("#new_user #user_email").val("No te spamearemos")
   
   $('.text_field').addClass("blur");
   
@@ -19,17 +19,41 @@ $(document).ready(function() {
     $(this).addClass("blur");
   });
 
-  $('.delete_when_focus').focus(function() {
+  $('#new_user .delete_when_focus, .word_field').click(function() {
     if ($(this).attr("value_entered") != "true") {
       $(this).val("");
       $(this).attr("value_entered", "true")
     };
   });
 
+  $(".word_field").keydown(function() {
+
+    if ($(".word_field").attr("cleared") != "true") {
+      $(".word_field").val("");
+      $(".word_field").attr("cleared", "true")
+    };
+    
+  });
+
+  $('#new_user .delete_when_focus, .word_field').focus(function() {
+    if ($(this).attr("value_entered") != "true") {
+      $(this).val("");
+      $(this).attr("value_entered", "true")
+    };
+  });
+
+
   $("#user_username").keypress(function(event) {
     if (event.which == '32') {
        event.preventDefault();
      }
+  });
+
+  $("#submit_word_form").click(function() {
+    if ($(".word_field").attr("cleared") != "true") {
+      $(".word_field").val("");
+      $(".word_field").attr("cleared", "true")
+    };
   });
 
   $("#new_user").validate({
@@ -43,21 +67,21 @@ $(document).ready(function() {
       "user[display_name]": {
         required: I18n.t("activerecord.errors.models.user.attributes.display_name.blank"),
         minlength: I18n.t("activerecord.errors.models.user.attributes.display_name.too_short"),
-        maxlength: I18n.t("activerecord.errors.models.user.attributes.display_name.too_long"),
+        maxlength: I18n.t("activerecord.errors.models.user.attributes.display_name.too_long")
       },
       "user[email]": {
-        required: I18n.t("activerecord.errors.models.user.attributes.email.blank"),
+        required: I18n.t("activerecord.errors.models.user.attributes.email.blank")
       },
       "user[username]": {
         required: I18n.t("activerecord.errors.models.user.attributes.username.blank"),
         minlength: I18n.t("activerecord.errors.models.user.attributes.username.too_short"),
         maxlength: I18n.t("activerecord.errors.models.user.attributes.username.too_long"),
-        remote: I18n.t("activerecord.errors.models.user.attributes.username.taken"),
+        remote: I18n.t("activerecord.errors.models.user.attributes.username.taken")
       },
       "user[password]": {
         required: I18n.t("activerecord.errors.models.user.attributes.password.blank"),
         minlength: I18n.t("activerecord.errors.models.user.attributes.password.too_short"),
-        maxlength: I18n.t("activerecord.errors.models.user.attributes.password.too_long"),
+        maxlength: I18n.t("activerecord.errors.models.user.attributes.password.too_long")
       },
       email: "Por favor pon un email valido"
     },
@@ -77,12 +101,12 @@ $(document).ready(function() {
       "user[username]": {
         required: I18n.t("activerecord.errors.models.user.attributes.username.blank"),
         minlength: I18n.t("activerecord.errors.models.user.attributes.username.too_short"),
-        maxlength: I18n.t("activerecord.errors.models.user.attributes.username.too_long"),
+        maxlength: I18n.t("activerecord.errors.models.user.attributes.username.too_long")
       },
       "user[password]": {
         required: I18n.t("activerecord.errors.login.password.blank"),
         minlength: I18n.t("activerecord.errors.models.user.attributes.password.too_short"),
-        maxlength: I18n.t("activerecord.errors.models.user.attributes.password.too_long"),
+        maxlength: I18n.t("activerecord.errors.models.user.attributes.password.too_long")
       },
       email: "Por favor pon un email valido"
     },

@@ -6,20 +6,26 @@
     =# stylesheet_link_tag "own/threewords"    
     = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"
     = javascript_include_tag "rails.js"
-    = javascript_include_tag "jquery.validate.pack.js"
+    = javascript_include_tag "jquery.validate.min.js"
     = javascript_include_tag "application.js"    
     = javascript_include_tag "i18n.js"
     = javascript_include_tag "translations.js"    
+
+    :erb
+      <!--[if IE]><%= stylesheet_link_tag 'own/ie_all' %><![endif]-->
+      <!--[if lte IE 6]><%= stylesheet_link_tag 'own/ie_6' %><![endif]-->
+
     
     = csrf_meta_tag
   %body{ :id => @body_id || controller.controller_name }
+    :javascript
+      I18n.defaultLocale = "#{I18n.default_locale}"
+      I18n.locale = "#{I18n.locale}"
     %div{ :id => @body_id || controller.action_name }
       #header_background &nbsp;
-      .container_24
-        .grid_24.alpha.omega
-          #header
-            = render :partial => 'shared/header'
+      = render :partial => 'shared/header'
 
+      .container_24
         =yield
 
       .grid_24.alpha

@@ -17,3 +17,17 @@ styling dashboard
 
 Später:
 reply to word set (http://ruby-toolbox.com/categories/rails_comments.html)
+
+
+alle strings in i18n - mail paula
+
+
+
+
+#TODO:
+What if already taken? 
+oder es keinen gibt? 
+do: set all_values_valid to false
+method in application_controller: redirect to preferences where username can be changed
+dont let him navigate away until changed
+display message that username is already taken
