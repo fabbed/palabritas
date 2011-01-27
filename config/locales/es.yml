@@ -1,4 +1,9 @@
 es:
+  title_user_show: "Página publica de %{username} en 5palabritas.com"
+  user_show_meta: "Obten tu propio 5palabritas.com completamente GRATIS"
+  title_user_dashboard: "¡Comparte tu enlace con todo el mundo para recibir palabras!"
+
+  standard_title: "5palabritas.com te regala una página donde tus amigos pueden describirte en tan sólo 5 palabras."
   activerecord:
     errors:
       words:
