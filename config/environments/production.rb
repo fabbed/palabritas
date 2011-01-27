@@ -52,3 +52,12 @@ CincopalabritasCom::Application.configure do
   HOST = "http://5palabritas.com/"
 
 end
+
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :facebook, '193968523949418', 'b2c94abc18dfe6ee161c715cd9bddf37' #this is for live
+  # production
+  # Nombre de la aplicación:  5palabritas.com
+  # URL de la aplicación: http://5palabritas.com/
+  # identificación de aplicación: 193968523949418
+  # Código secreto de la aplicación:  b2c94abc18dfe6ee161c715cd9bddf37
+end
