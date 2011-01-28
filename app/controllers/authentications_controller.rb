@@ -41,6 +41,20 @@ class AuthenticationsController < ApplicationController
 
      if user.save(:validate => false)
        flash[:notice] = "Felicitaciones! Te has registrado con tu cuenta de facebook, ahora comparte tu enlace con tus amigos para que te describan en 5 palabritas..."
+
+       unless user.username = ""
+         #Share on Wall
+         fb_user = FbGraph::User.me(user.last_access_token).fetch
+         fb_user.feed!(
+           :message => I18n.t("facebook.wall_post_after_sign_up.message"),
+           :picture => HOST + user.avatar.url(:medium),
+           :link => HOST + user.username,
+           :name => I18n.t("facebook.wall_post_after_sign_up.name"),
+           :description => I18n.t("facebook.wall_post_after_sign_up.description")
+         )
+         #end SHARE ON FACEBOOK
+      end
+       
        pic_url = FbGraph::User.me(user.last_access_token).fetch.picture
        mechanize = WWW::Mechanize.new
        mechanize.get(pic_url+"?type=large")

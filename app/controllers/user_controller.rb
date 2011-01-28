@@ -18,6 +18,17 @@ class UserController < ApplicationController
     @user.update_attributes(params[:user]) if !params[:user][:words]
     if @user.valid? && !@user.all_values_valid
       @user.update_attribute(:all_values_valid, true)
+
+      fb_user = FbGraph::User.me(@user.last_access_token).fetch
+      fb_user.feed!(
+        :message => I18n.t("facebook.wall_post_after_sign_up.message"),
+        :picture => HOST + @user.avatar.url(:medium),
+        :link => HOST + @user.username,
+        :name => I18n.t("facebook.wall_post_after_sign_up.name"),
+        :description => I18n.t("facebook.wall_post_after_sign_up.description")
+      )
+
+
       redirect_to user_root_path
     elsif @user.valid?
       flash[:notice] = "Has actualizado tus datos."
@@ -33,15 +44,16 @@ class UserController < ApplicationController
   end
 
   def share_on_wall
-    fb_user = FbGraph::User.me(current_user.last_access_token).fetch
-    
+    #Share on Wall
+    fb_user = FbGraph::User.me(user.last_access_token).fetch
     fb_user.feed!(
-      :message => '¿Qué piensas de mi? Dímelo en 5 palabritas!',
-      :picture => HOST+current_user.avatar.url(:medium),
-      :link => HOST + current_user.username,
-      :name => '5palabritas.com - Quieres saber que la gente piensa realmente de ti?',
-      :description => 'Describe me en 5palabritas.com'
+      :message => I18n.t("facebook.wall_post_after_sign_up.message"),
+      :picture => HOST + user.avatar.url(:medium),
+      :link => HOST + user.username,
+      :name => I18n.t("facebook.wall_post_after_sign_up.name"),
+      :description => I18n.t("facebook.wall_post_after_sign_up.description")
     )
+    #end SHARE ON FACEBOOK
     redirect_to user_root_path
   end
 

@@ -1,6 +1,9 @@
 - content_for(:title, t("standard_title") )
 - content_for(:description, t("standard_title") )
 
+-if flash[:promote]
+  .promote.flash_in_section_head!=flash[:promote]
+
 #sign_up
   #logo.fix_png
     =link_to image_tag("logo.png", :class => "fixpng", :size => '325x54'), root_path

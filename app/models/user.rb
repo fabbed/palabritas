@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
   end
 
   def get_username
-    username  == "" ? "no valido" : username
+    username  == "" ? "elige-un-nombre-de-usuario" : username
   end
 
   def is_facebook_user?

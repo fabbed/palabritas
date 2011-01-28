@@ -35,4 +35,10 @@
       = yield :javascript
     - unless Rails.env.development? and false
       = render "/tracking/google_analytics_tracking_code.html.erb"
-  
+    
+
+    -if session[:user][:blinking_counter] < 4
+      -session[:user][:blinking_counter] = session[:user][:blinking_counter] + 1
+      :javascript
+        $('.sth_with_facebook').fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400);
+        $('.promote').fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400);

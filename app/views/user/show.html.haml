@@ -40,6 +40,26 @@
           %h4="Nadie ha dicho nada de #{@user.username} aún,...¡sé el primero que le da 5 palabritas!:"
   #section_bottom &nbsp;
 
+
+/session["user"]["described_users"]
+-if current_user && current_user.username == params[:username]
+  -content_for :javascript do
+    :javascript
+      $("#word_set_form").submit(function() {
+        alert(I18n.t("errors.you_cant_vote_for_yourself"))
+        return false;
+      });
+
+
+-if session[:user][:described_users].include?(@user.username)
+  -content_for :javascript do
+    :javascript
+      $("#word_set_form").submit(function() {
+        alert(I18n.t("errors.you_voted_this_user_already", {username: "#{@user.username}"}))
+        return false;
+      });
+      
+      
 -content_for :javascript do
   :javascript
     $(".word_field")[0].focus();

@@ -1,8 +1,23 @@
 es:
-  title_user_show: "Página pública de %{username} en 5palabritas.com"
+  title_user_show: "¡Describe %{username} en 5 palabras!"
   user_show_meta: "Consigue tu propio 5palabritas.com completamente GRATIS"
   title_user_dashboard: "¡Comparte tu enlace con todo el mundo para recibir palabras!"
 
+
+
+  facebook:
+    wall_post_after_sign_up:
+      message: "¿Qué piensas de mi? Dímelo en 5 palabritas!"
+      name: "http://5palabritas.com"
+      description: "En 5palabritas.com tus amigos te pueden describir en 5 palabras, es 100% GRATIS!"
+
+  errors:
+    you_cant_vote_for_yourself: "¡No puedes describirte a tu mismo!"
+    you_voted_this_user_already: "Ya has descrito a %{username} hoy, tienes que esperar hasta mañana"
+
+  promote_flash_after_words_were_sent: "¡Tus palabritas estan enviados!<br/><span>¿Quieres tu propio 5palabritas.com? ¡Regístrate ahora! ¡Es GRATIS!"
+  words_sent: "¡Tus palabritas estan enviados!"
+    
   standard_title: "5palabritas.com te regala una página donde tus amigos pueden describirte en tan sólo 5 palabras."
   activerecord:
     errors:
@@ -73,7 +88,7 @@ es:
       choose_an_avatar: "Elige una foto para ti"
       choose_a_background: "Elige una foto para el fondo de pantalla de tu página pública"
   please_choose_a_username: "Por favor, elige un nombre de usuario..."
-
+  please_choose_a_different_email: "Por favor, elige otro correo electronico, este ya esta registrado"
 
   datetime:
     distance_in_words:
