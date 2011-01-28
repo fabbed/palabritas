@@ -1118,11 +1118,11 @@ input {
 }
 /* line 18, ../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #bottom_section {
-  background: #ff3300 url("/images/dashboard_content_section_bottom.png") top center no-repeat;
+  background: url("/images/dashboard_content_section_bottom.png") top center no-repeat;
 }
 /* line 20, ../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #top_section {
-  background: #ff3300 url("/images/dashboard_content_section_top.png") top center no-repeat;
+  background: url("/images/dashboard_content_section_top.png") top center no-repeat;
   height: 160px;
 }
 /* line 23, ../../app/stylesheets/own/dashboard.sass */
@@ -1186,12 +1186,12 @@ input {
 
 /* line 3, ../../app/stylesheets/own/edit.sass */
 #section_top {
-  background: #ff3300 url("/images/section_top.png") top center no-repeat;
+  background: url("/images/section_top.png") top center no-repeat;
 }
 
 /* line 5, ../../app/stylesheets/own/edit.sass */
 #section_middle {
-  background: #ff3300 url("/images/section_middle.png") top center repeat-y;
+  background: url("/images/section_middle.png") top center repeat-y;
 }
 /* line 7, ../../app/stylesheets/own/edit.sass */
 #section_middle #content {
@@ -1200,7 +1200,7 @@ input {
 
 /* line 9, ../../app/stylesheets/own/edit.sass */
 #section_bottom {
-  background: #ff3300 url("/images/section_bottom.png") top center no-repeat;
+  background: url("/images/section_bottom.png") top center no-repeat;
 }
 
 /* line 14, ../../app/stylesheets/own/edit.sass */
@@ -1343,31 +1343,35 @@ input {
   position: absolute;
 }
 /* line 6, ../../app/stylesheets/own/show.sass */
+#user #show #show_call_to_action.w_background {
+  background-color: white;
+}
+/* line 8, ../../app/stylesheets/own/show.sass */
 #user #show #register_bubble {
   position: absolute;
   margin: 12px 0px 0px 802px;
 }
-/* line 9, ../../app/stylesheets/own/show.sass */
+/* line 11, ../../app/stylesheets/own/show.sass */
 #user #show .word_field {
   margin-top: 15px;
   border: solid 1px #999999;
   width: 230px;
 }
-/* line 13, ../../app/stylesheets/own/show.sass */
+/* line 15, ../../app/stylesheets/own/show.sass */
 #user #show #add_note_to_words {
   margin-top: 15px;
 }
-/* line 15, ../../app/stylesheets/own/show.sass */
+/* line 17, ../../app/stylesheets/own/show.sass */
 #user #show #avatar {
   text-align: right;
 }
-/* line 17, ../../app/stylesheets/own/show.sass */
+/* line 19, ../../app/stylesheets/own/show.sass */
 #user #show #avatar h1 {
   color: white;
   font-size: 33px;
   margin-bottom: 0px;
 }
-/* line 21, ../../app/stylesheets/own/show.sass */
+/* line 23, ../../app/stylesheets/own/show.sass */
 #user #show #avatar .medium_avatar {
   border: solid 5px #6b1a00;
   float: right;

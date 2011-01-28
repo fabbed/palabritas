@@ -7,7 +7,7 @@ class AuthenticationsController < ApplicationController
     omniauth = request.env["rack.auth"]
     user = User.find_by_fb_uid(omniauth['uid'])
     puts "USER: " + user.to_yaml
-   puts request.env["rack.auth"].to_yaml
+    puts request.env["rack.auth"].to_yaml
    
     if user #if facebook user already is registered in 5palabritas
        flash[:notice] = "Te has conectado con tu cuenta de facebook, ahora comparte tu enlace con tus amigos para que te describan en 5 palabritas..."
