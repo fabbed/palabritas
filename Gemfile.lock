@@ -149,6 +149,8 @@ GEM
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
     rubyntlm (0.1.1)
+    smurf (1.0.5)
+      rails (= 3.0.3)
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -174,3 +176,4 @@ DEPENDENCIES
   mysql2
   omniauth
   rails (~> 3.0.3)
+  smurf

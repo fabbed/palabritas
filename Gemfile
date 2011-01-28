@@ -13,6 +13,7 @@ group :default do
   gem 'compass'
   gem 'compass-960-plugin'
   gem 'compass-colors'
+  gem 'smurf'
 end
 
 group :deployment do
