@@ -6,13 +6,13 @@
     :erb
       <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     = stylesheet_link_tag "screen", :cache => true
-    =# stylesheet_link_tag "own/threewords"    
     = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"
     = javascript_include_tag "rails.js", "jquery.validate.min.js", "application.js", "i18n.js", "translations.js", :cache => true
 
-    :erb
-      <!--[if IE]><%= stylesheet_link_tag 'own/ie_all' %><![endif]-->
-      <!--[if lte IE 6]><%= stylesheet_link_tag 'own/ie_6' %><![endif]-->
+    /if IE
+      = stylesheet_link_tag 'own/ie_all'
+    /if lte IE 6
+      = stylesheet_link_tag 'own/ie_6'
 
     
     = csrf_meta_tag
