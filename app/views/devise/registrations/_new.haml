@@ -3,15 +3,15 @@
 
 #sign_up
   #logo.fix_png
-    =link_to image_tag("logo.png", :class => "fixpng"), root_path
+    =link_to image_tag("logo.png", :class => "fixpng", :size => '325x54'), root_path
 
   #introduction
     %h1=t(".title")
     %h2!=t(".subtitle")
     
-    =link_to(image_tag("facebook_login.png"), "/auth/facebook", :class => "sth_with_facebook")
+    =link_to(image_tag("facebook_login.png"), "/auth/facebook", :class => "sth_with_facebook"), :size => '150x22'
     
-    =image_tag "es_gratis.png", :id => "es_gratis_label", :class => "fixpng"
+    =image_tag "es_gratis.png", :id => "es_gratis_label", :class => "fixpng", :size => '282x39'
 
   #register_fields
     = form_for(@user, :url => registration_path(@user)) do |f|
@@ -33,7 +33,7 @@
         = f.error_message_on :password
       / TODO: password_confirmation
       .clear
-      %span= image_submit_tag "btn_registrate_big.png", :id => "btn_registrate"
+      %span= image_submit_tag "btn_registrate_big.png", :id => "btn_registrate", :size => '75x22'
 
     .clear  
     %p.bold#slogan_below_form=t(".slogan_below_form")
