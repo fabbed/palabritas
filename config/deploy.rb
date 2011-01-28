@@ -57,16 +57,18 @@ end
 # have builder check and install gems after each update_code
 require 'bundler/capistrano'
 set :bundle_without, [:development, :test, :metrics, :deployment]
+set :bundle, '/home/rails/.rvm/gems/ree-1.8.7-2010.02\@palabritas' 
+set :bundle_flags,    "--deployment --verbose --path /home/rails/.rvm/gems/ree-1.8.7-2010.02\@palabritas/"
 
 
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
 require "rvm/capistrano"
-set :rvm_ruby_string, 'ree@5palabritas'
+set :rvm_ruby_string, 'ree-1.8.7-2010.02'
 set :rvm_type, :user
 
 set :default_environment, {
   'PATH' => "/home/rails/.rvm/gems/ree-1.8.7-2010.02/bin:/home/rails/.rvm/bin:/home/rails/.rvm/rubies/ree-1.8.7-2010.02/bin:$PATH",
-  'RUBY_VERSION' => 'ree',
-  'GEM_HOME'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02',
-  'GEM_PATH'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02'
+  'RUBY_VERSION' => 'ree-1.8.7-2010.02',
+  'GEM_HOME'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02@palabritas',
+  'GEM_PATH'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02@palabritas'
 }

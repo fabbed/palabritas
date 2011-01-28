@@ -171,6 +171,6 @@ DEPENDENCIES
   haml
   i18n-js
   mechanize
-  mysql2 (= 0.2.6)
+  mysql2
   omniauth
-  rails (= 3.0.3)
+  rails (~> 3.0.3)

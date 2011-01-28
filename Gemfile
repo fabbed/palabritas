@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
 group :default do
-  gem 'rails', '3.0.3'
+  gem 'rails', '~>3.0.3'
   gem 'devise'
-  gem 'mysql2', '0.2.6'
+  gem 'mysql2'
   gem 'haml'
   gem "omniauth"
   gem "dynamic_form"
