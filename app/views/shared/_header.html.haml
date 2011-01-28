@@ -25,7 +25,7 @@
       = link_to(image_tag("btn_logout.png"), destroy_user_session_path, :style => "float: left;")
 
     -if !user_signed_in?
-      =link_to image_tag("btn_registrate.png"), new_user_registration_path, :style => "float: left;"
+      =link_to image_tag("btn_registrate.png", :size => '75x22'), new_user_registration_path, :style => "float: left;"
 
 
 
