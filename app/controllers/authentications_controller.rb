@@ -18,6 +18,9 @@ class AuthenticationsController < ApplicationController
      all_values_valid = true
      username = omniauth["user_info"]["nickname"]
      email = omniauth["extra"]["user_hash"]["email"]
+     
+     puts "xxx: " + username
+     
      if User.find_by_username(username) || username.match(/profile/)
        all_values_valid = false
        username = ""
@@ -27,6 +30,7 @@ class AuthenticationsController < ApplicationController
        email = "elige_un_mail_"+(0...8).map{65.+(rand(25)).chr}.join
      end
      
+     puts "xxx: " + username
      
      user = User.new(:display_name => omniauth["user_info"]["name"],
                      :username => username,
@@ -38,11 +42,11 @@ class AuthenticationsController < ApplicationController
                      :last_access_token => omniauth['credentials']['token'],
                      :all_values_valid => all_values_valid
                       )
-
+      puts "after save" + user.username
      if user.save(:validate => false)
-       flash[:notice] = "Felicitaciones! Te has registrado con tu cuenta de facebook, ahora comparte tu enlace con tus amigos para que te describan en 5 palabritas..."
+       #flash[:notice] = "Felicitaciones! Te has registrado con tu cuenta de facebook, ahora comparte tu enlace con tus amigos para que te describan en 5 palabritas..."
 
-       unless user.username = ""
+       unless user.username == ""
          #Share on Wall
          fb_user = FbGraph::User.me(user.last_access_token).fetch
          fb_user.feed!(
