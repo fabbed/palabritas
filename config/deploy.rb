@@ -47,7 +47,7 @@ namespace :deploy do
   end
   
   task :copy_configs_from_shared do
-    %w(database.yml).each do |file|
+    %w(database.yml facebook.yml).each do |file|
       run "ln -nfs #{shared_path}/config/#{file} #{release_path}/config/#{file}"
     end
   end
