@@ -8,11 +8,7 @@
     = stylesheet_link_tag "screen"
     =# stylesheet_link_tag "own/threewords"    
     = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"
-    = javascript_include_tag "rails.js"
-    = javascript_include_tag "jquery.validate.min.js"
-    = javascript_include_tag "application.js"    
-    = javascript_include_tag "i18n.js"
-    = javascript_include_tag "translations.js"    
+    = javascript_include_tag "rails.js", "jquery.validate.min.js", "application.js", "i18n.js", "translations.js", :cache => true
 
     :erb
       <!--[if IE]><%= stylesheet_link_tag 'own/ie_all' %><![endif]-->
