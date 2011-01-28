@@ -58,7 +58,7 @@ end
 require 'bundler/capistrano'
 set :bundle_without, [:development, :test, :metrics, :deployment]
 set :bundle, '/home/rails/.rvm/gems/ree-1.8.7-2010.02\@palabritas' 
-set :bundle_flags,    "--deployment --verbose --path /home/rails/.rvm/gems/ree-1.8.7-2010.02\@palabritas/"
+set :bundle_flags,    "--deployment --quiet --path /home/rails/.rvm/gems/ree-1.8.7-2010.02\@palabritas/"
 
 
 $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory to the load path.
