@@ -16,7 +16,7 @@ class AuthenticationsController < ApplicationController
        sign_in_and_redirect(:user, user)
    else #einen user mit der uid gibt es noch nicht
      all_values_valid = true
-     username = omniauth["user_info"]["nickname"]
+     username = omniauth["user_info"]["nickname"].gsub(/\./, '_')
      email = omniauth["extra"]["user_hash"]["email"]
      
      puts "xxx: " + username

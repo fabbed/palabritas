@@ -45,6 +45,7 @@ es:
               too_long: "Tu nombre de usuario no debe tener mas que 20 letras"
               taken: "Este usuario ya existe, elige otro"
               blank: "Tienes que especificar un nombre de usuario"
+              invalid: "Usa solo letras y numeros"
       login:
         password:
           blank: "Por favor, pon tu contraseña"
