@@ -28,4 +28,8 @@
           = f.label :remember_me, "Recuerdame en este ordenador"
 
       %span= image_submit_tag "btn_entrar.png"
+
+      - if devise_mapping.recoverable? && controller_name != 'passwords'
+        = link_to "¿Olvidaste tu contraseña?", new_password_path(resource_name), "data-role" => "button"
+
     .clear  

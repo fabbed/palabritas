@@ -40,6 +40,7 @@ es:
               blank: "Por favor, elige una contraseña"
               too_short: "La contraseña debe tener 4 letras minimo"
               too_long: "La contraseña no debe tener mas que 15 letras"
+              confirmation: "Pon la misma contraseña dos vezes"
             username:
               too_short: "Tu nombre de usuario debe tener 4 letras minimo"
               too_long: "Tu nombre de usuario no debe tener mas que 20 letras"
@@ -58,6 +59,17 @@ es:
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'Your account was not activated yet.'
+    passwords:
+      user:
+        send_instructions: 'Reciberás un correo con instrucciones como tener una contraseña nueva'
+        updated: 'Cambiaste tu contraseña, estas conectado ahora'
+
+
+
+    mailer:
+      reset_password_instructions:
+        subject: '5palabritas.com - Nueva contraseña'
+
 
   devise:
     registrations:

@@ -1,0 +1,28 @@
+#sign_in
+  #logo.fix_png
+    =link_to image_tag("logo.png", :class => "fixpng", :size => '325x54'), root_path
+
+  =flash[:notice]
+
+  #introduction
+    %h1 Cambia tu contraseña
+
+  #register_fields
+    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+      #flash_alert_in_form=flash[:alert] if flash[:alert]
+      = devise_error_messages!
+
+      %span.top_margin_20
+        = f.hidden_field :reset_password_token
+        = f.label :password, "Tu contraseña nueva"
+        = f.password_field :password, :class => "text_field delete_when_focus"
+        = f.error_message_on :password
+      %span
+        = f.label :password_confirmation, "Repite la contraseña nueva"
+        = f.password_field :password_confirmation, :class => "text_field delete_when_focus"
+        = f.error_message_on :password_confirmation
+
+        = f.submit "Quiero una contraseña nueva"
+    .clear  
+
+
