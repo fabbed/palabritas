@@ -14,6 +14,8 @@ class WordSetsController < ApplicationController
       
       session[:user][:described_users].push(@user.username)
       
+      UserMailer.new_word_set(@user).deliver
+      
       if current_user
         flash[:promote] = I18n.t("words_sent")
         redirect_to show_user_path(User.find(params[:user_id]).username, :t => "word_set_created")

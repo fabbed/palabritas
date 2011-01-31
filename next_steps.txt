@@ -20,18 +20,6 @@ comparte este enlacepara que puedan empezar a defnirte.
 
 
 
-==== MIAL QUE LLEGA CUANDO TE REGISTRASTE =====
-
-Subject: 5palabritas.com - ¡bienvenidos!
-
-Body:
-hola xxx,
-
-¡bienvenido a 5palabritas.com!
-tu solicitud de registro se ha realizado con éxito. ya puedes compartir el enlace y saber lo que tus amigos piensan de ti. mucha suerte!
-
-
-
 
 protect user  (authentication)
 

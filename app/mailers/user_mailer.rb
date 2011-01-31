@@ -5,7 +5,14 @@ class UserMailer < ActionMailer::Base
     @user = user
     @url  = user.permalink
     mail(:to => user.email,
-         :subject => "Bienvenidos a 5palabritas.com")
+         :subject => "5palabritas.com - ¡bienvenidos!")
+  end
+
+  def new_word_set(user)
+    @user = user
+    @url  = user.permalink
+    mail(:to => user.email,
+         :subject => "5palabritas.com - ¡Tienes palabritas nuevas!")
   end
 
 

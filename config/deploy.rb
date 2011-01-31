@@ -72,3 +72,5 @@ set :default_environment, {
   'GEM_HOME'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02@palabritas',
   'GEM_PATH'     => '/home/rails/.rvm/gems/ree-1.8.7-2010.02@palabritas'
 }
+        require 'config/boot'
+        require 'hoptoad_notifier/capistrano'

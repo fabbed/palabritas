@@ -63,6 +63,9 @@ GEM
       rest-client (>= 1.4)
     haml (3.0.25)
     highline (1.6.1)
+    hoptoad_notifier (2.4.4)
+      activesupport
+      builder
     i18n (0.5.0)
     i18n-js (0.1.6)
     json (1.5.0)
@@ -171,6 +174,7 @@ DEPENDENCIES
   dynamic_form
   fb_graph
   haml
+  hoptoad_notifier
   i18n-js
   mechanize
   mysql2

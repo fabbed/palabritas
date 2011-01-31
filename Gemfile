@@ -14,6 +14,7 @@ group :default do
   gem 'compass-960-plugin'
   gem 'compass-colors'
   gem 'smurf'
+  gem 'hoptoad_notifier'
 end
 
 group :deployment do
