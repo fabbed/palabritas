@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :display_name, :words_attributes, :avatar, :background, :delete_photo_avatar, :delete_photo_background, :profile_public, :fb_uid, :auth_type, :last_access_token, :all_values_valid
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :display_name, :words_attributes, :avatar, :background, :delete_photo_avatar, :delete_photo_background, :profile_public, :fb_uid, :auth_type, :last_access_token, :all_values_valid, :signup_tracked
 
   has_many :word_sets, :foreign_key => :receiver_id
 
@@ -40,6 +40,10 @@ class User < ActiveRecord::Base
       :thumb=> "100x100#",
       :medium  => "400x400>" }
 
+
+    def permalink
+      HOST + username
+    end
 
   def received_words_as_array
     words = received_word_to_word_sets.inject([]){ |words, word_set_to_word| words <<  word_set_to_word.word.word}

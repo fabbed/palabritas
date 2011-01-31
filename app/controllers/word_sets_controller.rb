@@ -16,10 +16,10 @@ class WordSetsController < ApplicationController
       
       if current_user
         flash[:promote] = I18n.t("words_sent")
-        redirect_to show_user_path(User.find(params[:user_id]).username)
+        redirect_to show_user_path(User.find(params[:user_id]).username, :t => "word_set_created")
       else
         flash[:promote] = I18n.t("promote_flash_after_words_were_sent")
-        redirect_to root_path
+        redirect_to root_path(:t => "word_set_created")
       end
       
     end

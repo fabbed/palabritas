@@ -1,3 +1,8 @@
+tracking
+  http://5palabritas.local:3000/dashboard?mthd=sign_up&t=signup
+  http://5palabritas.local:3000/dashboard?mthd=facebook&t=signup  
+  
+
 -check godaddy
 -email absenden
 

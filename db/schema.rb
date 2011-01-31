@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110126100740) do
+ActiveRecord::Schema.define(:version => 20110131112005) do
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20110126100740) do
     t.string   "fb_uid"
     t.string   "last_access_token"
     t.boolean  "all_values_valid",                       :default => true
+    t.boolean  "signup_tracked",                         :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
