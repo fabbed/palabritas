@@ -40,7 +40,7 @@ class UserController < ApplicationController
   end
 
   def edit
-    if params[:id] == current_user.id
+    if params[:id].to_s == current_user.id.to_s
       @user = User.find(params[:id]) 
     end
   end
