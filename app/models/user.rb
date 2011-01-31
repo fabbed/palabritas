@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :display_name, :words_attributes, :avatar, :background, :delete_photo_avatar, :delete_photo_background, :profile_public, :fb_uid, :auth_type, :last_access_token, :all_values_valid, :signup_tracked
 
+
+  after_create :send_welcome_email 
+
   has_many :word_sets, :foreign_key => :receiver_id
 
   has_many :received_word_sets, :class_name => "WordSet", :foreign_key => :receiver_id
@@ -95,6 +98,12 @@ class User < ActiveRecord::Base
   def clear_photo
     self.avatar = nil if delete_photo_avatar?
     self.background = nil if delete_photo_background?
+  end
+
+  private
+
+  def send_welcome_email
+    UserMailer.welcome_email(self).deliver
   end
 
 
