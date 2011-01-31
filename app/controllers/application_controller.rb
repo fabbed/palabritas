@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource_or_scope)
     if resource_or_scope.is_a?(User)
-      if !resource_or_scope.signup_tracked?
+      if !resource_or_scope.signup_tracked
         resource_or_scope.update_attribute(:signup_tracked, true)
         user_root_path(:t => "signup", :mthd => resource_or_scope.auth_type)
       else
