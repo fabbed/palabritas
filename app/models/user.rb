@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   validates_presence_of :display_name
   validates_presence_of :email
   validates_presence_of :username
-  validates_format_of :username, :with => /^[-a-z]+$/
+  validates_format_of :username, :with => /[\w \.\-@]+/
 
   # validates_presence_of :password
   validates_uniqueness_of :username
