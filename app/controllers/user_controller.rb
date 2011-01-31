@@ -40,7 +40,9 @@ class UserController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id]) if params[:id] == current_user.id
+    if params[:id] == current_user.id
+      @user = User.find(params[:id]) 
+    end
   end
 
   def share_on_wall

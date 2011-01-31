@@ -16,7 +16,7 @@
         &nbsp;
         \|
         &nbsp;
-        = link_to(t(".settings"), edit_user_path(current_user))
+        = link_to(t(".settings"), edit_user_path(current_user.id))
 
       -else
         =link_to t(".login"), new_user_session_path
