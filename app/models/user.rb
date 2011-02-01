@@ -17,6 +17,9 @@ class User < ActiveRecord::Base
 
   has_many :received_word_to_word_sets, :through => :received_word_sets, :source => :word_set_to_words
 
+  has_many :friends_from_which_received_word_sets, :through => :received_word_sets, :source => :sender
+  has_many :friends_to_whom_sent_word_sets, :through => :sent_word_sets, :source => :receiver
+
   validates_presence_of :display_name
   validates_presence_of :email
   validates_presence_of :username
@@ -44,9 +47,13 @@ class User < ActiveRecord::Base
       :medium  => "400x400>" }
 
 
-    def permalink
-      HOST + username
-    end
+  def permalink
+    HOST + username
+  end
+
+  def friends
+    (friends_to_whom_sent_word_sets + friends_from_which_received_word_sets).uniq
+  end
 
   def received_words_as_array
     words = received_word_to_word_sets.inject([]){ |words, word_set_to_word| words <<  word_set_to_word.word.word}

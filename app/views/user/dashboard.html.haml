@@ -35,6 +35,13 @@
             %li o por email
           
       #sidebar
+        =image_tag "tus_amigos.gif"
+        #your_friends
+          -if current_user.friends.any?
+            = render :partial => "friend", :collection => current_user.friends
+          -else
+            "No tienes amigo aún, ¡decribe alguien con 5 palabras!"
+        
         =image_tag "tus_palabritas_top.gif"
         #top_words
           =render :partial => "received_words", :locals => {:user => current_user}

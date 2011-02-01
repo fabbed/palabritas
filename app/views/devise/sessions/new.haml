@@ -24,7 +24,7 @@
         - if devise_mapping.rememberable?
         %p
           %br
-          = f.check_box :remember_me
+          = f.check_box :remember_me, :checked => "checked"
           = f.label :remember_me, "Recuerdame en este ordenador"
 
       %span= image_submit_tag "btn_entrar.png"
