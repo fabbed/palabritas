@@ -93,7 +93,7 @@
 }
 /* line 62, ../../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #main_section, #user #show #main_section {
-  background: #ff3300 url("/images/dashboard_content_section_main.png") top center repeat-y;
+  background: url("/images/dashboard_content_section_main.png") top center repeat-y;
 }
 /* line 64, ../../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #main_section .content, #user #show #main_section .content {

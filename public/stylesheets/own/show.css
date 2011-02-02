@@ -4,7 +4,7 @@
 }
 /* line 5, ../../../app/stylesheets/own/show.sass */
 #user #show #main_section {
-  background: url("/images/section_middle.png") repeat-y scroll center top #ff3300;
+  background: url("/images/section_middle.png") repeat-y scroll center top;
 }
 /* line 7, ../../../app/stylesheets/own/show.sass */
 #user #show #main_section #word_sets {

@@ -1409,7 +1409,7 @@ img.facebook_login {
 }
 /* line 62, ../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #main_section, #user #show #main_section {
-  background: #ff3300 url("/images/dashboard_content_section_main.png") top center repeat-y;
+  background: url("/images/dashboard_content_section_main.png") top center repeat-y;
 }
 /* line 64, ../../app/stylesheets/own/dashboard.sass */
 #user #dashboard #main_section .content, #user #show #main_section .content {
@@ -1441,7 +1441,7 @@ img.facebook_login {
 }
 /* line 5, ../../app/stylesheets/own/show.sass */
 #user #show #main_section {
-  background: url("/images/section_middle.png") repeat-y scroll center top #ff3300;
+  background: url("/images/section_middle.png") repeat-y scroll center top;
 }
 /* line 7, ../../app/stylesheets/own/show.sass */
 #user #show #main_section #word_sets {
