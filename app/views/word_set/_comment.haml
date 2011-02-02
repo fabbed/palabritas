@@ -1,0 +1,7 @@
+.comment
+  -if current_user && current_user.id == comment.user_id
+    Tu:
+  -else
+    ="#{comment.user.username}: "
+
+  =comment.comment

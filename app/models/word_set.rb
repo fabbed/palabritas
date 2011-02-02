@@ -2,11 +2,12 @@ class WordSet < ActiveRecord::Base
 
   # acts_as_paranoid
 
+  acts_as_commentable
+
   belongs_to :receiver, :class_name => "User"
   belongs_to :sender, :class_name => "User"
   has_many :word_set_to_words
   has_many :words, :through => :word_set_to_words
-  
   
   def self.create_set(words_hash, note, sender_id = nil)
 

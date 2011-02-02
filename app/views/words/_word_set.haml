@@ -6,22 +6,17 @@
     %p.time_ago="hace " + time_ago_in_words(word_set.created_at)
     
   .actions
-    -if !word_set.reply && current_user && current_user == word_set.receiver
-      = link_to image_tag("btn_reply.jpg"), "#", :class => "btn_leave_reply"
-      = button_to "", user_word_set_path(@user, word_set), :confirm => "¿Estas seguro?", :method => :delete
+    = link_to(image_tag("btn_reply.jpg"), "#", :class => "btn_leave_reply") if current_user
+    = button_to("", user_word_set_path(@user, word_set), :confirm => "¿Estas seguro?", :method => :delete) if current_user && current_user == word_set.receiver
   .clear
   
-  .word_set_reply{:class => (word_set.reply  ? nil : "hidden_content")}
-    -if current_user && current_user == word_set.receiver
-      Tu comentario:
-    -else
-      ="#{word_set.receiver.username}: "
-    
-    -if !word_set.reply && current_user == @user
-      -form_for [current_user, word_set], :html => {:id => "word_set_reply_form"}, :method => :post do |f|
+  .word_set_comments{:class => (word_set.comments.any?  ? nil : "hidden_content")}
+    =render :partial => "word_set/comment", :collection => word_set.comments, :locals => {:word_set => word_set}
+
+  .word_set_comment_form.hidden_content
+    -if current_user
+      -form_for [@user, word_set], :html => {:id => "word_set_reply_form"}, :method => :post do |f|
         =f.text_area :reply, :class => "reply_text_field"
         =submit_tag "Enviar comentario" , :id => "submit_word_form"
-    -else
-      =word_set.reply
   
 .divider{:class => ((word_set_counter+1) == total_count ? "last" : nil)} &nbsp;

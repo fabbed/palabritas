@@ -15,6 +15,8 @@ group :default do
   gem 'compass-colors'
   gem 'smurf'
   gem 'hoptoad_notifier'
+  gem 'acts_as_commentable'  
+  
 end
 
 group :deployment do

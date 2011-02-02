@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 
   $(".btn_leave_reply").click(function() {
-    $(this).closest(".word_set").children(".word_set_reply").slideDown();
+    $(this).closest(".word_set").children(".word_set_comment_form").slideDown();
     return false;
   });
 
