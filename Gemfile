@@ -16,7 +16,7 @@ group :default do
   gem 'smurf'
   gem 'hoptoad_notifier'
   gem 'acts_as_commentable'  
-  
+  gem 'typus', :git => 'https://github.com/fesplugas/typus.git'
 end
 
 group :deployment do

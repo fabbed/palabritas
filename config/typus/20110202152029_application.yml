@@ -1,0 +1,54 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Comment:
+  fields:
+    default: title, comment, commentable_id, user_id, user
+    form: title, comment, commentable_id, user_id, user
+  order_by: 
+  relationships: user
+  filters: created_at
+  search: title
+  application: cincopalabritas.com
+
+User:
+  fields:
+    default: email, remember_token, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, display_name, username, avatar_file_name, background_file_name, profile_public, fb_uid, last_access_token, all_values_valid, signup_tracked
+    form: email, reset_password_token, remember_token, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, display_name, username, avatar_file_name, background_file_name, profile_public, fb_uid, last_access_token, all_values_valid, signup_tracked
+  order_by: 
+  relationships: friends_from_which_received_word_sets, friends_to_whom_sent_word_sets, received_word_sets, received_word_to_word_sets, sent_word_sets, word_sets
+  filters: created_at
+  search: 
+  application: cincopalabritas.com
+
+Word:
+  fields:
+    default: word, word_count
+    form: word, word_count
+  order_by: 
+  relationships: 
+  filters: created_at
+  search: 
+  application: cincopalabritas.com
+
+WordSet:
+  fields:
+    default: sender_id, receiver_id, note, reply, receiver, sender
+    form: sender_id, receiver_id, note, reply, receiver, sender
+  order_by: 
+  relationships: comments, receiver, sender, word_set_to_words, words
+  filters: created_at
+  search: 
+  application: cincopalabritas.com
+
+WordSetToWord:
+  fields:
+    default: word_set_id, word_id, position, word_set, word
+    form: word_set_id, word_id, word_set, word
+  order_by: position
+  relationships: word, word_set
+  filters: created_at
+  search: 
+  application: cincopalabritas.com
+
