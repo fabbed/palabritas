@@ -35,7 +35,7 @@
             %li.sth_with_facebook{:onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;"} en facebook
             %li en messenger
             %li o por email
-          
+        =render :partial => "shared/facebook_invite"
       #sidebar
         =image_tag "tus_amigos.gif"
         #your_friends

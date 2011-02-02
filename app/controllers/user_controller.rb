@@ -7,6 +7,17 @@ class UserController < ApplicationController
     @word_set = WordSet.new
   end
   
+  # 1. <?php  
+  # 2. // Prepare the invitation text that all invited users will receive.  
+  # 3. $content = <<<FBML  
+  # 4. <fb:name uid="$user" firstnameonly="true" shownetwork="false"/> wants to know what your Favorite Games are!  
+  # 5. <fb:req-choice url="{$facebook->get_add_url()}" label="Add Favorite Games to your profile!"/>  
+  # 6. FBML;  
+  # 7. ?>  
+  # 8. <fb:request-form action="http://apps.facebook.com/myapp/" method="POST" invite="true" type="Favorite Games" content="<?php echo htmlentities($content);?>">  
+  # 9.     <fb:multi-friend-selector max="20" actiontext="Here are your friends who haven't added Favorite Games to their profile. Invite them to share their Favorite Games today!" showborder="true" rows="5"></fb:request-form>  
+  
+  
   def dashboard
     @fb_user = FbGraph::User.me(current_user.last_access_token) if current_user.is_facebook_user?
     # @fb_user.fetch if @fb_user # TODO
