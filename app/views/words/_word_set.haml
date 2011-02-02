@@ -17,7 +17,7 @@
     -else
       ="Comentario de #{word_set.receiver.username}"
     
-    -if !word_set.reply && is_dashboard?
+    -if !word_set.reply && is_dashboard
       -form_for [current_user, word_set], :html => {:id => "word_set_reply_form"}, :method => :post do |f|
         =f.text_area :reply, :class => "reply_text_field"
         =submit_tag "Enviar comentario" , :id => "submit_word_form"
