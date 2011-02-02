@@ -16,7 +16,7 @@
   .word_set_comment_form.hidden_content
     -if current_user
       -form_for [@user, word_set], :html => {:id => "word_set_reply_form"}, :method => :post do |f|
-        =f.text_area :reply, :class => "reply_text_field"
+        =text_area_tag "word_set[comment]", nil, :class => "reply_text_field"
         =submit_tag "Enviar comentario" , :id => "submit_word_form"
   
 .divider{:class => ((word_set_counter+1) == total_count ? "last" : nil)} &nbsp;
