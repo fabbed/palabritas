@@ -12,7 +12,12 @@ class WordSetsController < ApplicationController
     if params[:word_set][:comment]
       @word_set = WordSet.find(:first, :conditions => ['receiver_id = ? AND id = ?', @user.id, params[:id]])
       @word_set.comments.create(:title => "", :comment => params[:word_set][:comment], :user_id => current_user.id)
-      UserMailer.new_comment_on_your_word_set(@word_set).deliver if @word_set.sender
+
+      #mail an den owner des word sets wenn comment von 
+
+      UserMailer.new_comment_on_your_word_set(@word_set).deliver if @word_set.sender && (@word_set.sender != current_user)
+
+
       redirect_to show_user_path(@user.username)
     end
   end
