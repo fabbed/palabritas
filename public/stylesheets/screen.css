@@ -1441,7 +1441,7 @@ img.facebook_login {
 }
 /* line 5, ../../app/stylesheets/own/show.sass */
 #user #show #main_section {
-  background: url("/images/dashboard_content_section_main_white.png") repeat-y scroll center top #ff3300;
+  background: url("/images/section_middle.png") repeat-y scroll center top #ff3300;
 }
 /* line 7, ../../app/stylesheets/own/show.sass */
 #user #show #main_section #word_sets {
@@ -1453,7 +1453,7 @@ img.facebook_login {
 }
 /* line 11, ../../app/stylesheets/own/show.sass */
 #user #show #show_call_to_action {
-  margin: -24px 0px 0px 366px;
+  margin: -40px 0px 0px 366px;
   position: absolute;
 }
 /* line 14, ../../app/stylesheets/own/show.sass */
