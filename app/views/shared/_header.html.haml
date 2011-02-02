@@ -3,17 +3,13 @@
   #loginout
     #text_links
       -if user_signed_in?
-        !=t(".hola_username", :link => link_to(current_user.get_username, edit_user_path(current_user)))+"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;"
+        !=t(".hola_username", :link => link_to(current_user.get_username, user_root_path))+"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;"
 
         !=link_to(t(".your_public_page"), show_user_path(current_user.get_username))
-        &nbsp;
-        \|
         &nbsp;
 
 
       -if user_signed_in?
-        = link_to(t(".answers"), user_root_path)
-        &nbsp;
         \|
         &nbsp;
         = link_to(t(".settings"), edit_user_path(current_user.id))
