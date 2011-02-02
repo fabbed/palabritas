@@ -1027,34 +1027,35 @@ input {
 }
 /* line 46, ../../app/stylesheets/own/sign_up.sass */
 #register_fields form {
-  padding: 85px 0px 0px 135px;
+  padding: 75px 0px 0px 135px;
   font-weight: bold;
   width: 250px;
+  height: 440px;
   display: block;
   overflow: hidden;
 }
-/* line 52, ../../app/stylesheets/own/sign_up.sass */
+/* line 53, ../../app/stylesheets/own/sign_up.sass */
 #register_fields form span {
   display: block;
   margin-bottom: 0px;
-  height: 80px;
+  margin-top: 12px;
 }
-/* line 56, ../../app/stylesheets/own/sign_up.sass */
+/* line 57, ../../app/stylesheets/own/sign_up.sass */
 #register_fields form #btn_registrate {
   margin-left: -5px;
 }
 
-/* line 58, ../../app/stylesheets/own/sign_up.sass */
+/* line 59, ../../app/stylesheets/own/sign_up.sass */
 #introduction {
   float: left;
   width: 405px;
 }
 
-/* line 63, ../../app/stylesheets/own/sign_up.sass */
+/* line 64, ../../app/stylesheets/own/sign_up.sass */
 #sign_up #logo, #sign_in #logo {
   padding-top: 30px;
 }
-/* line 65, ../../app/stylesheets/own/sign_up.sass */
+/* line 66, ../../app/stylesheets/own/sign_up.sass */
 #sign_up h1, #sign_in h1 {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -1063,20 +1064,20 @@ input {
   line-height: 50px;
   font-weight: bold;
 }
-/* line 72, ../../app/stylesheets/own/sign_up.sass */
+/* line 73, ../../app/stylesheets/own/sign_up.sass */
 #sign_up h2, #sign_in h2 {
   color: white;
   line-height: 25px;
   margin-bottom: 15px;
 }
-/* line 76, ../../app/stylesheets/own/sign_up.sass */
+/* line 77, ../../app/stylesheets/own/sign_up.sass */
 #sign_up #es_gratis_label, #sign_in #es_gratis_label {
-  margin: 100px 0px 0px 122px;
+  margin: 70px 0px 0px 122px;
 }
-/* line 78, ../../app/stylesheets/own/sign_up.sass */
+/* line 79, ../../app/stylesheets/own/sign_up.sass */
 #sign_up #slogan_below_form, #sign_in #slogan_below_form {
   color: white;
-  margin: 35px 0px 0px 25px;
+  margin: 0px 0px 0px 25px;
   font-weight: normal;
   font-size: 16px;
 }
@@ -1094,103 +1095,18 @@ input {
   color: red;
 }
 
-/* line 6, ../../app/stylesheets/own/sign_in.sass */
+/* line 5, ../../app/stylesheets/own/sign_in.sass */
+img.facebook_login {
+  border: solid 3px white;
+}
+
+/* line 9, ../../app/stylesheets/own/sign_in.sass */
 #sign_in #logo {
   padding-top: 30px;
 }
-/* line 8, ../../app/stylesheets/own/sign_in.sass */
+/* line 11, ../../app/stylesheets/own/sign_in.sass */
 #sign_in h1 {
   font-size: 40px;
-}
-
-/* line 1, ../../app/stylesheets/own/dashboard.sass */
-#your_friends {
-  width: 200px;
-}
-
-/* line 10, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard span.no_words {
-  font-size: 25px;
-  line-height: 28px;
-}
-/* line 13, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard span.comparte {
-  font-size: 20px;
-}
-/* line 15, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard ul {
-  font-size: 20px;
-  margin-bottom: 0px;
-}
-/* line 18, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard a#btn_share_on_facebook {
-  padding: 5px 0px 0px 29px;
-  height: 24px;
-  background: url("/images/icon_share_on_facebook.png") left center no-repeat;
-  margin-left: 44px;
-  display: block;
-}
-/* line 25, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #bottom_section {
-  background: url("/images/dashboard_content_section_bottom.png") top center no-repeat;
-}
-/* line 27, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section {
-  background: url("/images/dashboard_content_section_top.png") top center no-repeat;
-  height: 160px;
-}
-/* line 30, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section #share_link_field {
-  float: left;
-  width: 800px;
-}
-/* line 33, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section #avatar {
-  float: right;
-  margin-right: 10px;
-}
-/* line 36, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard .content {
-  padding: 20px 20px 0px 20px;
-}
-/* line 37, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard .content p#share_link {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-/* line 42, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard input#username {
-  width: 720px;
-  border: 1px solid #bbbbbb;
-  font-size: 20pt;
-  padding: 8px;
-}
-/* line 48, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #avatar img {
-  background-color: white;
-  padding: 3px;
-}
-/* line 51, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section {
-  background: #ff3300 url("/images/dashboard_content_section_main.png") top center repeat-y;
-}
-/* line 53, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section .content {
-  padding-top: 0px;
-}
-/* line 55, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section #main_content, #user #dashboard #main_section #sidebar {
-  float: left;
-}
-/* line 57, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section #main_content {
-  width: 640px;
-}
-/* line 59, ../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section #sidebar {
-  width: 258px;
-  text-align: center;
 }
 
 /* line 1, ../../app/stylesheets/own/edit.sass */
@@ -1225,90 +1141,114 @@ input {
 /* line 3, ../../app/stylesheets/own/word_set.sass */
 #user #dashboard #top_words {
   color: #ff6600;
+  margin-top: 30px;
 }
 
-/* line 8, ../../app/stylesheets/own/word_set.sass */
+/* line 9, ../../app/stylesheets/own/word_set.sass */
 #user #show .words {
   width: 700px;
   padding-top: 2px;
 }
-/* line 11, ../../app/stylesheets/own/word_set.sass */
+/* line 12, ../../app/stylesheets/own/word_set.sass */
 #user #show .actions {
   display: none;
 }
+/* line 15, ../../app/stylesheets/own/word_set.sass */
+#user #show .word_set_reply {
+  color: #999999;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 12px;
+}
 
-/* line 14, ../../app/stylesheets/own/word_set.sass */
-#word_sets {
-  margin-top: 20px;
-  margin-left: 20px;
-}
-/* line 17, ../../app/stylesheets/own/word_set.sass */
-#word_sets .divider {
-  height: 1px;
-  border-bottom: 1px solid #ffcc67;
-  line-height: 0px;
-  margin-bottom: 7px;
-}
-/* line 22, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set {
-  min-height: 60px;
-}
-/* line 24, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .thumb_avatar, #word_sets .word_set .words, #word_sets .word_set .actions {
-  float: left;
-}
 /* line 26, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .thumb_avatar {
-  margin-right: 10px;
-}
-/* line 28, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .words {
-  width: 525px;
-}
-/* line 29, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .words p.who {
+#word_sets p.who, #your_friends p.who {
   font-size: 13px;
   line-height: 12px;
   color: #999999;
   padding-left: 1px;
   padding-bottom: 4px;
 }
-/* line 36, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .words a {
-  color: #3399ff;
-  text-decoration: none;
-}
-/* line 39, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .words p {
+/* line 32, ../../app/stylesheets/own/word_set.sass */
+#word_sets p, #your_friends p {
   margin: 0;
   color: black;
   line-height: 21px;
   font-size: 19px;
   font-weight: bold;
 }
-/* line 45, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .words p.time_ago {
+/* line 38, ../../app/stylesheets/own/word_set.sass */
+#word_sets p.time_ago, #your_friends p.time_ago {
   color: #999999;
   font-size: 10px;
   font-weight: normal;
   line-height: 12px;
 }
+/* line 43, ../../app/stylesheets/own/word_set.sass */
+#word_sets a, #your_friends a {
+  color: #3399ff;
+  text-decoration: none;
+}
+
+/* line 47, ../../app/stylesheets/own/word_set.sass */
+#word_sets, #your_friends {
+  margin-top: 0px;
+  margin-left: 20px;
+}
 /* line 50, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .words span.normal {
+#word_sets .divider, #your_friends .divider {
+  height: 1px;
+  border-bottom: 1px solid #ffcc67;
+  line-height: 0px;
+  margin-bottom: 7px;
+}
+/* line 55, ../../app/stylesheets/own/word_set.sass */
+#word_sets .divider.last, #your_friends .divider.last {
+  display: none;
+}
+/* line 57, ../../app/stylesheets/own/word_set.sass */
+#word_sets .word_set, #word_sets .friend, #your_friends .word_set, #your_friends .friend {
+  min-height: 60px;
+}
+/* line 59, ../../app/stylesheets/own/word_set.sass */
+#word_sets .word_set .thumb_avatar, #word_sets .word_set .words, #word_sets .word_set .actions, #word_sets .friend .thumb_avatar, #word_sets .friend .words, #word_sets .friend .actions, #your_friends .word_set .thumb_avatar, #your_friends .word_set .words, #your_friends .word_set .actions, #your_friends .friend .thumb_avatar, #your_friends .friend .words, #your_friends .friend .actions {
+  float: left;
+}
+/* line 61, ../../app/stylesheets/own/word_set.sass */
+#word_sets .word_set .thumb_avatar, #word_sets .friend .thumb_avatar, #your_friends .word_set .thumb_avatar, #your_friends .friend .thumb_avatar {
+  margin-right: 10px;
+}
+/* line 63, ../../app/stylesheets/own/word_set.sass */
+#word_sets .word_set .words, #word_sets .friend .words, #your_friends .word_set .words, #your_friends .friend .words {
+  width: 480px;
+}
+/* line 65, ../../app/stylesheets/own/word_set.sass */
+#word_sets .word_set .words span.normal, #word_sets .friend .words span.normal, #your_friends .word_set .words span.normal, #your_friends .friend .words span.normal {
   font-weight: normal;
   color: #666666;
 }
-/* line 53, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .actions {
-  width: 28px;
+/* line 68, ../../app/stylesheets/own/word_set.sass */
+#word_sets .actions, #your_friends .actions {
+  margin-top: 10px;
+  width: 70px;
 }
-/* line 55, ../../app/stylesheets/own/word_set.sass */
-#word_sets .word_set .actions input {
+/* line 70, ../../app/stylesheets/own/word_set.sass */
+#word_sets .actions form, #word_sets .actions a, #your_friends .actions form, #your_friends .actions a {
+  float: left;
+}
+/* line 73, ../../app/stylesheets/own/word_set.sass */
+#word_sets .actions form, #your_friends .actions form {
+  height: 25px;
+}
+/* line 75, ../../app/stylesheets/own/word_set.sass */
+#word_sets .actions input, #your_friends .actions input {
+  margin-left: 10px;
   background: url("/images/icon_trash.png") left center no-repeat;
   border: 0;
   height: 25px;
   width: 25px;
-  margin-top: 10px;
   cursor: hand;
 }
 
@@ -1351,47 +1291,6 @@ input {
   display: none;
 }
 
-/* line 3, ../../app/stylesheets/own/show.sass */
-#user #show #show_call_to_action {
-  margin: -24px 0px 0px 366px;
-  position: absolute;
-}
-/* line 6, ../../app/stylesheets/own/show.sass */
-#user #show #show_call_to_action.w_background {
-  background-color: white;
-}
-/* line 8, ../../app/stylesheets/own/show.sass */
-#user #show #register_bubble {
-  position: absolute;
-  margin: 12px 0px 0px 802px;
-}
-/* line 11, ../../app/stylesheets/own/show.sass */
-#user #show .word_field {
-  margin-top: 15px;
-  border: solid 1px #999999;
-  width: 230px;
-}
-/* line 15, ../../app/stylesheets/own/show.sass */
-#user #show #add_note_to_words {
-  margin-top: 15px;
-}
-/* line 17, ../../app/stylesheets/own/show.sass */
-#user #show #avatar {
-  text-align: right;
-}
-/* line 19, ../../app/stylesheets/own/show.sass */
-#user #show #avatar h1 {
-  color: white;
-  font-size: 33px;
-  margin-bottom: 0px;
-}
-/* line 23, ../../app/stylesheets/own/show.sass */
-#user #show #avatar .medium_avatar {
-  border: solid 5px #6b1a00;
-  float: right;
-  height: 100px;
-}
-
 /* line 1, ../../app/stylesheets/own/avatars.sass */
 .medium_avatar {
   height: 100px;
@@ -1405,30 +1304,225 @@ input {
 }
 
 /* line 9, ../../app/stylesheets/own/avatars.sass */
+.tiny_avatar {
+  height: 25px;
+  width: 25px;
+}
+
+/* line 14, ../../app/stylesheets/own/avatars.sass */
 .thumb_avatar {
   border: solid 2px #fff2e5;
 }
 
-/* line 18, ../../app/stylesheets/screen.sass */
+/* line 1, ../../app/stylesheets/own/dashboard.sass */
+#your_friends {
+  margin: 0;
+  padding-left: 10px;
+}
+/* line 4, ../../app/stylesheets/own/dashboard.sass */
+#your_friends .tiny_avatar {
+  float: left;
+}
+/* line 6, ../../app/stylesheets/own/dashboard.sass */
+#your_friends .friend {
+  min-height: 30px;
+}
+/* line 8, ../../app/stylesheets/own/dashboard.sass */
+#your_friends .friend .details {
+  float: left;
+}
+/* line 10, ../../app/stylesheets/own/dashboard.sass */
+#your_friends .friend p.who {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+/* line 14, ../../app/stylesheets/own/dashboard.sass */
+.reply_text_field {
+  width: 450px;
+  height: 50px;
+  border: solid 1px #bbbbbb;
+}
+
+/* line 21, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard span.no_words, #user #show span.no_words {
+  font-size: 25px;
+  line-height: 28px;
+}
+/* line 24, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard span.comparte, #user #show span.comparte {
+  font-size: 20px;
+}
+/* line 26, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard ul, #user #show ul {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+/* line 29, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard a#btn_share_on_facebook, #user #show a#btn_share_on_facebook {
+  padding: 5px 0px 0px 29px;
+  height: 24px;
+  background: url("/images/icon_share_on_facebook.png") left center no-repeat;
+  margin-left: 44px;
+  display: block;
+}
+/* line 36, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #bottom_section, #user #show #bottom_section {
+  background: url("/images/dashboard_content_section_bottom.png") top center no-repeat;
+}
+/* line 38, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section, #user #show #top_section {
+  background: url("/images/dashboard_content_section_top.png") top center no-repeat;
+  height: 160px;
+}
+/* line 41, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #share_link_field, #user #show #top_section #share_link_field {
+  float: left;
+  width: 780px;
+}
+/* line 44, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #avatar, #user #show #top_section #avatar {
+  float: right;
+  margin-right: 10px;
+}
+/* line 47, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard .content, #user #show .content {
+  padding: 20px 20px 0px 30px;
+}
+/* line 48, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard .content p#share_link, #user #show .content p#share_link {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+/* line 53, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard input#username, #user #show input#username {
+  width: 710px;
+  border: 1px solid #bbbbbb;
+  font-size: 20pt;
+  padding: 8px;
+}
+/* line 59, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #avatar img, #user #show #avatar img {
+  background-color: white;
+  padding: 3px;
+}
+/* line 62, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section, #user #show #main_section {
+  background: #ff3300 url("/images/dashboard_content_section_main.png") top center repeat-y;
+}
+/* line 64, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section .content, #user #show #main_section .content {
+  padding-top: 0px;
+}
+/* line 66, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #main_content, #user #dashboard #main_section #sidebar, #user #show #main_section #main_content, #user #show #main_section #sidebar {
+  float: left;
+}
+/* line 68, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #main_content, #user #show #main_section #main_content {
+  width: 640px;
+}
+/* line 70, ../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #sidebar, #user #show #main_section #sidebar {
+  width: 250px;
+  text-align: center;
+  float: right;
+}
+
+/* line 79, ../../app/stylesheets/own/dashboard.sass */
+#user #show #avatar img {
+  padding: 0px;
+}
+
+/* line 3, ../../app/stylesheets/own/show.sass */
+#user #show #top_section {
+  height: 60px;
+}
+/* line 5, ../../app/stylesheets/own/show.sass */
+#user #show #main_section {
+  background: url("/images/dashboard_content_section_main_white.png") repeat-y scroll center top #ff3300;
+}
+/* line 7, ../../app/stylesheets/own/show.sass */
+#user #show #main_section #word_sets {
+  padding-top: 15px;
+}
+/* line 9, ../../app/stylesheets/own/show.sass */
+#user #show #bottom_section {
+  background: url("/images/dashboard_content_section_bottom_bright.png") top center no-repeat;
+}
+/* line 11, ../../app/stylesheets/own/show.sass */
+#user #show #show_call_to_action {
+  margin: -24px 0px 0px 366px;
+  position: absolute;
+}
+/* line 14, ../../app/stylesheets/own/show.sass */
+#user #show #show_call_to_action.w_background {
+  background-color: white;
+}
+/* line 16, ../../app/stylesheets/own/show.sass */
+#user #show #register_bubble {
+  position: absolute;
+  margin: 12px 0px 0px 802px;
+}
+/* line 19, ../../app/stylesheets/own/show.sass */
+#user #show .word_field {
+  margin-top: 15px;
+  border: solid 1px #999999;
+  width: 230px;
+}
+/* line 23, ../../app/stylesheets/own/show.sass */
+#user #show #add_note_to_words {
+  margin-top: 15px;
+}
+/* line 25, ../../app/stylesheets/own/show.sass */
+#user #show #avatar {
+  text-align: right;
+}
+/* line 27, ../../app/stylesheets/own/show.sass */
+#user #show #avatar h1 {
+  color: white;
+  font-size: 33px;
+  margin-bottom: 0px;
+}
+/* line 31, ../../app/stylesheets/own/show.sass */
+#user #show #avatar .medium_avatar {
+  border: solid 5px #6b1a00;
+  float: right;
+  height: 100px;
+}
+
+/* line 19, ../../app/stylesheets/screen.sass */
+h4 {
+  padding-top: 10px;
+  margin: 0;
+}
+
+/* line 23, ../../app/stylesheets/screen.sass */
 a.tab.selected {
   font-size: 22px;
 }
 
-/* line 21, ../../app/stylesheets/screen.sass */
+/* line 26, ../../app/stylesheets/screen.sass */
 .fixpng {
   behavior: url("/iepngfix.htc");
 }
-/* line 23, ../../app/stylesheets/screen.sass */
+/* line 28, ../../app/stylesheets/screen.sass */
 .fixpng img {
   behavior: url("/iepngfix.htc");
 }
 
-/* line 26, ../../app/stylesheets/screen.sass */
+/* line 31, ../../app/stylesheets/screen.sass */
 img.fixpng {
   behavior: url("/iepngfix.htc");
 }
 
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 34, ../../app/stylesheets/screen.sass */
 #top_section, #main_section, #bottom_section, #section_top, #section_middle, #section_bottom, #register_fields {
   behavior: url("/iepngfix.htc");
+}
+
+/* line 38, ../../app/stylesheets/screen.sass */
+#upload_your_pick_cta {
+  font-weight: bold;
 }

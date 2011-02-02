@@ -7,6 +7,16 @@ function fbshare(url,title){
 
 $(document).ready(function() {
 
+
+
+  $(".btn_leave_reply").click(function() {
+    $(this).closest(".word_set").children(".word_set_reply").slideDown();
+    return false;
+  });
+
+  $('#upload_your_pick_cta').fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400);
+
+
   $("#new_user #user_display_name").val("Tu nombre o apodo")
   $("#new_user #user_email").val("No te spamearemos")
   

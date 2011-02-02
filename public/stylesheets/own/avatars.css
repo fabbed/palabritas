@@ -11,6 +11,12 @@
 }
 
 /* line 9, ../../../app/stylesheets/own/avatars.sass */
+.tiny_avatar {
+  height: 25px;
+  width: 25px;
+}
+
+/* line 14, ../../../app/stylesheets/own/avatars.sass */
 .thumb_avatar {
   border: solid 2px #fff2e5;
 }

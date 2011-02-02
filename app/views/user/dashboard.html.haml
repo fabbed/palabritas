@@ -12,7 +12,10 @@
         =text_field_tag "username", HOST + current_user.username, :readonly => true
         =link_to t(".share_in_facebook"), "#", :name => "fb_share", :onclick => "fbshare('#{HOST+current_user.username}', '#{fb_text}'); return false;", :id => "btn_share_on_facebook", :class => "sth_with_facebook"
 
-      #avatar=link_to render_avatar(current_user), edit_user_path(current_user)
+      #avatar
+        =link_to render_avatar(current_user), edit_user_path(current_user)
+        -if !current_user.avatar.exists?
+          #upload_your_pick_cta=link_to "Sube tu foto aqui", edit_user_path(current_user)
       .clear
 
   #main_section
@@ -21,8 +24,7 @@
         -if current_user.word_sets.any?
           %a#youranswers.tab.selected=t(".your_answers")+":"
           #word_sets
-            -current_user.word_sets.reverse.each do |set|
-              =render :partial => "words/word_set_for_dashboard", :locals => {:set => set}
+            =render :partial => "words/word_set", :locals => {:total_count => current_user.word_sets.reverse.size}, :collection => current_user.word_sets.reverse
         -else
           %span.no_words No hay palabritas aún para ti, comparte tu enlace
           %span.no_words y averiguarás lo que tus amigos piensan realmente de ti.
@@ -38,13 +40,17 @@
         =image_tag "tus_amigos.gif"
         #your_friends
           -if current_user.friends.any?
-            = render :partial => "friend", :collection => current_user.friends
+            = render :partial => "friend", :collection => current_user.friends, :locals => {:total_friends => current_user.friends.size}
           -else
-            "No tienes amigo aún, ¡decribe alguien con 5 palabras!"
-        
-        =image_tag "tus_palabritas_top.gif"
+            No tienes amigos aún, ¡decribe alguien con 5 palabras!
         #top_words
-          =render :partial => "received_words", :locals => {:user => current_user}
+          =image_tag "tus_palabritas_top.gif"
+          -if current_user.uniq_received_words_as_array_with_count.any?
+            %br
+            =render :partial => "received_words", :locals => {:user => current_user}
+          -else
+            .clear
+            %p{:style => "color: black"} No tienes palabras aún
       .clear
   #bottom_section &nbsp;
 

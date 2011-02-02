@@ -24,21 +24,37 @@
       %p.hidden_content#add_note_to_words ¿Añadir una nota con tus palabritas?
       .hidden_content#note
         = text_area_tag "user[note]"
-      %p{:style => "margin: 0; padding: 0; margin-top: 17px; overflow: hidden;"} &nbsp;
+      %p{:style => "margin: 0; padding: 0; margin-top: 5px; overflow: hidden; "} &nbsp;
       =image_submit_tag "btn_enviar.png" , :id => "submit_word_form"
   .clear
 
-  #section_top &nbsp;
-  #section_middle
-    #content
-      %h1="Así describen a #{@user.username}:"
+  #top_section.fixpng
+    .content
+      %h1="Así describen a #{@user.username}:"    
+  #main_section
+    .content
       #word_sets
         -if @user.word_sets.exists?
           -@user.word_sets.reverse.each do |set|
-            =render :partial => "words/word_set_for_dashboard", :locals => {:set => set}
+            =render :partial => "words/word_set", :locals => {:total_count => @user.word_sets.reverse.size}, :collection => @user.word_sets.reverse
+            
         -else
           %h4="Nadie ha dicho nada de #{@user.username} aún,...¡sé el primero que le da 5 palabritas!:"
-  #section_bottom &nbsp;
+        .clear
+  #bottom_section &nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /session["user"]["described_users"]

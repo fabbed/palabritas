@@ -38,6 +38,7 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar,
       :styles => {
+       :tiny =>"25x25#",
        :thumb =>"50x50#",
        :medium => "100x100#" }
 
@@ -50,6 +51,11 @@ class User < ActiveRecord::Base
   def permalink
     HOST + username
   end
+
+  def dashboard_link
+    HOST + "dasboard"
+  end
+
 
   def friends
     (friends_to_whom_sent_word_sets + friends_from_which_received_word_sets).uniq
@@ -110,7 +116,7 @@ class User < ActiveRecord::Base
   private
 
   def send_welcome_email
-    UserMailer.welcome_email(self, password).deliver
+    UserMailer.welcome_email(self, password)
   end
 
 

@@ -15,9 +15,9 @@
     %h1=t(".title")
     %h2!=t(".subtitle")
     
-    =link_to(image_tag("facebook_login.png", :size => '150x22'), "/auth/facebook", :class => "sth_with_facebook")
+    =link_to(image_tag("facebook_login.png", :size => '150x22', :class => "facebook_login"), "/auth/facebook", :class => "sth_with_facebook")
     
-    =image_tag "es_gratis.png", :id => "es_gratis_label", :class => "fixpng", :size => '282x39'
+    =image_tag "es_gratis_logo.png", :id => "es_gratis_label", :class => "fixpng", :size => '284x49'
 
   #register_fields
     = form_for(@user, :url => registration_path(@user)) do |f|
@@ -37,9 +37,8 @@
         = f.label :password, t(".password")
         = f.password_field :password, :class => "text_field"
         = f.error_message_on :password
-      / TODO: password_confirmation
-      .clear
-      %span= image_submit_tag "btn_registrate_big.png", :id => "btn_registrate", :size => '170x60'
 
+      %span= image_submit_tag "btn_registrate_big.png", :id => "btn_registrate", :size => '170x60'
+      .clear
     .clear  
     %p.bold#slogan_below_form=t(".slogan_below_form")

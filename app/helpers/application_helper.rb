@@ -14,9 +14,11 @@ module ApplicationHelper
     if user && user.avatar.exists?
       output=image_tag(user.avatar.url(:medium)) if size == "medium"
       output=image_tag(user.avatar.url(:thumb)) if size == "thumb"
+      output=image_tag(user.avatar.url(:tiny)) if size == "tiny"
     else
       output=image_tag("missing_100_100.png") if size == "medium"
       output=image_tag("missing_50_50.png") if size == "thumb"
+      output=image_tag("missing_25_25.png") if size == "tiny"
     end
     
     content_tag(:div, output, :class => "#{size}_avatar")

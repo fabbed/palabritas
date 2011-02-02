@@ -3,7 +3,7 @@
   #loginout
     #text_links
       -if user_signed_in?
-        !=t(".hola_username", :link => link_to(current_user.get_username, show_user_path(current_user.get_username)))+"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;"
+        !=t(".hola_username", :link => link_to(current_user.get_username, edit_user_path(current_user)))+"&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;"
 
         !=link_to(t(".your_public_page"), show_user_path(current_user.get_username))
         &nbsp;
@@ -19,7 +19,9 @@
         = link_to(t(".settings"), edit_user_path(current_user.id))
 
       -else
-        =link_to t(".login"), new_user_session_path
+        =link_to t(".login"), new_user_session_path, :style => "margin-right: 10px"
+        =link_to(image_tag("facebook_login_small.png", :size => '64x22'), "/auth/facebook", :class => "sth_with_facebook")
+        
 
     -if user_signed_in?
       = link_to(image_tag("btn_logout.png"), destroy_user_session_path, :style => "float: left;")

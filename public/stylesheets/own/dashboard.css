@@ -1,89 +1,120 @@
 /* line 1, ../../../app/stylesheets/own/dashboard.sass */
 #your_friends {
-  width: 200px;
+  margin: 0;
+  padding-left: 10px;
+}
+/* line 4, ../../../app/stylesheets/own/dashboard.sass */
+#your_friends .tiny_avatar {
+  float: left;
+}
+/* line 6, ../../../app/stylesheets/own/dashboard.sass */
+#your_friends .friend {
+  min-height: 30px;
+}
+/* line 8, ../../../app/stylesheets/own/dashboard.sass */
+#your_friends .friend .details {
+  float: left;
+}
+/* line 10, ../../../app/stylesheets/own/dashboard.sass */
+#your_friends .friend p.who {
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-/* line 10, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard span.no_words {
+/* line 14, ../../../app/stylesheets/own/dashboard.sass */
+.reply_text_field {
+  width: 450px;
+  height: 50px;
+  border: solid 1px #bbbbbb;
+}
+
+/* line 21, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard span.no_words, #user #show span.no_words {
   font-size: 25px;
   line-height: 28px;
 }
-/* line 13, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard span.comparte {
+/* line 24, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard span.comparte, #user #show span.comparte {
   font-size: 20px;
 }
-/* line 15, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard ul {
+/* line 26, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard ul, #user #show ul {
   font-size: 20px;
   margin-bottom: 0px;
 }
-/* line 18, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard a#btn_share_on_facebook {
+/* line 29, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard a#btn_share_on_facebook, #user #show a#btn_share_on_facebook {
   padding: 5px 0px 0px 29px;
   height: 24px;
   background: url("/images/icon_share_on_facebook.png") left center no-repeat;
   margin-left: 44px;
   display: block;
 }
-/* line 25, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #bottom_section {
+/* line 36, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #bottom_section, #user #show #bottom_section {
   background: url("/images/dashboard_content_section_bottom.png") top center no-repeat;
 }
-/* line 27, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section {
+/* line 38, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section, #user #show #top_section {
   background: url("/images/dashboard_content_section_top.png") top center no-repeat;
   height: 160px;
 }
-/* line 30, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section #share_link_field {
+/* line 41, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #share_link_field, #user #show #top_section #share_link_field {
   float: left;
-  width: 800px;
+  width: 780px;
 }
-/* line 33, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #top_section #avatar {
+/* line 44, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #top_section #avatar, #user #show #top_section #avatar {
   float: right;
   margin-right: 10px;
 }
-/* line 36, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard .content {
-  padding: 20px 20px 0px 20px;
+/* line 47, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard .content, #user #show .content {
+  padding: 20px 20px 0px 30px;
 }
-/* line 37, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard .content p#share_link {
+/* line 48, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard .content p#share_link, #user #show .content p#share_link {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-/* line 42, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard input#username {
-  width: 720px;
+/* line 53, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard input#username, #user #show input#username {
+  width: 710px;
   border: 1px solid #bbbbbb;
   font-size: 20pt;
   padding: 8px;
 }
-/* line 48, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #avatar img {
+/* line 59, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #avatar img, #user #show #avatar img {
   background-color: white;
   padding: 3px;
 }
-/* line 51, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section {
+/* line 62, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section, #user #show #main_section {
   background: #ff3300 url("/images/dashboard_content_section_main.png") top center repeat-y;
 }
-/* line 53, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section .content {
+/* line 64, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section .content, #user #show #main_section .content {
   padding-top: 0px;
 }
-/* line 55, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section #main_content, #user #dashboard #main_section #sidebar {
+/* line 66, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #main_content, #user #dashboard #main_section #sidebar, #user #show #main_section #main_content, #user #show #main_section #sidebar {
   float: left;
 }
-/* line 57, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section #main_content {
+/* line 68, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #main_content, #user #show #main_section #main_content {
   width: 640px;
 }
-/* line 59, ../../../app/stylesheets/own/dashboard.sass */
-#user #dashboard #main_section #sidebar {
-  width: 258px;
+/* line 70, ../../../app/stylesheets/own/dashboard.sass */
+#user #dashboard #main_section #sidebar, #user #show #main_section #sidebar {
+  width: 250px;
   text-align: center;
+  float: right;
+}
+
+/* line 79, ../../../app/stylesheets/own/dashboard.sass */
+#user #show #avatar img {
+  padding: 0px;
 }

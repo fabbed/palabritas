@@ -5,10 +5,10 @@
   =flash[:notice]
 
   #introduction
-    %h1 Entra con tu nombre de usuario y contraseña:
+    %h1 Entra con tu nombre de usuario y contraseña
 
-    =link_to(image_tag("facebook_login.png", :size => '150x22'), "/auth/facebook")
-
+    %h1!="O: &nbsp;" + link_to(image_tag("facebook_login.png", :size => '150x22', :class => "facebook_login"), "/auth/facebook", :class => "sth_with_facebook")
+    
   #register_fields
     = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:id => "user_login"}) do |f|
       #flash_alert_in_form=flash[:alert] if flash[:alert]
@@ -23,12 +23,10 @@
       %span
         - if devise_mapping.rememberable?
         %p
-          %br
           = f.check_box :remember_me, :checked => "checked"
           = f.label :remember_me, "Recuerdame en este ordenador"
 
       %span= image_submit_tag "btn_entrar.png"
-
       - if devise_mapping.recoverable? && controller_name != 'passwords'
         = link_to "¿Olvidaste tu contraseña?", new_password_path(resource_name), "data-role" => "button"
 

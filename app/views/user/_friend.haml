@@ -1,6 +1,6 @@
-.sidebar_friend
-  =render_avatar(friend, "thumb")
-  .friend_details
+.friend
+  =render_avatar(friend, "tiny")
+  .details
     %p.who!="<b>#{link_to(friend.display_name, user_path(friend))}</b>"
   .clear
-.divider &nbsp;
+.divider{:class => (friend_counter+1 == total_friends ? "last" : nil)} &nbsp;
