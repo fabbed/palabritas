@@ -24,7 +24,7 @@
         -if current_user.word_sets.any?
           %a#youranswers.tab.selected=t(".your_answers")+":"
           #word_sets
-            =render :partial => "words/word_set", :locals => {:total_count => current_user.word_sets.reverse.size}, :collection => current_user.word_sets.reverse
+            =render :partial => "words/word_set", :locals => {:is_dashboard? => true, :total_count => current_user.word_sets.reverse.size}, :collection => current_user.word_sets.reverse
         -else
           %span.no_words No hay palabritas aún para ti, comparte tu enlace
           %span.no_words y averiguarás lo que tus amigos piensan realmente de ti.
