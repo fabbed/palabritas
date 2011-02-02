@@ -2,6 +2,6 @@
   -if current_user && current_user.id == comment.user_id
     %b Tu:
   -else
-    ="#{comment.user.username}: "
+    %b="#{comment.user.username}: "
 
   =comment.comment
