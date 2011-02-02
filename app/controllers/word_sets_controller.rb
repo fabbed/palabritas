@@ -15,7 +15,7 @@ class WordSetsController < ApplicationController
       
       UserMailer.new_comment_on_your_word_set(@word_set).deliver if @word_set.sender
       
-      redirect_to show_user_path(current_user)
+      redirect_to show_user_path(current_user.username)
     end
   end
 
