@@ -9,11 +9,7 @@
   width: 700px;
   padding-top: 2px;
 }
-/* line 12, ../../../app/stylesheets/own/word_set.sass */
-#user #show .actions {
-  display: none;
-}
-/* line 15, ../../../app/stylesheets/own/word_set.sass */
+/* line 13, ../../../app/stylesheets/own/word_set.sass */
 #user #show .word_set_reply {
   color: #999999;
   margin-left: 10px;
@@ -23,7 +19,7 @@
   line-height: 12px;
 }
 
-/* line 26, ../../../app/stylesheets/own/word_set.sass */
+/* line 24, ../../../app/stylesheets/own/word_set.sass */
 #word_sets p.who, #your_friends p.who {
   font-size: 13px;
   line-height: 12px;
@@ -31,7 +27,7 @@
   padding-left: 1px;
   padding-bottom: 4px;
 }
-/* line 32, ../../../app/stylesheets/own/word_set.sass */
+/* line 30, ../../../app/stylesheets/own/word_set.sass */
 #word_sets p, #your_friends p {
   margin: 0;
   color: black;
@@ -39,70 +35,70 @@
   font-size: 19px;
   font-weight: bold;
 }
-/* line 38, ../../../app/stylesheets/own/word_set.sass */
+/* line 36, ../../../app/stylesheets/own/word_set.sass */
 #word_sets p.time_ago, #your_friends p.time_ago {
   color: #999999;
   font-size: 10px;
   font-weight: normal;
   line-height: 12px;
 }
-/* line 43, ../../../app/stylesheets/own/word_set.sass */
+/* line 41, ../../../app/stylesheets/own/word_set.sass */
 #word_sets a, #your_friends a {
   color: #3399ff;
   text-decoration: none;
 }
 
-/* line 47, ../../../app/stylesheets/own/word_set.sass */
+/* line 45, ../../../app/stylesheets/own/word_set.sass */
 #word_sets, #your_friends {
   margin-top: 0px;
   margin-left: 20px;
 }
-/* line 50, ../../../app/stylesheets/own/word_set.sass */
+/* line 48, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .divider, #your_friends .divider {
   height: 1px;
   border-bottom: 1px solid #ffcc67;
   line-height: 0px;
   margin-bottom: 7px;
 }
-/* line 55, ../../../app/stylesheets/own/word_set.sass */
+/* line 53, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .divider.last, #your_friends .divider.last {
   display: none;
 }
-/* line 57, ../../../app/stylesheets/own/word_set.sass */
+/* line 55, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .word_set, #word_sets .friend, #your_friends .word_set, #your_friends .friend {
   min-height: 60px;
 }
-/* line 59, ../../../app/stylesheets/own/word_set.sass */
+/* line 57, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .word_set .thumb_avatar, #word_sets .word_set .words, #word_sets .word_set .actions, #word_sets .friend .thumb_avatar, #word_sets .friend .words, #word_sets .friend .actions, #your_friends .word_set .thumb_avatar, #your_friends .word_set .words, #your_friends .word_set .actions, #your_friends .friend .thumb_avatar, #your_friends .friend .words, #your_friends .friend .actions {
   float: left;
 }
-/* line 61, ../../../app/stylesheets/own/word_set.sass */
+/* line 59, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .word_set .thumb_avatar, #word_sets .friend .thumb_avatar, #your_friends .word_set .thumb_avatar, #your_friends .friend .thumb_avatar {
   margin-right: 10px;
 }
-/* line 63, ../../../app/stylesheets/own/word_set.sass */
+/* line 61, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .word_set .words, #word_sets .friend .words, #your_friends .word_set .words, #your_friends .friend .words {
   width: 480px;
 }
-/* line 65, ../../../app/stylesheets/own/word_set.sass */
+/* line 63, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .word_set .words span.normal, #word_sets .friend .words span.normal, #your_friends .word_set .words span.normal, #your_friends .friend .words span.normal {
   font-weight: normal;
   color: #666666;
 }
-/* line 68, ../../../app/stylesheets/own/word_set.sass */
+/* line 66, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .actions, #your_friends .actions {
   margin-top: 10px;
   width: 70px;
 }
-/* line 70, ../../../app/stylesheets/own/word_set.sass */
+/* line 68, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .actions form, #word_sets .actions a, #your_friends .actions form, #your_friends .actions a {
   float: left;
 }
-/* line 73, ../../../app/stylesheets/own/word_set.sass */
+/* line 71, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .actions form, #your_friends .actions form {
   height: 25px;
 }
-/* line 75, ../../../app/stylesheets/own/word_set.sass */
+/* line 73, ../../../app/stylesheets/own/word_set.sass */
 #word_sets .actions input, #your_friends .actions input {
   margin-left: 10px;
   background: url("/images/icon_trash.png") left center no-repeat;

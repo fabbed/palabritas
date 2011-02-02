@@ -6,18 +6,18 @@
     %p.time_ago="hace " + time_ago_in_words(word_set.created_at)
     
   .actions
-    -unless word_set.reply
+    -if !word_set.reply && current_user && current_user == word_set.receiver
       = link_to image_tag("btn_reply.jpg"), "#", :class => "btn_leave_reply"
-    = button_to "", user_word_set_path(@user, word_set), :confirm => "¿Estas seguro?", :method => :delete
+      = button_to "", user_word_set_path(@user, word_set), :confirm => "¿Estas seguro?", :method => :delete
   .clear
   
-  .word_set_reply{:class => (word_set.reply ? nil : "hidden_content")}
+  .word_set_reply{:class => (word_set.reply  ? nil : "hidden_content")}
     -if current_user && current_user == word_set.receiver
       Tu comentario:
     -else
-      ="Comentario de #{word_set.receiver.username}"
+      ="#{word_set.receiver.username}: "
     
-    -if !word_set.reply && is_dashboard
+    -if !word_set.reply && current_user == @user
       -form_for [current_user, word_set], :html => {:id => "word_set_reply_form"}, :method => :post do |f|
         =f.text_area :reply, :class => "reply_text_field"
         =submit_tag "Enviar comentario" , :id => "submit_word_form"
@@ -25,4 +25,3 @@
       =word_set.reply
   
 .divider{:class => ((word_set_counter+1) == total_count ? "last" : nil)} &nbsp;
-
