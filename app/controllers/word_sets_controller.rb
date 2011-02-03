@@ -23,7 +23,7 @@ class WordSetsController < ApplicationController
         fb_user.feed!(
           :message => I18n.t("facebook.wall_post_after_giving_words.message", :sender => current_user.username, :receiver => @user.username),
           :picture => HOST + current_user.avatar.url(:medium),
-          :link => HOST + current_user.current_username,
+          :link => HOST + current_user.username,
           :name => I18n.t("facebook.wall_post_after_giving_words.name"),
           :description => I18n.t("facebook.wall_post_after_giving_words.description")
         )        
