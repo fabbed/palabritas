@@ -11,6 +11,16 @@ es:
       name: "http://5palabritas.com"
       description: "En 5palabritas.com tus amigos te pueden describir en 5 palabras, es 100% GRATIS!"
 
+    wall_post_after_giving_words:
+      message: "%{sender} ha descrito a %{receiver} en 5palabritas.com"
+      name: "http://5palabritas.com"
+      description: "En 5palabritas.com tus amigos te pueden describir en 5 palabras, es 100% GRATIS!"
+
+
+
+
+
+
   errors:
     you_cant_vote_for_yourself: "¡No puedes describirte a tu mismo!"
     you_voted_this_user_already: "Ya has descrito a %{username} hoy, tienes que esperar hasta mañana"

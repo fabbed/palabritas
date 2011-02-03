@@ -17,6 +17,21 @@ class WordSetsController < ApplicationController
 
       UserMailer.new_comment_on_your_word_set(@word_set).deliver if @word_set.sender && (@word_set.sender != current_user)
 
+      if current_user && current_user.auth_type == "facebook"
+        
+        fb_user = FbGraph::User.me(current_user.last_access_token).fetch
+        fb_user.feed!(
+          :message => I18n.t("facebook.wall_post_after_giving_words.message", :sender => current_user.username, :receiver => @user.username),
+          :picture => HOST + current_user.avatar.url(:medium),
+          :link => HOST + current_user.current_username,
+          :name => I18n.t("facebook.wall_post_after_giving_words.name"),
+          :description => I18n.t("facebook.wall_post_after_giving_words.description")
+        )        
+        
+        
+      end
+      
+
 
       redirect_to show_user_path(@user.username)
     end
