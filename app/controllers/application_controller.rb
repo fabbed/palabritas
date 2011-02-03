@@ -35,6 +35,7 @@ class ApplicationController < ActionController::Base
     end
 
     def create_user_session
+
       if !session[:user]
         session[:user] = {}
         session[:user][:blinking_counter] = 1

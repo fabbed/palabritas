@@ -8,6 +8,8 @@ function fbshare(url,title){
 $(document).ready(function() {
 
 
+  $('.btn_leave_reply').fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400).fadeOut(400).fadeIn(400);
+  
 
   $(".btn_leave_reply").click(function() {
     $(this).closest(".word_set").children(".word_set_comment_form").slideDown();
