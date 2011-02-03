@@ -41,7 +41,7 @@ CincopalabritasCom::Application.routes.draw do
   match 'dashboard' => 'user#dashboard', :as => 'user_root'
   
 
-  #match '/:username' => 'user#show', :as => :show_user
+  match '/:username' => 'user#show', :as => :show_user
 
 
   # The priority is based upon order of creation:
