@@ -17,6 +17,20 @@ class WordSetsController < ApplicationController
 
       UserMailer.new_comment_on_your_word_set(@word_set).deliver if @word_set.sender && (@word_set.sender != current_user)
 
+      redirect_to show_user_path(@user.username)
+    end
+  end
+
+  
+  def create
+    @user = User.find(params[:user_id])
+    
+    if params[:word_set][:words]
+      @user.word_sets.create_set(params[:word_set][:words], params[:user][:note], (current_user ? current_user.id : nil ))
+      session[:user][:described_users].push(@user.username)
+      UserMailer.new_word_set(@user).deliver
+
+
       if current_user && current_user.auth_type == "facebook"
         
         fb_user = FbGraph::User.me(current_user.last_access_token).fetch
@@ -30,21 +44,9 @@ class WordSetsController < ApplicationController
         
         
       end
-      
 
 
-      redirect_to show_user_path(@user.username)
-    end
-  end
 
-  
-  def create
-    @user = User.find(params[:user_id])
-    
-    if params[:word_set][:words]
-      @user.word_sets.create_set(params[:word_set][:words], params[:user][:note], (current_user ? current_user.id : nil ))
-      session[:user][:described_users].push(@user.username)
-      UserMailer.new_word_set(@user).deliver
       if current_user
         flash[:promote] = I18n.t("words_sent")
         redirect_to show_user_path(User.find(params[:user_id]).username, :t => "word_set_created")
