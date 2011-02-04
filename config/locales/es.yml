@@ -16,7 +16,10 @@ es:
       name: "http://5palabritas.com"
       description: "En 5palabritas.com tus amigos te pueden describir en 5 palabras, es 100% GRATIS!"
 
-
+    wall_post_for_receiver_after_receiving_words:
+      message: "%{sender} ha descrito a %{receiver} como %{words} en 5palabritas.com."
+      name: "http://5palabritas.com"
+      description: "En 5palabritas.com tus amigos te pueden describir en 5 palabras, es 100% GRATIS!"
 
 
 
