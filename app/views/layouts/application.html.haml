@@ -22,8 +22,9 @@
       <script src="http://connect.facebook.net/es_ES/all.js"></script>
     :javascript
       FB.init({ appId:'#{FacebookConfig.key}', cookie:true, xfbml:true });
-      I18n.defaultLocale = "#{I18n.default_locale}"
-      I18n.locale = "#{I18n.locale}"
+
+      I18n.defaultLocale = "#{I18n.default_locale}";
+      I18n.locale = "#{I18n.locale}";
     %div{ :id => @body_id || controller.action_name }
       #header_background &nbsp;
       = render :partial => 'shared/header'
