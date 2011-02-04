@@ -34,7 +34,7 @@ class WordSetsController < ApplicationController
       if current_user && current_user.auth_type == "facebook"
         fb_user = FbGraph::User.me(current_user.last_access_token).fetch
         fb_user.feed!(
-          :message => I18n.t("facebook.wall_post_after_giving_words.message", :sender => current_user.username, :receiver => @user.username, :words => params[:word_set][:words].join(",")),
+          :message => I18n.t("facebook.wall_post_after_giving_words.message", :sender => current_user.username, :receiver => @user.username, :words => params[:word_set][:words].inject([]){|words,hash| words << hash[1]}.join(",")),
           :picture => HOST + current_user.avatar.url(:medium),
           :link => HOST + current_user.username,
           :name => I18n.t("facebook.wall_post_after_giving_words.name"),
@@ -46,7 +46,7 @@ class WordSetsController < ApplicationController
       if @user.auth_type == "facebook"
         fb_user = FbGraph::User.me(@user.last_access_token).fetch
         fb_user.feed!(
-          :message => I18n.t("facebook.wall_post_for_receiver_after_receiving_words.message", :sender => (current_user ? current_user.username : "Anónimo"), :receiver => @user.username, :words => params[:word_set][:words].join(",")),
+          :message => I18n.t("facebook.wall_post_for_receiver_after_receiving_words.message", :sender => (current_user ? current_user.username : "Anónimo"), :receiver => @user.username, :words => params[:word_set][:words].inject([]){|words,hash| words << hash[1]}.join(",")),
           :picture => HOST + @user.avatar.url(:medium),
           :link => HOST + @user.username,
           :name => I18n.t("facebook.wall_post_for_receiver_after_receiving_words.name"),
