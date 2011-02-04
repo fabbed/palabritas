@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20110202143406) do
     t.integer  "background_file_size"
     t.boolean  "profile_public",                         :default => true
     t.string   "auth_type",                              :default => "sign_up"
-    t.string   "fb_uid"
+    t.integer  "fb_uid"
     t.string   "last_access_token"
     t.boolean  "all_values_valid",                       :default => true
     t.boolean  "signup_tracked",                         :default => false
