@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/fesplugas/typus.git
-  revision: d807f35ae0feccb025261349b2487eaaee96e9ad
+  remote: git://github.com/fesplugas/typus.git
+  revision: a776ceb966e49a1ade63f151ce7366470454448b
   specs:
     typus (3.0.6)
       fastercsv (~> 1.5)
